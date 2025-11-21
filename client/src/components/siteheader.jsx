@@ -1,0 +1,22 @@
+import React from "react"
+import { NavLink } from "react-router-dom"
+import logoImg from "../assets/LOGO.jpg"
+
+export default function SiteHeader() {
+  return (
+    <header className="sticky top-0 z-20 nav-blur border-b border-slate-700">
+      <div className="max-w-6xl mx-auto px-8 py-6 flex items-center">
+        <NavLink to="/" className="flex items-center gap-3 font-bold text-xl md:text-2xl">
+          <img src={logoImg} alt="Private Path logo" className="logo-brand" />
+          <span>Private Path</span>
+        </NavLink>
+        <nav className="ml-auto flex gap-6">
+          <NavLink to="/" className={({isActive})=>`nav-link ${isActive?"nav-link-active":""}`}>Home</NavLink>
+          <NavLink to="/courses" className={({isActive})=>`nav-link ${isActive?"nav-link-active":""}`}>Courses</NavLink>
+          <NavLink to="/admission" className={({isActive})=>`nav-link ${isActive?"nav-link-active":""}`}>Admission</NavLink>
+          <NavLink to="/about" className={({isActive})=>`nav-link ${isActive?"nav-link-active":""}`}>Vision & Mission</NavLink>
+        </nav>
+      </div>
+    </header>
+  )
+}
