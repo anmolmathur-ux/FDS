@@ -55,7 +55,7 @@ export default function About() {
           {/* ---------- CEO MESSAGE + STEPS SECTION INSERTED HERE ---------- */}
           <section className="bg-gray-50 py-15 font-serif">
             <h1 className=" text-4xl font-bold text-[#315262] p-6 text-center">
-            Vision & Mission
+              Goals & Ideals
           </h1>
             {/* CEO MESSAGE */}
             <div className="max-w-4xl mx-auto px-4 text-center mb-10">
@@ -68,25 +68,25 @@ export default function About() {
             </div>
 
             {/* STEPS TIMELINE */}
-            <div className="max-w-7xl mx-auto px-1">
-              <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-                Steps to Total Independence :-
+            <div className="w-full px-0">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-6 sm:mb-8 text-center px-4">
+                Sovereignty Path:-
               </h2>
 
-              <div className="steps-dark rounded-xl p-6">
+              <div className="steps-dark rounded-none p-4 sm:p-6 md:p-8 w-full">
                 <div className="relative">
-                  <div className="progress-line" aria-hidden="true"></div>
-                  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                  <div className="progress-line hidden sm:block" aria-hidden="true"></div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 sm:gap-8 px-4 md:px-8">
                     {steps.map(({ number, title, description, Icon }) => (
-                      <div key={number} className="text-center">
-                        <div className="mx-auto step-circle relative">
-                          <Icon className="w-7 h-7" />
-                          <span className="step-number" aria-hidden="true">{number}</span>
+                      <div key={number} className="text-center transition-all duration-300 hover:-translate-y-2 animate-fade-up" style={{animationDelay: `${parseInt(number) * 0.1}s`}}>
+                        <div className="mx-auto step-circle-mobile sm:step-circle relative transition-all duration-300 hover:border-[#F6B93B]/80 hover:scale-110 hover:shadow-lg hover:shadow-[#F6B93B]/50">
+                          <Icon className="w-6 h-6 sm:w-7 sm:h-7 transition-all duration-300" />
+                          <span className="step-number transition-all duration-300" aria-hidden="true">{number}</span>
                         </div>
-                        <h3 className="mt-3 text-white font-semibold">
+                        <h3 className="mt-3 text-white font-semibold text-base sm:text-lg md:text-xl transition-all duration-300 hover:text-[#F6B93B]">
                           {title}
                         </h3>
-                        <p className="mt-1 text-sm text-white/90">
+                        <p className="mt-1 text-xs sm:text-sm md:text-base text-white/90 transition-all duration-300 hover:text-white">
                           {description}
                         </p>
                       </div>
