@@ -8,11 +8,11 @@ export default function SiteFooter() {
       <div className="max-w-6xl mx-auto px-10 py-10 grid md:grid-cols-3 gap-8 items-start">
         <div>
           <div className="flex items-center gap-3">
-            <img src={logoImg} alt="Private Path logo" className="logo-foot" />
-            <h3 className="text-lg font-semibold text-[#FBFCFC]">Private Path</h3>
+            <img src={logoImg} alt="FDS logo" className="logo-foot" />
+            <h3 className="text-lg font-semibold text-[#FBFCFC]">FDS</h3>
           </div>
           <p className="text-[#829494]">Education for operating privately and planning generational wealth.</p>
-          <p className="text-[#9aa9a9] text-sm">© {year} Private Path. For educational purposes only.</p>
+          <p className="text-[#9aa9a9] text-sm">© {year} FDS. For educational purposes only.</p>
         </div>
         <div>
           <h4 className="font-semibold text-[#FBFCFC]">Quick Links</h4>

@@ -36,15 +36,15 @@ export default function Admission() {
                 backgroundRepeat: "no-repeat"
               }}
             >
-              <div className="admission-overlay">
-                <h1 className="text-3xl font-bold text-white p-2">Online Admission</h1>
-                <p className="text-[#FBFCFC] p-2">Enroll in self‑paced programs designed to help you operate privately and build generational wealth.</p>
+              <div className="p-6">
+                <h1 className="text-3xl font-bold text-[#315262] p-2">Online Admission</h1>
+                <p className="text-[#315262] p-2">Enroll in self‑paced programs designed to help you operate privately and build generational wealth.</p>
                 <div className="mt-1 flex gap-2">
                   <a href="#info" className="btn-blue">Request Info</a>
                   <a href="#apply" className="btn-yellow">Apply Now</a>
                 </div>
-                 <h2 className="mt-6 heading-accent text-white p-2">How Do I Apply?</h2>
-            <ol className="mt-2 list-decimal ml-2 space-y-1 text-white">
+                 <h2 className="mt-6 heading-accent text-[#315262] p-2">How Do I Apply?</h2>
+            <ol className="mt-2 list-decimal ml-2 space-y-1 text-[#315262]">
               <li>Create your student account.</li>
               <li>Select one or more courses that match your goals.</li>
               <li>Complete enrollment and payment.</li>
@@ -82,7 +82,7 @@ export default function Admission() {
                 <p className="mt-2 text-[#EFAB47] text-sm">Submitting this form sends data to the local server.</p>
               </div>
 
-              <div id="apply" className="bg-white border border-[#829494] rounded-xl p-4">
+              <div id="apply" className="bg-white border  rounded-xl p-4">
                 <h3 className="font-semibold text-[#315262]">Apply Now</h3>
                 <form
                   className="grid gap-3"
@@ -132,13 +132,13 @@ export default function Admission() {
             </div>
             <div className="bg-white border border-[#829494] rounded-lg p-4">
               <div className="font-semibold text-[#315262] mb-2">Find Your Program</div>
-              <select className="w-full bg-[#FBFCFC] text-[#315262] border border-[#829494] rounded px-3 py-2 mb-2">
+              <select className="w-bg-[#FBFCFC] text-[#315262] border border-[#829494] rounded px-3 py-2 mb-2">
                 <option>Select a Degree Level</option>
                 <option>Foundational</option>
                 <option>Intermediate</option>
                 <option>Advanced</option>
               </select>
-              <select className="w-full bg-[#FBFCFC] text-[#315262] border border-[#829494] rounded px-3 py-2 mb-2">
+              <select className="w- bg-[#FBFCFC] text-[#315262] border border-[#829494] rounded px-3 py-2 mb-2">
                 <option>All Categories</option>
                 <option>Legal Foundations</option>
                 <option>Business Structures</option>

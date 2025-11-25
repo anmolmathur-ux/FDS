@@ -7,13 +7,13 @@
 ---------------------------------------------------- */
 :root {
   /* Primary Colors from Logo */
-  --dark-teal: #315262;      /* Dark Teal (Shield & Leaves) */
+  --dark-teal: #829494;      /* Changed from Dark Teal to Light Gray-Blue */
   --golden-yellow: #EFAB47;  /* Golden Yellow (Book Pages & Sun) */
   --light-gray-blue: #829494; /* Light Gray-Blue (Borders / Highlights) */
   --logo-white: #FBFCFC;     /* White (Text / Background elements) */
   
   /* Secondary/Complementary Colors */
-  --dark-teal-darker: #253d4a;
+  --dark-teal-darker: #9aa9a9;  /* Updated to match new primary color */
   --golden-yellow-darker: #d6922e;
   --light-gray-blue-lighter: #9aa9a9;
   --logo-white-darker: #e8eaea;
@@ -198,7 +198,7 @@ a:hover {
 
 /* Brand header area */
 .header-brand {
-  background-color: var(--dark-teal);
+  background-color: var(--golden-yellow);
   color: var(--logo-white);
 }
 
@@ -302,13 +302,16 @@ section:nth-of-type(4) { animation-delay: 0.6s; }
   border: 1px solid var(--light-gray-blue);
 }
 
+/*
 .admission-hero::before {
   content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg, rgba(49, 82, 98, 0.6), rgba(49, 82, 98, 0.75));
 }
+*/
 
+/*
 .admission-overlay {
   position: absolute;
   left: .7rem;
@@ -320,6 +323,7 @@ section:nth-of-type(4) { animation-delay: 0.6s; }
   padding: 1rem;
   border-radius: 0.5rem;
 }
+*/
 
 /* White sidebar cards with blue accents */
 .aside-card {
