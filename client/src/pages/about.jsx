@@ -12,9 +12,7 @@ export default function About() {
       number: "01",
       title: "Becoming Private",
       description: "Transition to private status across domains.",
-      //Icon: ShieldCheck,
-      image: step1Img
-      
+      Icon: ShieldCheck,
     },
     {
       number: 2,
@@ -27,8 +25,7 @@ export default function About() {
       number: "03",
       title: "Optimize Credit",
       description: "Strengthen personal and business credit.",
-      //Icon: CreditCard,
-      image: step3Img
+      Icon: CreditCard,
     },
     {
       number: 4,
@@ -41,8 +38,7 @@ export default function About() {
       number: "05",
       title: "Reclaim Securities",
       description: "Take ownership of securities and instruments.",
-      //Icon: FileText,
-      image: step5Img
+      Icon: FileText,
     },
     {
       number: 6,
@@ -63,27 +59,26 @@ export default function About() {
             backgroundImage: "url('/images/vision.jpg')"
           }}
         >
-
-
-          {/* ---------- CEO MESSAGE + STEPS SECTION INSERTED HERE ---------- */}
-          <section className="bg-gray-50 py-20 font-serif">
-            <h1 className="text-4xl font-bold text-[#315262] p-6">
+          {/* ---------- CEO MESSAGE + STEPS ---------- */}
+          <section className="bg-[#315262] py-20 font-serif">
+            <h1 className="text-4xl font-bold text-[#FBFCFC] p-6">
               Vision & Mission
             </h1>
+
             {/* CEO MESSAGE */}
             <div className="max-w-4xl mx-auto px-6 text-center mb-20">
-              <blockquote className="text-2xl italic text-gray-800 leading-relaxed">
-
-                Financial freedom comes from the courage to invest in self-education.
-                The path to total independence — legally, financially, and spiritually —
-                unfolds through the following steps:
+              <blockquote className="text-2xl italic text-[#FBFCFC] leading-relaxed">
+                Financial freedom comes from the courage to invest in
+                self-education.  
+                The path to total independence — legally, financially, and
+                spiritually — unfolds through the following steps:
               </blockquote>
             </div>
 
-            {/* STEPS CARDS */}
+            {/* STEPS GRID */}
             <div className="max-w-6xl mx-auto px-6 text-center">
-              <h2 className="text-3xl font-bold text-gray-900 mb-12">
-                Steps to Total Independence :-
+              <h2 className="text-3xl font-bold text-[#FBFCFC] mb-12">
+                Steps to Total Independence
               </h2>
 
               <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -92,22 +87,93 @@ export default function About() {
                     key={step.number}
                     className="steps-card rounded-2xl p-6 border border-gray-200 hover:shadow-xl transition"
                     style={{
-                      backgroundImage: `url(${step.image})`,
+                      backgroundImage: `url(${step.image})`
                     }}
                   >
                     <div className="steps-card-content">
                       <div className="text-5xl font-bold text-[#FBFCFC] mb-4">
                         {step.number}
                       </div>
-                      <h3 className="text-xl font-semibold text-[#FBFCFC] mb-2">
-                        {step.title}
-                      </h3>
-                      <p className="text-[#FBFCFC] leading-relaxed">
-                        {step.description}
-                      </p>
+                      
+                      {/* Title */}
+                      <div className="mt-3 text-center text-white text-xs font-medium font-serif max-w-[110px] tracking-wide opacity-90">{step.title}</div>
                     </div>
                   </div>
                 ))}
+              </div>
+              
+              {/* Mobile and Tablet Vertical/Responsive Layout */}
+              <div className="md:hidden block py-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                  {[
+                    { id: 1, label: "01", title: "Becoming Private", icon: (
+                      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    ) },
+                    { id: 2, label: "02", title: "Building Your Private Business Trust", icon: (
+                      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M20 7h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M4 7h4a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M20 17h-4a2 2 0 0 0-2 2v1" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M4 17h4a2 2 0 0 1 2 2v1" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M8 3v4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M16 3v4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    ) },
+                    { id: 3, label: "03", title: "Optimizing Personal & Business Credit", icon: (
+                      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <rect x="2" y="5" width="20" height="14" rx="2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <line x1="2" y1="10" x2="22" y2="10" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    ) },
+                    { id: 4, label: "04", title: "Becoming a Secure Party Creditor", icon: (
+                      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <rect x="8" y="2" width="8" height="4" rx="1" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    ) },
+                    { id: 5, label: "05", title: "Reclaiming Your Securities", icon: (
+                      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <polyline points="14,2 14,8 20,8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <line x1="16" y1="13" x2="8" y2="13" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <line x1="16" y1="17" x2="8" y2="17" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <polyline points="10,9 9,9 8,9" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    ) },
+                    { id: 6, label: "06", title: "Becoming Your Own Banker", icon: (
+                      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M17 9V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M21 13v6a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2v-6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M17 13h-4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M13 9h4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M13 5v4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    ) }
+                  ].map((item, index) => (
+                    <div 
+                      key={item.id} 
+                      className="flex flex-col items-center"
+                    >
+                      {/* Circle with icon */}
+                      <div className="group relative flex items-center justify-center w-12 h-12 rounded-full bg-black border-2 border-[#EFAB47] shadow-[0_0_6px_#EFAB47] transition-all duration-300">
+                        <div className="text-[#EFAB47] flex items-center justify-center">
+                          {item.icon}
+                        </div>
+                        
+                        {/* Glow effect */}
+                        <div className="absolute inset-0 rounded-full bg-[#EFAB47] opacity-10 blur-md"></div>
+                      </div>
+                      
+                      {/* Label and Title */}
+                      <div className="mt-3 text-center">
+                        <div className="text-[#EFAB47] text-xs font-bold tracking-widest mb-1">{item.label}</div>
+                        <div className="text-white text-xs font-medium font-serif tracking-wide">{item.title}</div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </section>
