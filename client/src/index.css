@@ -462,5 +462,5 @@ section:nth-of-type(4) { animation-delay: 0.6s; }
 .steps-card-content {
   position: relative;
   z-index: 1;
-  color: #FBFCFC; /* White text for better contrast */
+  color: #528383; /* White text for better contrast */
 }
