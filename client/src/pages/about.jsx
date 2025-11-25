@@ -1,54 +1,43 @@
 import React from "react";
-import step1Img from "../assets/step-1.jpg";
-import step2Img from "../assets/step2.jpg";
-import step3Img from "../assets/step3.jpg";
-import step4Img from "../assets/step4.jpg";
-import step5Img from "../assets/step5.jpg";
-import step6Img from "../assets/step6.jpg";
+import { ShieldCheck, Briefcase, CreditCard, BadgeCheck, FileText, Landmark } from "lucide-react";
 
 export default function About() {
   const steps = [
     {
-      number: 1,
+      number: "01",
       title: "Becoming Private",
-      description:
-        "The first step toward financial, legal, and spiritual independence begins with transitioning to a private status.",
-      image: step1Img
+      description: "Transition to private status across domains.",
+      Icon: ShieldCheck,
     },
     {
-      number: 2,
-      title: "Building Your Private Business Trust",
-      description:
-        "Establish a private trust structure to protect your assets and build generational stability.",
-      image:step2Img  
+      number: "02",
+      title: "Private Business Trust",
+      description: "Establish a trust to protect assets.",
+      Icon: Briefcase,
     },
     {
-      number: 3,
-      title: "Optimizing Personal & Business Credit",
-      description:
-        "Strengthen both personal and business credit to unlock greater financial opportunities.",
-      image: step3Img
+      number: "03",
+      title: "Optimize Credit",
+      description: "Strengthen personal and business credit.",
+      Icon: CreditCard,
     },
     {
-      number: 4,
-      title: "Becoming a Secure Party Creditor",
-      description:
-        "Take legal control of your identity and assets through Secure Party Creditor status.", 
-      image: step4Img
+      number: "04",
+      title: "Secure Party Creditor",
+      description: "Gain legal control of identity and assets.",
+      Icon: BadgeCheck,
     },
     {
-      number: 5,
-      title: "Reclaiming Your Securities",
-      description:
-        "Recover what belongs to you by taking ownership of your securities and financial instruments.",
-      image: step5Img
+      number: "05",
+      title: "Reclaim Securities",
+      description: "Take ownership of securities and instruments.",
+      Icon: FileText,
     },
     {
-      number: 6,
-      title: "Becoming Your Own Banker",
-      description:
-        "Achieve full financial autonomy by taking control of your banking and financial systems.",
-      image: step6Img
+      number: "06",
+      title: "Become Your Banker",
+      description: "Operate with full financial autonomy.",
+      Icon: Landmark,
     },
   ];
 
@@ -64,12 +53,12 @@ export default function About() {
           
 
           {/* ---------- CEO MESSAGE + STEPS SECTION INSERTED HERE ---------- */}
-          <section className="bg-gray-50 py-20 font-serif">
-            <h1 className="text-4xl font-bold text-[#315262] p-6">
+          <section className="bg-gray-50 py-15 font-serif">
+            <h1 className=" text-4xl font-bold text-[#315262] p-6 text-center">
             Vision & Mission
           </h1>
             {/* CEO MESSAGE */}
-            <div className="max-w-4xl mx-auto px-6 text-center mb-20">
+            <div className="max-w-4xl mx-auto px-4 text-center mb-10">
               <blockquote className="text-2xl italic text-gray-800 leading-relaxed">
                 
                 Financial freedom comes from the courage to invest in self-education.
@@ -78,34 +67,32 @@ export default function About() {
                 </blockquote>
             </div>
 
-            {/* STEPS CARDS */}
-            <div className="max-w-6xl mx-auto px-6 text-center">
-              <h2 className="text-3xl font-bold text-gray-900 mb-12">
+            {/* STEPS TIMELINE */}
+            <div className="max-w-7xl mx-auto px-1">
+              <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
                 Steps to Total Independence :-
               </h2>
 
-              <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                {steps.map((step) => (
-                  <div
-                    key={step.number}
-                    className="steps-card rounded-2xl p-6 border border-gray-200 hover:shadow-xl transition"
-                    style={{
-                      backgroundImage: `url(${step.image})`,
-                    }}
-                  >
-                    <div className="steps-card-content">
-                      <div className="text-5xl font-bold text-[#FBFCFC] mb-4">
-                        {step.number}
+              <div className="steps-dark rounded-xl p-6">
+                <div className="relative">
+                  <div className="progress-line" aria-hidden="true"></div>
+                  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                    {steps.map(({ number, title, description, Icon }) => (
+                      <div key={number} className="text-center">
+                        <div className="mx-auto step-circle relative">
+                          <Icon className="w-7 h-7" />
+                          <span className="step-number" aria-hidden="true">{number}</span>
+                        </div>
+                        <h3 className="mt-3 text-white font-semibold">
+                          {title}
+                        </h3>
+                        <p className="mt-1 text-sm text-white/90">
+                          {description}
+                        </p>
                       </div>
-                      <h3 className="text-xl font-semibold text-[#FBFCFC] mb-2">
-                        {step.title}
-                      </h3>
-                      <p className="text-[#FBFCFC] leading-relaxed">
-                        {step.description}
-                      </p>
-                    </div>
+                    ))}
                   </div>
-                ))}
+                </div>
               </div>
             </div>
           </section>
@@ -113,73 +100,96 @@ export default function About() {
       </section>
 
       {/* ----------- REST OF YOUR ORIGINAL CONTENT ----------- */}
-      <section className="section bg-[#FBFCFC] p-6 border-b-4 border-[#829494]">
-        <h2 className="text-3xl font-bold text-[#315262] ">
-          Company Vision & Mission
-        </h2>
-        <div className="mt-6 bg-white border border-[#829494] rounded-lg p-6">
-          <p className="text-[#315262]">
-            To educate individuals on how to become private and gain generational
-            wealth through our courses. Our subjects are status corrections, secure
-            party creditor, building unincorporated business trust, repairing and
-            optimizing personal and business credit profiles. Reclaiming your
-            securities and debt discharge.
-          </p>
-          <p className="mt-2 text-[#315262]">
-            Becoming private gives the freedom to live and operate within the public
-            statutory laws, policies, regulations and free from taxation.
-          </p>
-        </div>
+      <section className="section bg-[#FBFCFC] py-16 px-4 sm:px-6 lg:px-8 border-b-4 border-[#829494]">
+        <div className="max-w-7xl mx-auto">
+          {/* Company Vision & Mission Section */}
+          <div className="mb-16 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#315262] mb-6">
+              Company Vision & Mission
+            </h2>
+            <div className="max-w-3xl mx-auto bg-white border border-[#829494] rounded-xl p-8 shadow-sm">
+              <p className="text-[#315262] text-lg leading-relaxed mb-4">
+                To educate individuals on how to become private and gain generational
+                wealth through our courses. Our subjects are status corrections, secure
+                party creditor, building unincorporated business trust, repairing and
+                optimizing personal and business credit profiles. Reclaiming your
+                securities and debt discharge.
+              </p>
+              <p className="text-[#315262] text-lg leading-relaxed">
+                Becoming private gives the freedom to live and operate within the public
+                statutory laws, policies, regulations and free from taxation.
+              </p>
+            </div>
+          </div>
 
-        <h2 className="mt-8 text-3xl font-semibold text-[#315262]">
-          Our Approach
-        </h2>
+          {/* Our Approach Section */}
+          <div className="mb-16 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#315262] mb-6">
+              Our Approach
+            </h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="bg-white border border-[#829494] rounded-xl p-8 shadow-sm flex flex-col h-full">
+                <h3 className="font-bold text-[#315262] text-xl mb-4">Learn</h3>
+                <p className="text-[#315262] text-base leading-relaxed flex-grow">
+                  Step-by-step, self-paced modules with templates, checklists, and case studies.
+                </p>
+              </div>
+              <div className="bg-white border border-[#829494] rounded-xl p-8 shadow-sm flex flex-col h-full">
+                <h3 className="font-bold text-[#315262] text-xl mb-4">Apply</h3>
+                <p className="text-[#315262] text-base leading-relaxed flex-grow">
+                  Guided documentation practices, compliance awareness, and review workflows.
+                </p>
+              </div>
+              <div className="bg-white border border-[#829494] rounded-xl p-8 shadow-sm flex flex-col h-full">
+                <h3 className="font-bold text-[#315262] text-xl mb-4">Thrive</h3>
+                <p className="text-[#315262] text-base leading-relaxed flex-grow">
+                  Privacy-focused operations and long-term planning for wealth preservation.
+                </p>
+              </div>
+            </div>
+          </div>
 
-        <div className="mt-4 grid md:grid-cols-3 gap-4">
-          <div className="bg-white border border-[#829494] rounded-lg p-6">
-            <h3 className="font-semibold text-[#315262]">Learn</h3>
-            <p className="text-[#315262]">
-              Step-by-step, self-paced modules with templates, checklists, and case studies.
+          {/* Core Values Section */}
+          <div className="text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#315262] mb-6">
+              Core Values
+            </h2>
+            <div className="max-w-4xl mx-auto">
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="bg-white border border-[#829494] rounded-xl p-6 shadow-sm">
+                  <h3 className="font-bold text-[#315262] text-xl mb-2">Privacy</h3>
+                  <p className="text-[#315262] text-base leading-relaxed">
+                    Protect personal and organizational information.
+                  </p>
+                </div>
+                <div className="bg-white border border-[#829494] rounded-xl p-6 shadow-sm">
+                  <h3 className="font-bold text-[#315262] text-xl mb-2">Compliance</h3>
+                  <p className="text-[#315262] text-base leading-relaxed">
+                    Operate responsibly within applicable laws and regulations.
+                  </p>
+                </div>
+                <div className="bg-white border border-[#829494] rounded-xl p-6 shadow-sm">
+                  <h3 className="font-bold text-[#315262] text-xl mb-2">Empowerment</h3>
+                  <p className="text-[#315262] text-base leading-relaxed">
+                    Provide clear, actionable guidance.
+                  </p>
+                </div>
+                <div className="bg-white border border-[#829494] rounded-xl p-6 shadow-sm">
+                  <h3 className="font-bold text-[#315262] text-xl mb-2">Integrity</h3>
+                  <p className="text-[#315262] text-base leading-relaxed">
+                    Teach practices grounded in ethics and transparency.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-16 max-w-3xl mx-auto bg-[#EFAB47]/20 border border-[#EFAB47] rounded-xl p-6 shadow-sm">
+            <p className="text-[#315262] text-center text-lg">
+              Important: This platform provides education only. Statements about taxation or
+              legal status vary by jurisdiction; consult licensed professionals and follow all laws.
             </p>
           </div>
-          <div className="bg-white border border-[#829494] rounded-lg p-6">
-            <h3 className="font-semibold text-[#315262]">Apply</h3>
-            <p className="text-[#315262]">
-              Guided documentation practices, compliance awareness, and review workflows.
-            </p>
-          </div>
-          <div className="bg-white border border-[#829494] rounded-lg p-6">
-            <h3 className="font-semibold text-[#315262]">Thrive</h3>
-            <p className="text-[#315262]">
-              Privacy-focused operations and long-term planning for wealth preservation.
-            </p>
-          </div>
-        </div>
-
-        <h2 className="mt-8 text-3xl font-semibold text-[#315262]">
-          Core Values
-        </h2>
-        <ul className="mt-2 space-y-2 text-[#315262]">
-          <li>
-            <strong className="text-[#315262]">Privacy</strong> — Protect personal and
-            organizational information.
-          </li>
-          <li>
-            <strong className="text-[#315262]">Compliance</strong> — Operate responsibly within applicable laws and regulations.
-          </li>
-          <li>
-            <strong className="text-[#315262]">Empowerment</strong> — Provide clear, actionable guidance.
-          </li>
-          <li>
-            <strong className="text-[#315262]">Integrity</strong> — Teach practices grounded in ethics and transparency.
-          </li>
-        </ul>
-
-        <div className="mt-6 bg-[#EFAB47]/20 border border-[#EFAB47] rounded-xl p-4">
-          <p className="text-[#315262]">
-            Important: This platform provides education only. Statements about taxation or
-            legal status vary by jurisdiction; consult licensed professionals and follow all laws.
-          </p>
         </div>
       </section>
     </div>

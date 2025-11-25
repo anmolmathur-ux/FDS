@@ -7,11 +7,15 @@
 ---------------------------------------------------- */
 :root {
   /* Primary Colors from Logo */
-  --dark-teal: #315262;      /* Dark Teal (Shield & Leaves) */
-  --golden-yellow: #EFAB47;  /* Golden Yellow (Book Pages & Sun) */
-  --light-gray-blue: #829494; /* Light Gray-Blue (Borders / Highlights) */
-  --logo-white: #FBFCFC;     /* White (Text / Background elements) */
-  
+  --dark-teal: #315262;
+  /* Dark Teal (Shield & Leaves) */
+  --golden-yellow: #EFAB47;
+  /* Golden Yellow (Book Pages & Sun) */
+  --light-gray-blue: #829494;
+  /* Light Gray-Blue (Borders / Highlights) */
+  --logo-white: #FBFCFC;
+  /* White (Text / Background elements) */
+
   /* Secondary/Complementary Colors */
   --dark-teal-darker: #253d4a;
   --golden-yellow-darker: #d6922e;
@@ -28,14 +32,14 @@
   font-weight: 700;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .btn-amber:hover {
   background-color: var(--golden-yellow-darker);
   transform: scale(1.06);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
 }
 
 .btn-blue {
@@ -44,14 +48,14 @@
   font-weight: 700;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .btn-blue:hover {
   background-color: var(--dark-teal-darker);
   transform: scale(1.06);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
 }
 
 /* New yellow button */
@@ -61,14 +65,14 @@
   font-weight: 700;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .btn-yellow:hover {
   background-color: var(--golden-yellow-darker);
   transform: scale(1.06);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
 }
 
 .btn-blue:active,
@@ -91,7 +95,8 @@
 }
 
 .hero-overlay-box {
-  background: rgba(49, 82, 98, 0.85); /* Dark Teal with transparency */
+  background: rgba(49, 82, 98, 0.85);
+  /* Dark Teal with transparency */
   padding: 1rem 2rem;
   margin-left: 2rem;
   border-radius: 0.5rem;
@@ -137,8 +142,8 @@ h3 {
   color: var(--dark-teal-darker);
 }
 
-p { 
-  color: var(--light-gray-blue); 
+p {
+  color: var(--light-gray-blue);
 }
 
 a {
@@ -167,7 +172,7 @@ a:hover {
 
 .hero-gradient {
   background-image: url('home.jpg'),
-  linear-gradient(var(--light-gray-blue-lighter), rgba(130, 148, 148, 0.6) 10%, var(--logo-white) 10%);
+    linear-gradient(var(--light-gray-blue-lighter), rgba(130, 148, 148, 0.6) 10%, var(--logo-white) 10%);
 }
 
 .hero-subtitle {
@@ -186,14 +191,15 @@ a:hover {
    NAVIGATION (Improved)
 ---------------------------------------------------- */
 .nav-blur {
-  background-color: rgba(49, 82, 98, 0.7); /* Dark Teal with transparency */
+  background-color: rgba(49, 82, 98, 0.7);
+  /* Dark Teal with transparency */
   backdrop-filter: blur(8px);
   transition: 0.3s ease;
 }
 
 .nav-blur:hover {
   background-color: rgba(49, 82, 98, 0.9);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.45);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
 }
 
 /* Brand header area */
@@ -217,7 +223,7 @@ a:hover {
 .nav-link-active {
   background-color: var(--golden-yellow);
   color: var(--dark-teal);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Brand and footer logo sizing (Tailwind component classes) */
@@ -234,6 +240,7 @@ a:hover {
     height: 3rem;
   }
 }
+
 .logo-foot {
   width: 2rem;
   height: 2rem;
@@ -256,13 +263,13 @@ a:hover {
   border: 1px solid var(--light-gray-blue);
   border-radius: 0.75rem;
   padding: 1.25rem;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .card-soft:hover {
   transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* ----------------------------------------------------
@@ -270,8 +277,8 @@ a:hover {
 ---------------------------------------------------- */
 section {
   opacity: 0;
-  transform: translateY(40px);
-  animation: fadeIn 1.2s ease forwards;
+  transform: translateY(5px);
+  animation: fadeIn 0.8s ease forwards;
 }
 
 @keyframes fadeIn {
@@ -281,9 +288,17 @@ section {
   }
 }
 
-section:nth-of-type(2) { animation-delay: 0.2s; }
-section:nth-of-type(3) { animation-delay: 0.4s; }
-section:nth-of-type(4) { animation-delay: 0.6s; }
+section:nth-of-type(2) {
+  animation-delay: 0.2s;
+}
+
+section:nth-of-type(3) {
+  animation-delay: 0.4s;
+}
+
+section:nth-of-type(4) {
+  animation-delay: 0.6s;
+}
 
 /* ----------------------------------------------------
    DIVIDERS
@@ -328,7 +343,7 @@ section:nth-of-type(4) { animation-delay: 0.6s; }
   border: 1px solid var(--light-gray-blue);
   border-radius: 0.5rem;
   padding: 1rem;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .aside-title {
@@ -369,13 +384,13 @@ section:nth-of-type(4) { animation-delay: 0.6s; }
   border-radius: 1rem;
   overflow: hidden;
   border: 1px solid var(--light-gray-blue);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
   transition: transform .3s ease, box-shadow .3s ease;
 }
 
 .course-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
 /* Top image placeholder — replace with actual BG if needed */
@@ -455,12 +470,58 @@ section:nth-of-type(4) { animation-delay: 0.6s; }
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(49, 82, 98, 0.7); /* Dark teal overlay for better text contrast */
+  background: rgba(49, 82, 98, 0.7);
+  /* Dark teal overlay for better text contrast */
   border-radius: 1rem;
 }
 
 .steps-card-content {
   position: relative;
   z-index: 1;
-  color: #FBFCFC; /* White text for better contrast */
+  color: #FBFCFC;
+  /* White text for better contrast */
+}
+
+/* ----------------------------------------------------
+   STEPS TIMELINE (Four-step dark strip)
+---------------------------------------------------- */
+.steps-dark {
+  background: #0b0b0b;
+  border: 1px solid #1f1f1f;
+}
+
+.progress-line {
+  position: absolute;
+  top: 34px;
+  left: 6%;
+  right: 6%;
+  height: 3px;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, #ef4444, #EFAB47);
+}
+
+.step-circle {
+  width: 64px;
+  height: 64px;
+  border-radius: 9999px;
+  border: 2px solid #EFAB47;
+  color: #EFAB47;
+  background: rgba(0, 0, 0, 0.5);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-number {
+  position: absolute;
+  right: -8px;
+  top: -10px;
+  background: #EFAB47;
+  color: #FBFCFC;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1;
+  padding: 4px 8px;
+  border-radius: 9999px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }

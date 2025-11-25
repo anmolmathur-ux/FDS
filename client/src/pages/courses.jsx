@@ -95,7 +95,7 @@ export default function Courses() {
   );
 
   return (
-    <div className="max-w-6xl mx-auto px-6 py-12 bg-[#FBFCFC]">
+    <div className="max-w-6xl mx-auto px-6 py-8 bg-[#FBFCFC]">
       
       {/* Header + Filter Section */}
       <div className="flex items-end justify-between border-b border-[#829494] pb-4 mb-8">
