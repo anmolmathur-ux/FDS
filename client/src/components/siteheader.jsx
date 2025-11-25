@@ -4,11 +4,11 @@ import logoImg from "../assets/LOGO.jpg"
 
 export default function SiteHeader() {
   return (
-    <header className="sticky top-0 z-20 nav-blur border-b border-slate-700">
+    <header className="sticky top-0 z-20 nav-blur">
       <div className="max-w-6xl mx-auto px-8 py-6 flex items-center">
-        <NavLink to="/" className="flex items-center gap-3 font-bold text-xl md:text-2xl">
+        <NavLink to="/" className="flex items-center gap-3 font-bold text-xl md:text-2xl text-white">
           <img src={logoImg} alt="Private Path logo" className="logo-brand" />
-          <span>Private Path</span>
+          <span className="text-white">Private Path</span>
         </NavLink>
         <nav className="ml-auto flex gap-6">
           <NavLink to="/" className={({isActive})=>`nav-link ${isActive?"nav-link-active":""}`}>Home</NavLink>

@@ -1,5 +1,12 @@
 import React, { useState } from "react";
 import CourseCard from "../components/coursecard.jsx";
+import course1 from '../assets/course1.jpg';
+import course2 from '../assets/course2.jpg';
+import course3 from '../assets/course3.jpg';
+import course4 from '../assets/course4.jpg';
+import course5 from '../assets/course5.jpg';
+import course6 from '../assets/course6.jpg';
+
 
 export default function Courses() {
   const [filter, setFilter] = useState("all");
@@ -14,7 +21,7 @@ export default function Courses() {
         "Core principles, documentation workflows, and compliance considerations.",
       category: "legal",
       features: ["Principles", "Workflows", "Compliance"],
-      imageUrl: "/images/status.jpg",
+      imageUrl: course1,
       buttonLink: "/admission"
     },
     {
@@ -25,7 +32,7 @@ export default function Courses() {
         "Understanding frameworks, filings, and risk management.",
       category: "legal",
       features: ["Frameworks", "Risk Management"],
-      imageUrl: "",
+      imageUrl: course2,
       buttonLink: "/admission"
     },
     {
@@ -36,7 +43,7 @@ export default function Courses() {
         "Establishing and operating private trust structures.",
       category: "business",
       features: ["Private Trusts", "Operating Structures"],
-      imageUrl: "/images/.j",
+      imageUrl: course3  ,
       buttonLink: "/admission"
     },
     {
@@ -51,7 +58,7 @@ export default function Courses() {
         "Profile Hygiene",
         "Scoring Optimization"
       ],
-      imageUrl: "/images/cre",
+      imageUrl: course4,
       buttonLink: "/admission"
     },
     {
@@ -62,7 +69,7 @@ export default function Courses() {
         "Vendor tiers, trade lines, and underwriting signals.",
       category: "credit",
       features: ["Vendor Tiers", "Trade Lines", "Underwriting Signals"],
-      imageUrl: "/images/credit-business.jpg",
+      imageUrl: course5,
       buttonLink: "/admission"
     },
     {
@@ -77,7 +84,7 @@ export default function Courses() {
         "Reconciliation",
         "Documentation Review"
       ],
-      imageUrl: "/images/securities.jpg",
+      imageUrl: course6,
       buttonLink: "/admission"
     }
   ];
@@ -88,18 +95,18 @@ export default function Courses() {
   );
 
   return (
-    <div className="max-w-6xl mx-auto px-6 py-12">
+    <div className="max-w-6xl mx-auto px-6 py-12 bg-[#FBFCFC]">
       
       {/* Header + Filter Section */}
-      <div className="flex items-end justify-between border-b border-slate-700 pb-4 mb-8">
-        <h1 className="text-3xl font-bold text-white">All Courses</h1>
+      <div className="flex items-end justify-between border-b border-[#829494] pb-4 mb-8">
+        <h1 className="text-3xl font-bold text-[#315262]">All Courses</h1>
 
         <div className="text-right">
-          <label className="block text-gray-400 text-sm">Filter by category</label>
+          <label className="block text-[#315262] text-sm">Filter by category</label>
           <select
             value={filter}
             onChange={(e) => setFilter(e.target.value)}
-            className="mt-1 bg-slate-900 text-gray-200 border border-slate-700 rounded px-3 py-2 focus:ring focus:ring-blue-500/40 transition"
+            className="mt-1 bg-[#FBFCFC] text-[#315262] border border-[#829494] rounded px-3 py-2 focus:ring focus:ring-[#315262]/40 transition"
           >
             <option value="all">All</option>
             <option value="legal">Legal Foundations</option>
@@ -131,21 +138,21 @@ export default function Courses() {
       <div className="mt-10 text-center flex justify-center gap-4">
         <a
           href="/admission"
-          className="btn-amber inline-block px-6 py-3 rounded bg-amber-600 text-white hover:bg-amber-700 transition shadow"
+          className="btn-amber inline-block px-6 py-3 rounded bg-[#EFAB47] text-[#FBFCFC] hover:bg-[#d6922e] transition shadow"
         >
           Apply Now
         </a>
 
         <a
           href="/about"
-          className="btn-blue inline-block px-6 py-3 rounded bg-blue-600 text-white hover:bg-blue-700 transition shadow"
+          className="btn-blue inline-block px-6 py-3 rounded bg-[#315262] text-[#FBFCFC] hover:bg-[#253d4a] transition shadow"
         >
           Request Info
         </a>
       </div>
 
       {/* Disclaimer */}
-      <p className="mt-8 text-amber-200 text-center text-sm max-w-3xl mx-auto leading-relaxed">
+      <p className="mt-8 text-[#315262] text-center text-sm max-w-3xl mx-auto leading-relaxed">
         Educational disclaimer: These courses present educational materials only.
         Outcomes depend on individual circumstances and jurisdiction. Consult qualified professionals.
       </p>

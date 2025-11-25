@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom"
 import SiteHeader from "./components/siteheader.jsx"
 import SiteFooter from "./components/sitefooter.jsx"
 import Home from "./pages/home.jsx"
-import Courses from "./pages/Courses.jsx"
+import Courses from "./pages/courses.jsx"
 import About from "./pages/about.jsx"
 import Admission from "./pages/admission.jsx"
 

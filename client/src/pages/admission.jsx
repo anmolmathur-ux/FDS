@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import admissionImg from "../assets/online-admission.jpg"
 
 export default function Admission() {
   const [infoLoading, setInfoLoading] = useState(false)
@@ -26,28 +27,35 @@ export default function Admission() {
       <section className="section">
         <div className="grid lg:grid-cols-3 gap-6">
           <div className="lg:col-span-2">
-            <div className="admission-hero">
+            <div 
+              className="admission-hero"
+              style={{
+                backgroundImage: `url(${admissionImg})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat"
+              }}
+            >
               <div className="admission-overlay">
-                <h1 className="text-3xl font-bold">Online Admission</h1>
-                <p>Enroll in self‑paced programs designed to help you operate privately and build generational wealth.</p>
-                <div className="mt-3 flex gap-2">
+                <h1 className="text-3xl font-bold text-white p-2">Online Admission</h1>
+                <p className="text-[#FBFCFC] p-2">Enroll in self‑paced programs designed to help you operate privately and build generational wealth.</p>
+                <div className="mt-1 flex gap-2">
                   <a href="#info" className="btn-blue">Request Info</a>
                   <a href="#apply" className="btn-yellow">Apply Now</a>
                 </div>
-              </div>
-            </div>
-
-            <h2 className="mt-6 heading-accent">How Do I Apply?</h2>
-            <ol className="mt-2 list-decimal ml-6 space-y-1">
+                 <h2 className="mt-6 heading-accent text-white p-2">How Do I Apply?</h2>
+            <ol className="mt-2 list-decimal ml-2 space-y-1 text-white">
               <li>Create your student account.</li>
               <li>Select one or more courses that match your goals.</li>
               <li>Complete enrollment and payment.</li>
               <li>Start learning immediately with guided modules.</li>
             </ol>
+              </div>
+            </div>
 
-            <div id="info" className="mt-8 grid md:grid-cols-2 gap-6">
-              <div className="bg-slate-800 border border-slate-700 rounded-xl p-4">
-                <h3 className="font-semibold">Request Info</h3>
+            <div id="info" className="mt-4 grid md:grid-cols-2 gap-6">
+              <div className="bg-white border border-[#829494] rounded-xl p-4">
+                <h3 className="font-semibold text-[#315262]">Request Info</h3>
                 <form
                   className="grid gap-3"
                   onSubmit={async e => {
@@ -58,10 +66,10 @@ export default function Admission() {
                     form.reset()
                   }}
                 >
-                  <label className="grid gap-1">Full Name<input name="name" required className="bg-slate-900 text-gray-200 border border-slate-700 rounded px-3 py-2" /></label>
-                  <label className="grid gap-1">Email<input name="email" type="email" required className="bg-slate-900 text-gray-200 border border-slate-700 rounded px-3 py-2" /></label>
-                  <label className="grid gap-1">Area of Interest
-                    <select name="interest" className="bg-slate-900 text-gray-200 border border-slate-700 rounded px-3 py-2">
+                  <label className="grid gap-1 text-[#315262]">Full Name<input name="name" required className="bg-[#FBFCFC] text-[#315262] border border-[#829494] rounded px-3 py-2" /></label>
+                  <label className="grid gap-1 text-[#315262]">Email<input name="email" type="email" required className="bg-[#FBFCFC] text-[#315262] border border-[#829494] rounded px-3 py-2" /></label>
+                  <label className="grid gap-1 text-[#315262]">Area of Interest
+                    <select name="interest" className="bg-[#FBFCFC] text-[#315262] border border-[#829494] rounded px-3 py-2">
                       <option>Status Corrections</option>
                       <option>Secure Party Creditor</option>
                       <option>Unincorporated Business Trust</option>
@@ -71,11 +79,11 @@ export default function Admission() {
                   </label>
                   <button disabled={infoLoading} className="btn-blue">{infoLoading ? "Submitting..." : "Request Info"}</button>
                 </form>
-                <p className="mt-2 text-amber-200 text-sm">Submitting this form sends data to the local server.</p>
+                <p className="mt-2 text-[#EFAB47] text-sm">Submitting this form sends data to the local server.</p>
               </div>
 
-              <div id="apply" className="bg-slate-800 border border-slate-700 rounded-xl p-4">
-                <h3 className="font-semibold">Apply Now</h3>
+              <div id="apply" className="bg-white border border-[#829494] rounded-xl p-4">
+                <h3 className="font-semibold text-[#315262]">Apply Now</h3>
                 <form
                   className="grid gap-3"
                   onSubmit={async e => {
@@ -86,10 +94,10 @@ export default function Admission() {
                     form.reset()
                   }}
                 >
-                  <label className="grid gap-1">Full Name<input name="name" required className="bg-slate-900 text-gray-200 border border-slate-700 rounded px-3 py-2" /></label>
-                  <label className="grid gap-1">Email<input name="email" type="email" required className="bg-slate-900 text-gray-200 border border-slate-700 rounded px-3 py-2" /></label>
-                  <label className="grid gap-1">Selected Course
-                    <select name="course" required className="bg-slate-900 text-gray-200 border border-slate-700 rounded px-3 py-2">
+                  <label className="grid gap-1 text-[#315262]">Full Name<input name="name" required className="bg-[#FBFCFC] text-[#315262] border border-[#829494] rounded px-3 py-2" /></label>
+                  <label className="grid gap-1 text-[#315262]">Email<input name="email" type="email" required className="bg-[#FBFCFC] text-[#315262] border border-[#829494] rounded px-3 py-2" /></label>
+                  <label className="grid gap-1 text-[#315262]">Selected Course
+                    <select name="course" required className="bg-[#FBFCFC] text-[#315262] border border-[#829494] rounded px-3 py-2">
                       <option>Status Corrections</option>
                       <option>Secure Party Creditor</option>
                       <option>Unincorporated Business Trust</option>
@@ -103,34 +111,34 @@ export default function Admission() {
               </div>
             </div>
 
-            <div className="mt-6 bg-amber-900/40 border border-amber-700 rounded-xl p-4">
-              <p className="text-amber-200">Educational disclaimer: Enrollment provides access to educational materials only. It does not constitute legal, financial, or tax advice.</p>
+            <div className="mt-6 bg-[#EFAB47]/20 border border-[#EFAB47] rounded-xl p-4">
+              <p className="text-[#315262]">Educational disclaimer: Enrollment provides access to educational materials only. It does not constitute legal, financial, or tax advice.</p>
             </div>
           </div>
 
           <aside className="space-y-4">
-            <div className="aside-card">
-              <div className="aside-title">Online Admission</div>
+            <div className="bg-white border border-[#829494] rounded-lg p-4">
+              <div className="font-semibold text-[#315262] mb-2">Online Admission</div>
               <ul className="space-y-1">
-                <li><a href="#" className="aside-link">How to Apply Online</a></li>
-                <li><a href="#" className="aside-link">Term Start Dates</a></li>
+                <li><a href="#" className="text-[#315262] hover:text-[#EFAB47] transition">How to Apply Online</a></li>
+                <li><a href="#" className="text-[#315262] hover:text-[#EFAB47] transition">Term Start Dates</a></li>
               </ul>
             </div>
-            <div className="aside-card">
-              <div className="aside-title">Contact Us</div>
-              <p className="text-sm">Online Admission</p>
-              <p className="text-sm">📞 888.327.SNHU</p>
-              <p className="text-sm">✉️ enroll@snhu.edu</p>
+            <div className="bg-white border border-[#829494] rounded-lg p-4">
+              <div className="font-semibold text-[#315262] mb-2">Contact Us</div>
+              <p className="text-sm text-[#315262]">Online Admission</p>
+              <p className="text-sm text-[#315262]">📞 888.327.SNHU</p>
+              <p className="text-sm text-[#315262]">✉️ enroll@snhu.edu</p>
             </div>
-            <div className="aside-card">
-              <div className="aside-title">Find Your Program</div>
-              <select className="aside-select mb-2">
+            <div className="bg-white border border-[#829494] rounded-lg p-4">
+              <div className="font-semibold text-[#315262] mb-2">Find Your Program</div>
+              <select className="w-full bg-[#FBFCFC] text-[#315262] border border-[#829494] rounded px-3 py-2 mb-2">
                 <option>Select a Degree Level</option>
                 <option>Foundational</option>
                 <option>Intermediate</option>
                 <option>Advanced</option>
               </select>
-              <select className="aside-select mb-2">
+              <select className="w-full bg-[#FBFCFC] text-[#315262] border border-[#829494] rounded px-3 py-2 mb-2">
                 <option>All Categories</option>
                 <option>Legal Foundations</option>
                 <option>Business Structures</option>
