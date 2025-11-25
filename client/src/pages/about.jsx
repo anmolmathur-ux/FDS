@@ -1,5 +1,5 @@
 import React from "react";
-import step1Img from "../assets/step-1.jpg";
+import step1Img from "../assets/step1.jpg";
 import step2Img from "../assets/step2.jpg";
 import step3Img from "../assets/step3.jpg";
 import step4Img from "../assets/step4.jpg";
@@ -12,7 +12,9 @@ export default function About() {
       number: "01",
       title: "Becoming Private",
       description: "Transition to private status across domains.",
-      Icon: ShieldCheck,
+      //Icon: ShieldCheck,
+      image: step1Img
+      
     },
     {
       number: 2,
@@ -25,7 +27,8 @@ export default function About() {
       number: "03",
       title: "Optimize Credit",
       description: "Strengthen personal and business credit.",
-      Icon: CreditCard,
+      //Icon: CreditCard,
+      image: step3Img
     },
     {
       number: 4,
@@ -38,7 +41,8 @@ export default function About() {
       number: "05",
       title: "Reclaim Securities",
       description: "Take ownership of securities and instruments.",
-      Icon: FileText,
+      //Icon: FileText,
+      image: step5Img
     },
     {
       number: 6,
