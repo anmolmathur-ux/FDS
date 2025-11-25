@@ -12,7 +12,7 @@ export default function About() {
       number: "01",
       title: "Becoming Private",
       description: "Transition to private status across domains.",
-      Icon: ShieldCheck,
+      image: step1Img,
     },
     {
       number: 2,
@@ -25,7 +25,7 @@ export default function About() {
       number: "03",
       title: "Optimize Credit",
       description: "Strengthen personal and business credit.",
-      Icon: CreditCard,
+      image: step3Img,
     },
     {
       number: 4,
@@ -38,7 +38,7 @@ export default function About() {
       number: "05",
       title: "Reclaim Securities",
       description: "Take ownership of securities and instruments.",
-      Icon: FileText,
+      image: step5Img,
     },
     {
       number: 6,
@@ -96,10 +96,10 @@ export default function About() {
                       </div>
                       
                       {/* Title */}
-                      <div className="mt-3 text-center text-white text-xs font-medium font-serif max-w-[110px] tracking-wide opacity-90">{item.title}</div>
-                    </motion.div>
-                  ))}
-                </div>
+                      <div className="mt-3 text-center text-white text-xs font-medium font-serif max-w-[110px] tracking-wide opacity-90">{step.title}</div>
+                    </div>
+                  </div>
+                ))}
               </div>
               
               {/* Mobile and Tablet Vertical/Responsive Layout */}
@@ -152,13 +152,9 @@ export default function About() {
                       </svg>
                     ) }
                   ].map((item, index) => (
-                    <motion.div 
+                    <div 
                       key={item.id} 
                       className="flex flex-col items-center"
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      viewport={{ once: true }}
                     >
                       {/* Circle with icon */}
                       <div className="group relative flex items-center justify-center w-12 h-12 rounded-full bg-black border-2 border-[#EFAB47] shadow-[0_0_6px_#EFAB47] transition-all duration-300">
@@ -175,7 +171,7 @@ export default function About() {
                         <div className="text-[#EFAB47] text-xs font-bold tracking-widest mb-1">{item.label}</div>
                         <div className="text-white text-xs font-medium font-serif tracking-wide">{item.title}</div>
                       </div>
-                    </motion.div>
+                    </div>
                   ))}
                 </div>
               </div>
