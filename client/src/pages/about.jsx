@@ -61,7 +61,7 @@ export default function About() {
   return (
     <div>
       {/* ================= HERO SECTION ================= */}
-      <section className="hero-gradient border-b border-[#829494]">
+      <section className="border-b border-[#829494]">
         <div
           className="vision-section"
           style={{
@@ -69,14 +69,14 @@ export default function About() {
           }}
         >
           {/* ---------- CEO MESSAGE + STEPS ---------- */}
-          <section className="bg-[#315262] py-20 font-serif">
-            <h1 className="text-4xl font-bold text-[#FBFCFC] p-6">
+          <section className="bg-white py-20 font-serif">
+            <h1 className="text-4xl font-bold text-[#315262] p-6">
               Vision & Mission
             </h1>
 
             {/* CEO MESSAGE */}
             <div className="max-w-4xl mx-auto px-6 text-center mb-20">
-              <blockquote className="text-2xl italic text-[#FBFCFC] leading-relaxed">
+              <blockquote className="text-2xl italic text-[#315262] leading-relaxed">
                 Financial freedom comes from the courage to invest in
                 self-education.  
                 The path to total independence — legally, financially, and
@@ -86,7 +86,7 @@ export default function About() {
 
             {/* STEPS GRID */}
             <div className="max-w-6xl mx-auto px-6 text-center">
-              <h2 className="text-3xl font-bold text-[#FBFCFC] mb-12">
+              <h2 className="text-3xl font-bold text-[#315262] mb-12">
                 Steps to Total Independence
               </h2>
 
@@ -96,17 +96,20 @@ export default function About() {
                     key={step.number}
                     className="steps-card rounded-2xl p-6 border border-gray-200 hover:shadow-xl transition"
                     style={{
-                      backgroundImage: `url(${step.image})`
+                      backgroundImage: `url(${step.image})`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                      backgroundRepeat: "no-repeat"
                     }}
                   >
                     <div className="steps-card-content">
-                      <div className="text-5xl font-bold text-[#FBFCFC] mb-4">
+                      <div className="text-5xl font-bold text-[#315262] mb-4">
                         {step.number}
                       </div>
-                      <h3 className="text-xl font-semibold text-[#FBFCFC] mb-2">
+                      <h3 className="text-xl font-semibold text-[#315262] mb-2">
                         {step.title}
                       </h3>
-                      <p className="text-[#FBFCFC] leading-relaxed">
+                      <p className="text-[#315262] leading-relaxed">
                         {step.description}
                       </p>
                     </div>
@@ -130,10 +133,10 @@ export default function About() {
           transition={{ duration: 0.7 }}
           className="text-center"
         >
-          <h2 className="text-4xl font-bold text-[#FBFCFC] tracking-wide">
+          <h2 className="text-4xl font-bold text-white tracking-wide">
             Our Vision & Mission
           </h2>
-          <p className="mt-4 max-w-3xl mx-auto text-lg text-[#FBFCFC] opacity-80">
+          <p className="mt-4 max-w-3xl mx-auto text-lg text-white opacity-80">
             Empowering individuals with the knowledge and structure needed
             to operate privately, build generational wealth, and thrive
             outside the limitations of public-statutory systems.
@@ -146,9 +149,9 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="mt-10 bg-[#FBFCFC] border border-[#829494] rounded-2xl p-8 shadow-sm max-w-5xl mx-auto"
+          className="mt-10 bg-[#315262] border border-[#829494] rounded-2xl p-8 shadow-sm max-w-5xl mx-auto"
         >
-          <p className="text-[#315262] leading-relaxed text-lg">
+          <p className="text-white leading-relaxed text-lg">
             We provide transformative education designed to help individuals
             become private and achieve generational wealth. Our specialized
             curriculum covers status correction, secure party creditor
@@ -157,7 +160,7 @@ export default function About() {
             understanding lawful debt discharge.
           </p>
 
-          <p className="mt-4 text-[#315262] leading-relaxed text-lg">
+          <p className="mt-4 text-white leading-relaxed text-lg">
             Becoming private gives individuals the ability to operate
             peacefully within public laws and regulations — while gaining the
             freedom and autonomy to build and protect wealth without
@@ -171,7 +174,7 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mt-16 text-3xl font-bold text-[#FBFCFC] text-center"
+          className="mt-16 text-3xl font-bold text-white text-center"
         >
           Our Approach
         </motion.h2>
@@ -200,7 +203,7 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.2, duration: 0.6 }}
-              className="bg-[#FBFCFC] border border-[#829494] rounded-2xl p-7 shadow hover:shadow-xl hover:scale-[1.02] transition-all cursor-pointer"
+              className="bg-[#315262] border border-[#829494] rounded-2xl p-7 shadow hover:shadow-xl hover:scale-[1.02] transition-all cursor-pointer"
             >
               <div className="h-40 rounded-lg overflow-hidden mb-4">
                 <img 
@@ -209,8 +212,8 @@ export default function About() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h3 className="font-bold text-xl text-[#315262] mb-2">{card.title}</h3>
-              <p className="text-[#315262] leading-relaxed">{card.desc}</p>
+              <h3 className="font-bold text-xl text-white mb-2">{card.title}</h3>
+              <p className="text-white leading-relaxed">{card.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -221,7 +224,7 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mt-16 text-3xl font-bold text-[#FBFCFC] text-center"
+          className="mt-16 text-3xl font-bold text-white text-center"
         >
           Core Values
         </motion.h2>
@@ -231,7 +234,7 @@ export default function About() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="mt-6 space-y-4 max-w-4xl mx-auto text-lg text-[#FBFCFC]"
+          className="mt-6 space-y-4 max-w-4xl mx-auto text-lg text-white"
         >
           <li>
             <strong>
@@ -255,9 +258,9 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="mt-12 bg-[#FBFCFC] border border-[#EFAB47] rounded-xl p-6 max-w-4xl mx-auto"
+          className="mt-12 bg-[#315262] border border-[#EFAB47] rounded-xl p-6 max-w-4xl mx-auto"
         >
-          <p className="text-[#315262] text-md leading-relaxed">
+          <p className="text-white text-md leading-relaxed">
             <strong>Important:</strong> This platform is educational and does not
             provide legal or tax advice. Laws vary by region — always consult
             licensed professionals and follow all jurisdictional requirements.
