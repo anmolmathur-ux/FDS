@@ -95,27 +95,27 @@ export default function Courses() {
   );
 
   return (
-    <div className="max-w-6xl mx-auto px-6 py-12 bg-[#FBFCFC]">
+    <div className="bg-white min-h-screen">
+      <div className="max-w-6xl mx-auto px-6 py-12">
       
-      {/* Header + Filter Section */}
-      <div className="flex items-end justify-between border-b border-[#829494] pb-4 mb-8">
-        <h1 className="text-3xl font-bold text-[#315262]">All Courses</h1>
+        {/* Header + Filter Section */}
+        <div className="flex items-end justify-between border-b border-[#829494] pb-4 mb-8">
+          <h1 className="text-3xl font-bold text-[#315262]">All Courses</h1>
 
-        <div className="text-right">
-          <label className="block text-[#315262] text-sm">Filter by category</label>
-          <select
-            value={filter}
-            onChange={(e) => setFilter(e.target.value)}
-            className="mt-1 bg-[#FBFCFC] text-[#315262] border border-[#829494] rounded px-3 py-2 focus:ring focus:ring-[#315262]/40 transition"
-          >
-            <option value="all">All</option>
-            <option value="legal">Legal Foundations</option>
-            <option value="business">Business Structures</option>
-            <option value="credit">Credit</option>
-            <option value="finance">Securities & Finance</option>
-          </select>
+          <div className="text-right">
+            <label className="block text-[#315262] text-sm">Filter by category</label>
+            <select
+              value={filter}
+              onChange={(e) => setFilter(e.target.value)}
+              className="mt-1 bg-white text-[#315262] border border-[#829494] rounded px-3 py-2 focus:ring focus:ring-[#315262]/40 transition"
+            >
+              <option value="all">All</option>
+              <option value="legal">Legal Foundation</option>
+              <option value="financial">Financial Strategy</option>
+              <option value="identity">Identity Management</option>
+            </select>
+          </div>
         </div>
-      </div>
 
         {/* Course Grid */}
         <div className="grid md:grid-cols-3 gap-6">
@@ -156,6 +156,7 @@ export default function Courses() {
         Educational disclaimer: These courses present educational materials only.
         Outcomes depend on individual circumstances and jurisdiction. Consult qualified professionals.
       </p>
+      </div>
     </div>
   );
 }
