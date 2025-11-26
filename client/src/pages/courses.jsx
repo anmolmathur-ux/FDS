@@ -95,67 +95,69 @@ export default function Courses() {
   );
 
   return (
-    <div className="max-w-6xl mx-auto px-6 py-12 bg-[#FBFCFC]">
+    <div className="min-h-screen bg-gradient-to-b from-[#2E4A56] to-[#355A66] py-12">
+      <div className="max-w-6xl mx-auto px-6">
       
-      {/* Header + Filter Section */}
-      <div className="flex items-end justify-between border-b border-[#829494] pb-4 mb-8">
-        <h1 className="text-3xl font-bold text-[#315262]">All Courses</h1>
+        {/* Header + Filter Section */}
+        <div className="flex items-end justify-between border-b border-[#829494] pb-4 mb-8">
+          <h1 className="text-3xl font-bold text-[#FBFCFC]">All Courses</h1>
 
-        <div className="text-right">
-          <label className="block text-[#315262] text-sm">Filter by category</label>
-          <select
-            value={filter}
-            onChange={(e) => setFilter(e.target.value)}
-            className="mt-1 bg-[#FBFCFC] text-[#315262] border border-[#829494] rounded px-3 py-2 focus:ring focus:ring-[#315262]/40 transition"
-          >
-            <option value="all">All</option>
-            <option value="legal">Legal Foundations</option>
-            <option value="business">Business Structures</option>
-            <option value="credit">Credit</option>
-            <option value="finance">Securities & Finance</option>
-          </select>
+          <div className="text-right">
+            <label className="block text-[#FBFCFC] text-sm">Filter by category</label>
+            <select
+              value={filter}
+              onChange={(e) => setFilter(e.target.value)}
+              className="mt-1 bg-[#315262] text-[#FBFCFC] border border-[#829494] rounded px-3 py-2 focus:ring focus:ring-[#FBFCFC]/40 transition"
+            >
+              <option value="all">All</option>
+              <option value="legal">Legal Foundations</option>
+              <option value="business">Business Structures</option>
+              <option value="credit">Credit</option>
+              <option value="finance">Securities & Finance</option>
+            </select>
+          </div>
         </div>
+
+        {/* Course Grid */}
+        <div className="grid md:grid-cols-3 gap-6">
+          {visible.map((c) => (
+            <CourseCard
+              key={c.title}
+              title={c.title}
+              level={c.level}
+              duration={c.duration}
+              summary={c.summary}
+              category={c.category}
+              features={c.features}
+              imageUrl={c.imageUrl}
+              buttonLink={c.buttonLink}
+            />
+          ))}
+        </div>
+
+        {/* Bottom Buttons */}
+        <div className="mt-10 text-center flex justify-center gap-4">
+          <a
+            href="/admission"
+            className="btn-amber inline-block px-6 py-3 rounded bg-[#EFAB47] text-[#FBFCFC] hover:bg-[#d6922e] transition shadow"
+          >
+            Apply Now
+          </a>
+
+          <a
+            href="/about"
+            className="btn-blue inline-block px-6 py-3 rounded bg-[#315262] text-[#FBFCFC] hover:bg-[#253d4a] transition shadow"
+          >
+            Request Info
+          </a>
+        </div>
+
+        {/* Disclaimer */}
+        <p className="mt-8 text-[#FBFCFC] text-center text-sm max-w-3xl mx-auto leading-relaxed">
+          Educational disclaimer: These courses present educational materials only.
+          Outcomes depend on individual circumstances and jurisdiction. Consult qualified professionals.
+        </p>
       </div>
-
-      {/* Course Grid */}
-      <div className="grid md:grid-cols-3 gap-6">
-        {visible.map((c) => (
-          <CourseCard
-            key={c.title}
-            title={c.title}
-            level={c.level}
-            duration={c.duration}
-            summary={c.summary}
-            category={c.category}
-            features={c.features}
-            imageUrl={c.imageUrl}
-            buttonLink={c.buttonLink}
-          />
-        ))}
-      </div>
-
-      {/* Bottom Buttons */}
-      <div className="mt-10 text-center flex justify-center gap-4">
-        <a
-          href="/admission"
-          className="btn-amber inline-block px-6 py-3 rounded bg-[#EFAB47] text-[#FBFCFC] hover:bg-[#d6922e] transition shadow"
-        >
-          Apply Now
-        </a>
-
-        <a
-          href="/about"
-          className="btn-blue inline-block px-6 py-3 rounded bg-[#315262] text-[#FBFCFC] hover:bg-[#253d4a] transition shadow"
-        >
-          Request Info
-        </a>
-      </div>
-
-      {/* Disclaimer */}
-      <p className="mt-8 text-[#315262] text-center text-sm max-w-3xl mx-auto leading-relaxed">
-        Educational disclaimer: These courses present educational materials only.
-        Outcomes depend on individual circumstances and jurisdiction. Consult qualified professionals.
-      </p>
     </div>
   );
 }

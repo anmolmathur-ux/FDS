@@ -59,7 +59,7 @@ export default function About() {
   ];
 
   return (
-    <div>
+    <div className="min-h-screen bg-gradient-to-b from-[#2E4A56] to-[#355A66]">
       {/* ================= HERO SECTION ================= */}
       <section className="hero-gradient border-b border-[#829494]">
         <div
@@ -67,61 +67,19 @@ export default function About() {
           style={{
             backgroundImage: "url('/images/vision.jpg')"
           }}
-        >
-          {/* ---------- CEO MESSAGE + STEPS ---------- */}
-          <section className="bg-[#315262] py-20 font-serif">
-            <h1 className="text-4xl font-bold text-[#FBFCFC] p-6">
-              Vision & Mission
-            </h1>
-
-            {/* CEO MESSAGE */}
-            <div className="max-w-4xl mx-auto px-6 text-center mb-20">
-              <blockquote className="text-2xl italic text-[#FBFCFC] leading-relaxed">
-                Financial freedom comes from the courage to invest in
-                self-education.  
-                The path to total independence — legally, financially, and
-                spiritually — unfolds through the following steps:
-              </blockquote>
-            </div>
-
-            {/* STEPS GRID */}
-            <div className="max-w-6xl mx-auto px-6 text-center">
-              <h2 className="text-3xl font-bold text-[#FBFCFC] mb-12">
-                Steps to Total Independence
-              </h2>
-
-              <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                {steps.map((step) => (
-                  <div
-                    key={step.number}
-                    className="steps-card rounded-2xl p-6 border border-gray-200 hover:shadow-xl transition"
-                    style={{
-                      backgroundImage: `url(${step.image})`
-                    }}
-                  >
-                    <div className="steps-card-content">
-                      <div className="text-5xl font-bold text-[#FBFCFC] mb-4">
-                        {step.number}
-                      </div>
-                      <h3 className="text-xl font-semibold text-[#FBFCFC] mb-2">
-                        {step.title}
-                      </h3>
-                      <p className="text-[#FBFCFC] leading-relaxed">
-                        {step.description}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+          >
+          </div>
           </section>
-        </div>
-      </section>
+        
 
+           
+            
+
+                    
       {/* ===========================================================
         Vision & Mission
       ============================================================ */}
-      <section className="bg-[#315262] py-16 px-6 border-b-4 border-[#829494] font-serif">
+      <section className="bg-[#315262]/80 py-16 px-6 border-b-4 border-[#829494] font-serif">
 
         {/* Header */}
         <motion.div
