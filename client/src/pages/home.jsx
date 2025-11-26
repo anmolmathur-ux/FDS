@@ -20,23 +20,23 @@ export default function Home() {
   }}
 >
   <div className="absolute inset-0 bg-[#315262]/60 z-0"></div>
-  <div className="relative z-10 max-w-6xl text-center px-4 sm:px-6 py-12">
-    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#EFAB47] leading-tight">
+  <div className="relative z-10 max-w-6xl text-center px-6 py-12">
+    <h1 className="text-4xl md:text-6xl font-bold text-[#EFAB47]">
       Become Private. Build Generational Wealth.
     </h1>
 
-    <p className="mt-4 text-base sm:text-lg md:text-xl text-[#FBFCFC] px-2 sm:px-6">
+    <p className="mt-4 text-lg md:text-xl text-[#FBFCFC] p-6">
       Structured courses on status corrections, secure party creditor
       concepts, unincorporated business trusts, credit optimization,
       reclaiming securities, and debt discharge strategies.
     </p>
 
-    <div className="mt-6 flex justify-center gap-4 flex-wrap px-2 sm:px-6">
+    <div className="mt-6 flex justify-center gap-4 flex-wrap p-6">
       <a href="/admission" className="btn-amber">Apply Now</a>
       <a href="/about" className="btn-blue">Request Info</a>
     </div>
 
-    <ul className="mt-6 flex flex-wrap justify-center gap-4 sm:gap-8 text-white px-2 sm:px-6">
+    <ul className="mt-6 flex justify-center gap-8 text-white p-6">
       <li><strong>6</strong> core subject areas</li>
       <li><strong>Self-paced</strong> modules</li>
       <li><strong>Community</strong> support</li>
