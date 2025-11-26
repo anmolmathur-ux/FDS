@@ -24,7 +24,7 @@ export default function Admission() {
 
   return (
     <div className="bg-[#315262] min-h-screen">
-      <section className="section">
+      <section className="max-w-6xl mx-auto px-6 py-12">
         <div className="grid gap-6">
           <div>
             {/* HERO */}
