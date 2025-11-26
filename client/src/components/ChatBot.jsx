@@ -154,7 +154,7 @@ const ChatBot = () => {
                 onChange={(e) => setInputValue(e.target.value)}
                 onKeyPress={handleKeyPress}
                 placeholder="Type your message..."
-                className="flex-1 border border-gray-300 rounded-l-2xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#2F4A55] focus:border-transparent"
+                className="flex-1 border border-gray-300 rounded-l-2xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#2F4A55] focus:border-transparent text-black placeholder-gray-500"
               />
               <button
                 onClick={handleSend}
