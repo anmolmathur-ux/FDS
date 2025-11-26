@@ -45,7 +45,7 @@ export default function Home() {
       </section>
 
       {/* GOALS & IDEALS SECTION */}
-      <section className="py-16 sm:py-20 md:py-24 bg-white">
+      <section className="py-16 sm:py-20 md:py-10 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           {/* Main Heading */}
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#2F4A55] text-center mb-6 sm:mb-8 font-serif tracking-wide">
@@ -61,6 +61,11 @@ export default function Home() {
           <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#2F4A55] text-center mb-3 sm:mb-6 font-serif tracking-wide">
             Sovereignty Path
           </h3>
+          
+          {/* Subtitle */}
+          <p className="text-[#2F4A55]/80 text-center text-base sm:text-lg mb-8 sm:mb-12">
+            Six steps toward full legal, financial, and spiritual independence.
+          </p>
           
           {/* Timeline */}
           <div className="mt-0">

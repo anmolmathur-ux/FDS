@@ -110,7 +110,7 @@ const Timeline = () => {
   };
 
   return (
-    <div className="w-full py-12 lg:py-16">
+    <div className="w-full py-12 lg:py-1">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Three-column layout for desktop */}
         <div className="hidden md:grid md:grid-cols-3 gap-8 lg:gap-12">
