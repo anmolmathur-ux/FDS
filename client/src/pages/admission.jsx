@@ -157,7 +157,7 @@ export default function Admission() {
             </div>
 
             <div className="mt-8 bg-[#EFAB47]/20 border border-[#EFAB47] rounded-xl p-6">
-              <p className="text-[#315262]">
+              <p className="text-white font-semibold">
                 Educational disclaimer: Enrollment provides access to educational materials only.
                 It does not constitute legal, financial, or tax advice.
               </p>
