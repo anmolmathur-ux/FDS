@@ -52,6 +52,87 @@ export default function VisionMission() {
         </p>
       </motion.div>
 
+      {/* Core Values */}
+      <div className="mt-16 grid md:grid-cols-2 gap-8 items-center">
+        <div className="bg-[#EFAB47] p-8 rounded-2xl">
+          <motion.h2
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-3xl font-bold text-[#315262] text-center md:text-left"
+          >
+            Core Values
+          </motion.h2>
+
+          <motion.ul
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="mt-6 space-y-4 text-lg text-white"
+          >
+            
+          </motion.ul>
+        </div>
+        {/* Core Values Object */}
+<motion.div
+  initial={{ opacity: 0, x: 50 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.8 }}
+  className="bg-gradient-to-br from-[#efe7da] to-[#d6ccb8] p-8 rounded-3xl shadow-lg max-w-xl mx-auto md:mx-0"
+>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    {/* Privacy */}
+    <div className="bg-white/80 backdrop-blur rounded-xl p-4 shadow flex gap-3">
+      <span className="text-yellow-600 text-2xl">🔒</span>
+      <div>
+        <h4 className="font-semibold text-gray-900">Privacy</h4>
+        <p className="text-gray-600 text-sm">
+          Your information and sovereignty are sacred.
+        </p>
+      </div>
+    </div>
+
+    {/* Compliance */}
+    <div className="bg-white/80 backdrop-blur rounded-xl p-4 shadow flex gap-3">
+      <span className="text-yellow-600 text-2xl">📜</span>
+      <div>
+        <h4 className="font-semibold text-gray-900">Compliance</h4>
+        <p className="text-gray-600 text-sm">
+          Operate responsibly while mastering lawful processes.
+        </p>
+      </div>
+    </div>
+
+    {/* Empowerment */}
+    <div className="bg-white/80 backdrop-blur rounded-xl p-4 shadow flex gap-3">
+      <span className="text-yellow-600 text-2xl">⚡</span>
+      <div>
+        <h4 className="font-semibold text-gray-900">Empowerment</h4>
+        <p className="text-gray-600 text-sm">
+          We equip you with actionable guidance and real strategies.
+        </p>
+      </div>
+    </div>
+
+    {/* Integrity */}
+    <div className="bg-white/80 backdrop-blur rounded-xl p-4 shadow flex gap-3">
+      <span className="text-yellow-600 text-2xl">⚖️</span>
+      <div>
+        <h4 className="font-semibold text-gray-900">Integrity</h4>
+        <p className="text-gray-600 text-sm">
+          Transparent, ethical, and principle-based education.
+        </p>
+      </div>
+    </div>
+  </div>
+</motion.div>
+
+      </div>
+
       {/* Approach */}
       <motion.h2
         initial={{ opacity: 0, y: 40 }}
@@ -100,36 +181,6 @@ export default function VisionMission() {
             <p className="text-white leading-relaxed">{card.desc}</p>
           </motion.div>
         ))}
-      </div>
-
-      {/* Core Values */}
-      <motion.h2
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-        className="mt-16 text-3xl font-bold text-white text-center"
-      >
-        Core Values
-      </motion.h2>
-
-      <motion.ul
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-        className="mt-6 space-y-4 max-w-4xl mx-auto text-lg text-white"
-      >
-        
-      </motion.ul>
-
-      {/* Core Values Image */}
-      <div className="mt-8 flex justify-center">
-        <img 
-          src={coreImg} 
-          alt="Core Values" 
-          className="max-w-full h-auto rounded-lg shadow-lg"
-        />
       </div>
 
       {/* Disclaimer */}
