@@ -31,7 +31,7 @@ export default function Courses() {
       summary:
         "Understanding frameworks, filings, and risk management.",
       category: "legal",
-      features: ["Frameworks", "Risk Management"],
+      features: ["Frameworks", "Risk Management", "Compliance"],
       imageUrl: course2,
       buttonLink: "/admission"
     },
@@ -42,7 +42,7 @@ export default function Courses() {
       summary:
         "Establishing and operating private trust structures.",
       category: "business",
-      features: ["Private Trusts", "Operating Structures"],
+      features: ["Private Trusts", "Operating Structures","Creditor Rights"],
       imageUrl: course3  ,
       buttonLink: "/admission"
     },
