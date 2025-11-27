@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function CoreValues() {
   return (
-    <div className="mt-16">
+    <div className="mt-8">
       <div className="flex flex-col items-center">
         <motion.h2
           initial={{ opacity: 0, y: 40 }}
@@ -20,7 +20,7 @@ export default function CoreValues() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="bg-gradient-to-br from-[#efe7da] to-[#EFAB47] p-12 rounded-3xl shadow-lg max-w-2xl w-full mx-auto"
+          className="bg-gradient-to-br from-[#efe7da] to-[#EFAB47] p-6 rounded-3xl shadow-lg max-w-2xl w-full mx-auto"
         >
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {/* Privacy */}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import SovImage from '../assets/Sov.jpg';
 
 const Timeline = () => {
@@ -45,6 +45,9 @@ const Timeline = () => {
   // Split features into left and right columns
   const leftFeatures = features.slice(0, 3);
   const rightFeatures = features.slice(3, 6);
+
+  // Reference for fade-in animation
+  const sectionRef = useRef(null);
 
   // Simple icon representations using SVG paths
   const renderIcon = (iconType) => {
@@ -109,9 +112,36 @@ const Timeline = () => {
     }
   };
 
+  // Add fade-in animation on scroll
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in-visible');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <div className="w-full py-12 lg:py-1">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+    <div className="w-full py-8 lg:py-10 bg-gradient-to-b from-white to-gray-50">
+      <div 
+        ref={sectionRef}
+        className="max-w-7xl mx-auto px-4 sm:px-6 fade-in-element"
+      >
         {/* Three-column layout for desktop */}
         <div className="hidden md:grid md:grid-cols-3 gap-8 lg:gap-12">
           {/* Left column */}
@@ -119,16 +149,20 @@ const Timeline = () => {
             {leftFeatures.map((feature, index) => (
               <div 
                 key={feature.id}
-                className="group flex items-start space-x-4 p-4 rounded-xl transition-all duration-300 hover:bg-white/50 hover:shadow-lg hover:-translate-y-1"
+                className="group flex items-start space-x-4 p-6 rounded-2xl transition-all duration-500 hover:bg-white hover:shadow-xl hover:-translate-y-2 border border-transparent hover:border-gray-100"
               >
                 <div className="flex-shrink-0 mt-1">
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-[#EFAB47]/10 to-[#D4AF37]/10 flex items-center justify-center text-[#EFAB47] group-hover:scale-110 transition-transform duration-300">
-                    {renderIcon(feature.icon)}
+                  {/* Soft shadow background behind each step icon */}
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-gradient-to-br from-[#EFAB47]/20 to-[#D4AF37]/10 rounded-xl blur-md opacity-70"></div>
+                    <div className="relative w-14 h-14 rounded-xl bg-gradient-to-br from-[#EFAB47]/15 to-[#D4AF37]/15 flex items-center justify-center text-[#EFAB47] group-hover:scale-110 transition-all duration-300 shadow-lg">
+                      {renderIcon(feature.icon)}
+                    </div>
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-[#1F3A48] mb-1">{feature.title}</h3>
-                  <p className="text-[#1F3A48]/80 text-sm leading-relaxed">{feature.description}</p>
+                  <h3 className="text-xl font-bold text-[#1F3A48] mb-2">{feature.title}</h3>
+                  <p className="text-[#1F3A48]/80 text-base leading-relaxed">{feature.description}</p>
                 </div>
               </div>
             ))}
@@ -137,12 +171,15 @@ const Timeline = () => {
           {/* Center column with image */}
           <div className="flex items-center justify-center">
             <div className="relative">
-              <div className="w-64 h-64 lg:w-72 lg:h-72 rounded-2xl bg-gradient-to-br from-[#EFAB47]/20 to-[#315262]/20 flex items-center justify-center shadow-xl overflow-hidden">
-                <img 
-                  src={SovImage} 
-                  alt="Sovereignty Path" 
-                  className="w-full h-full object-cover"
-                />
+              {/* Larger center image with smooth gradient border */}
+              <div className="relative w-80 h-80 lg:w-96 lg:h-96 rounded-3xl bg-gradient-to-br from-[#EFAB47] via-[#D4AF37] to-[#315262] p-1.5 shadow-2xl">
+                <div className="w-full h-full rounded-2xl overflow-hidden bg-white">
+                  <img 
+                    src={SovImage} 
+                    alt="Sovereignty Path" 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -152,16 +189,20 @@ const Timeline = () => {
             {rightFeatures.map((feature, index) => (
               <div 
                 key={feature.id}
-                className="group flex items-start space-x-4 p-4 rounded-xl transition-all duration-300 hover:bg-white/50 hover:shadow-lg hover:-translate-y-1"
+                className="group flex items-start space-x-4 p-6 rounded-2xl transition-all duration-500 hover:bg-white hover:shadow-xl hover:-translate-y-2 border border-transparent hover:border-gray-100"
               >
                 <div className="flex-shrink-0 mt-1">
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-[#EFAB47]/10 to-[#D4AF37]/10 flex items-center justify-center text-[#EFAB47] group-hover:scale-110 transition-transform duration-300">
-                    {renderIcon(feature.icon)}
+                  {/* Soft shadow background behind each step icon */}
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-gradient-to-br from-[#EFAB47]/20 to-[#D4AF37]/10 rounded-xl blur-md opacity-70"></div>
+                    <div className="relative w-14 h-14 rounded-xl bg-gradient-to-br from-[#EFAB47]/15 to-[#D4AF37]/15 flex items-center justify-center text-[#EFAB47] group-hover:scale-110 transition-all duration-300 shadow-lg">
+                      {renderIcon(feature.icon)}
+                    </div>
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-[#1F3A48] mb-1">{feature.title}</h3>
-                  <p className="text-[#1F3A48]/80 text-sm leading-relaxed">{feature.description}</p>
+                  <h3 className="text-xl font-bold text-[#1F3A48] mb-2">{feature.title}</h3>
+                  <p className="text-[#1F3A48]/80 text-base leading-relaxed">{feature.description}</p>
                 </div>
               </div>
             ))}
@@ -173,16 +214,20 @@ const Timeline = () => {
           {features.map((feature, index) => (
             <div 
               key={feature.id}
-              className="group flex items-start space-x-4 p-4 rounded-xl bg-white/50 backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+              className="group flex items-start space-x-4 p-6 rounded-2xl bg-white backdrop-blur-sm transition-all duration-500 hover:shadow-xl hover:-translate-y-1 border border-gray-100"
             >
               <div className="flex-shrink-0 mt-1">
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-[#EFAB47]/10 to-[#D4AF37]/10 flex items-center justify-center text-[#EFAB47] group-hover:scale-110 transition-transform duration-300">
-                  {renderIcon(feature.icon)}
+                {/* Soft shadow background behind each step icon */}
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#EFAB47]/20 to-[#D4AF37]/10 rounded-xl blur-md opacity-70"></div>
+                  <div className="relative w-14 h-14 rounded-xl bg-gradient-to-br from-[#EFAB47]/15 to-[#D4AF37]/15 flex items-center justify-center text-[#EFAB47] group-hover:scale-110 transition-all duration-300 shadow-lg">
+                    {renderIcon(feature.icon)}
+                  </div>
                 </div>
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-[#1F3A48] mb-1">{feature.title}</h3>
-                <p className="text-[#1F3A48]/80 text-sm leading-relaxed">{feature.description}</p>
+                <h3 className="text-xl font-bold text-[#1F3A48] mb-2">{feature.title}</h3>
+                <p className="text-[#1F3A48]/80 text-base leading-relaxed">{feature.description}</p>
               </div>
             </div>
           ))}

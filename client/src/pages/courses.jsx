@@ -31,7 +31,7 @@ export default function Courses() {
       summary:
         "Understanding frameworks, filings, and risk management.",
       category: "legal",
-      features: ["Frameworks", "Risk Management"],
+      features: ["Frameworks", "Risk Management", "Compliance"],
       imageUrl: course2,
       buttonLink: "/admission"
     },
@@ -40,9 +40,9 @@ export default function Courses() {
       level: "Intermediate",
       duration: "4 weeks",
       summary:
-        "Establishing and operating private trust structures.",
+        " Establishing and operating private trust structures with expertise. ",
       category: "business",
-      features: ["Private Trusts", "Operating Structures"],
+      features: ["Private Trusts", "Operating Structures","Creditor Rights"],
       imageUrl: course3  ,
       buttonLink: "/admission"
     },
@@ -66,7 +66,7 @@ export default function Courses() {
       level: "Intermediate",
       duration: "3 weeks",
       summary:
-        "Vendor tiers, trade lines, and underwriting signals.",
+        "Vendor tiers , trade lines, and underwriting signals.",
       category: "credit",
       features: ["Vendor Tiers", "Trade Lines", "Underwriting Signals"],
       imageUrl: course5,
@@ -99,8 +99,8 @@ export default function Courses() {
       <div className="max-w-6xl mx-auto px-6 py-12">
       
         {/* Header + Filter Section */}
-        <div className="flex items-end justify-between border-b border-[#829494] pb-4 mb-8">
-          <h1 className="text-3xl font-bold text-[#315262]">All Courses</h1>
+        <div className="flex items-end justify-between border-b border-[#829494] pb-6 mb-8">
+          <h1 className="text-4xl font-bold text-[#315262]">All Courses</h1>
 
           <div className="text-right">
             <label className="block text-[#315262] text-sm">Filter by category</label>
@@ -135,7 +135,7 @@ export default function Courses() {
         </div>
 
         {/* Bottom Buttons */}
-        <div className="mt-10 text-center flex justify-center gap-4">
+        <div className="mt-8 text-center flex justify-center gap-4">
           <a
             href="/admission"
             className="btn-amber inline-block px-6 py-3 rounded transition shadow"

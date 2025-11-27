@@ -21,76 +21,11 @@ export default function SiteHeader() {
           />
           <span className="text-white">FREEDOM SOLUTIONS</span>
         </NavLink>
-
-        {/* DESKTOP NAV */}
-        <nav className="hidden md:flex ml-auto gap-6">
-          <NavLink to="/" className={({ isActive }) =>
-              `nav-link ${isActive ? "nav-link-active" : ""}`}>Home</NavLink>
-          <NavLink to="/courses" className={({ isActive }) =>
-              `nav-link ${isActive ? "nav-link-active" : ""}`}>Courses</NavLink>
-          <NavLink to="/admission" className={({ isActive }) =>
-              `nav-link ${isActive ? "nav-link-active" : ""}`}>Admission</NavLink>
-          <NavLink to="/about" className={({ isActive }) =>
-              `nav-link ${isActive ? "nav-link-active" : ""}`}>Vision & Mission</NavLink>
-        </nav>
-
-        {/* MOBILE TOGGLE BUTTON */}
-        <button
-          className="md:hidden text-white text-3xl"
-          onClick={() => setOpen(!open)}
-        >
-          {open ? "✕" : "☰"}
-        </button>
-      </div>
-
-      {/* MOBILE MENU */}
-      <div
-        className={`md:hidden bg-[#315262] text-white transition-all duration-300 overflow-hidden ${
-          open ? "max-h-60 py-4" : "max-h-0"
-        }`}
-      >
-        <nav className="flex flex-col gap-4 px-6">
-
-          <NavLink
-            to="/"
-            onClick={() => setOpen(false)}
-            className={({ isActive }) =>
-              `nav-link-mobile ${isActive ? "nav-link-active" : ""}`
-            }
-          >
-            Home
-          </NavLink>
-
-          <NavLink
-            to="/courses"
-            onClick={() => setOpen(false)}
-            className={({ isActive }) =>
-              `nav-link-mobile ${isActive ? "nav-link-active" : ""}`
-            }
-          >
-            Courses
-          </NavLink>
-
-          <NavLink
-            to="/admission"
-            onClick={() => setOpen(false)}
-            className={({ isActive }) =>
-              `nav-link-mobile ${isActive ? "nav-link-active" : ""}`
-            }
-          >
-            Admission
-          </NavLink>
-
-          <NavLink
-            to="/about"
-            onClick={() => setOpen(false)}
-            className={({ isActive }) =>
-              `nav-link-mobile ${isActive ? "nav-link-active" : ""}`
-            }
-          >
-            Vision & Mission
-          </NavLink>
-
+        <nav className="ml-auto flex gap-6">
+          <NavLink to="/" className={({isActive})=>`nav-link ${isActive?"nav-link-active":""}`}>Home</NavLink>
+          <NavLink to="/courses" className={({isActive})=>`nav-link ${isActive?"nav-link-active":""}`}>Courses</NavLink>
+          <NavLink to="/admission" className={({isActive})=>`nav-link ${isActive?"nav-link-active":""}`}>Admission</NavLink>
+          <NavLink to="/about" className={({isActive})=>`nav-link ${isActive?"nav-link-active":""}`}>Vision & Mission</NavLink>
         </nav>
       </div>
     </header>
