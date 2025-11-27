@@ -66,7 +66,7 @@ const AboutNew = () => {
       </section>
 
       {/* SECTION 2 — TEXT SECTION: "We Make Sure Your Idea Delivered Properly" */}
-      <section className="py-16 bg-white pt-8">
+      <section className="py-16 bg-gradient-to-br from-[#F8F9FA] to-[#E9ECEF] pt-8">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-12 text-left hover:text-[#333] transition-colors duration-300">
             We Make Sure Your Idea & Creation Delivered Properly
@@ -94,7 +94,7 @@ const AboutNew = () => {
       </section>
 
       {/* SECTION 3 — BUSINESS OWNER EMPOWERMENT BLOCK */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-gradient-to-br from-[#F8F9FA] to-[#E9ECEF]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="rounded-[20px] overflow-hidden shadow-lg">
@@ -119,7 +119,7 @@ const AboutNew = () => {
               </p>
               
               {/* QUOTE CARD */}
-              <div className="bg-white rounded-xl p-6 shadow-md border border-gray-100">
+              <div className="bg-white rounded-xl p-6 shadow-md border border-gray-200">
                 <p className="text-[#1A1A1A] text-lg italic mb-2 hover:text-[#333] transition-colors duration-300">
                   "Making an impact, together"
                 </p>
@@ -133,7 +133,7 @@ const AboutNew = () => {
       </section>
 
       {/* SECTION 4 — BUSINESS GROWTH SECTION */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-gradient-to-br from-[#F8F9FA] to-[#E9ECEF]">
         <div className="max-w-7xl mx-auto px-6 text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4 hover:text-[#333] transition-colors duration-300">
             We help business to grow faster and bigger
