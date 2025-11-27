@@ -9,9 +9,9 @@ const AboutNew = () => {
   const portraitImage = "https://images.unsplash.com/photo-1718087036737-62d69f635ba3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fEFib3V0JTIwdXN8ZW58MHx8MHx8fDA%3D";
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-b from-[#2E4A56] to-[#355A66]">
       {/* SECTION 1 — HERO SECTION (TOP YELLOW HEADER) */}
-      <section className="bg-blue-600 rounded-b-[40px] py-24 md:py-32 relative overflow-hidden">
+      <section className="bg-[#315262]/80 rounded-b-[40px] py-24 md:py-32 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight hover:text-gray-200 transition-colors duration-300">
