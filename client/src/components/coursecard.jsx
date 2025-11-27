@@ -1,5 +1,5 @@
 import React from 'react';
-
+import SiteFooter from './sitefooter';
 // Map difficulty levels to colors and labels
 const difficultyConfig = {
   'Foundational': { 
