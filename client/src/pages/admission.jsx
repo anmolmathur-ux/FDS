@@ -69,7 +69,7 @@ export default function Admission() {
                 <img 
                   src={logoImg} 
                   alt="FDS Logo" 
-                  className="w-32 h-32 object-contain"
+                  className="w-40 h-40 object-contain"
                 />
               </div>
             </div>
