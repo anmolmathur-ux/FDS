@@ -40,7 +40,7 @@ export default function Courses() {
       level: "Intermediate",
       duration: "4 weeks",
       summary:
-        "Establishing and operating private trust structures.",
+        " Establishing and operating private trust structures with expertise. ",
       category: "business",
       features: ["Private Trusts", "Operating Structures","Creditor Rights"],
       imageUrl: course3  ,
@@ -66,7 +66,7 @@ export default function Courses() {
       level: "Intermediate",
       duration: "3 weeks",
       summary:
-        "Vendor tiers, trade lines, and underwriting signals.",
+        "Vendor tiers , trade lines, and underwriting signals.",
       category: "credit",
       features: ["Vendor Tiers", "Trade Lines", "Underwriting Signals"],
       imageUrl: course5,
