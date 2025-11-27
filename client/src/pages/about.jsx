@@ -5,6 +5,10 @@ import step3Img from "../assets/step3.jpg";
 import step4Img from "../assets/step4.jpg";
 import step5Img from "../assets/step5.jpg";
 import step6Img from "../assets/step6.jpg";
+<<<<<<< HEAD
+=======
+import VisionMission from "../components/VisionMission.jsx";
+>>>>>>> b6557bad996a96b58e00ebc671d1af25267235d6
 
 export default function About() {
   const steps = [
@@ -50,14 +54,15 @@ export default function About() {
   ];
 
   return (
-    <div>
+    <div className="min-h-screen bg-gradient-to-b from-[#2E4A56] to-[#355A66]">
       {/* ================= HERO SECTION ================= */}
-      <section className="hero-gradient border-b border-[#829494]">
+      <section className="border-b border-[#829494]">
         <div
           className="vision-section"
           style={{
             backgroundImage: "url('/images/vision.jpg')"
           }}
+<<<<<<< HEAD
         >
           {/* ---------- CEO MESSAGE + STEPS ---------- */}
           <section className="bg-[#315262] py-20 font-serif">
@@ -176,10 +181,16 @@ export default function About() {
                 </div>
               </div>
             </div>
+=======
+          >
+          </div>
+>>>>>>> b6557bad996a96b58e00ebc671d1af25267235d6
           </section>
-        </div>
-      </section>
+        
+           
+            
 
+<<<<<<< HEAD
     {/* ----------- REST OF YOUR ORIGINAL CONTENT ----------- */ }
     <section className="section bg-[#FBFCFC] p-6 border-b-4 border-[#829494]">
         <h2 className="text-3xl font-bold text-[#315262] ">
@@ -250,6 +261,13 @@ export default function About() {
           </p>
         </div>
       </section>
+=======
+                    
+      {/* ===========================================================
+        Vision & Mission
+      ============================================================ */}
+      <VisionMission />
+>>>>>>> b6557bad996a96b58e00ebc671d1af25267235d6
     </div>
   );
 }

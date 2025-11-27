@@ -28,6 +28,7 @@
 ---------------------------------------------------- */
 :root {
   /* Primary Colors from Logo */
+<<<<<<< HEAD
   --dark-teal: #315262;
   /* Dark Teal (Shield & Leaves) */
   --golden-yellow: #EFAB47;
@@ -37,11 +38,18 @@
   --logo-white: #FBFCFC;
   /* White (Text / Background elements) */
 
+=======
+  --dark-teal: #315262;           /* Dark Teal (Shield & Leaves) */
+  --golden-yellow: #EFAB47;       /* Golden Yellow (Book Pages & Sun) */
+  --light-gray-blue: #829494;     /* Light Gray-Blue (Borders / Highlights) */
+  --logo-white: #FBFCFC;          /* White (Text / Background elements) */
+  
+>>>>>>> b6557bad996a96b58e00ebc671d1af25267235d6
   /* Secondary/Complementary Colors */
   --dark-teal-darker: #253d4a;
   --golden-yellow-darker: #d6922e;
   --light-gray-blue-lighter: #9aa9a9;
-  --logo-white-darker: #e8eaea;
+  --logo-white-darker: #c5c9ca;
 }
 
 /* ----------------------------------------------------
@@ -75,11 +83,11 @@
 
 .btn-blue:hover {
   background-color: var(--dark-teal-darker);
+  color: var(--logo-white); /* Explicitly set text color to white on hover */
   transform: scale(1.06);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
 }
 
-/* New yellow button */
 .btn-yellow {
   background-color: var(--golden-yellow);
   color: var(--logo-white);
@@ -103,6 +111,7 @@
 }
 
 /* ----------------------------------------------------
+<<<<<<< HEAD
    HERO SECTION STYLES
 ---------------------------------------------------- */
 .hero-wrapper {
@@ -131,10 +140,12 @@
 }
 
 /* ----------------------------------------------------
+=======
+>>>>>>> b6557bad996a96b58e00ebc671d1af25267235d6
    GLOBAL COLORS & TYPOGRAPHY
 ---------------------------------------------------- */
 body {
-  background-color: var(--logo-white);
+  background-color: var(--dark-teal);
   color: var(--dark-teal);
 }
 
@@ -160,11 +171,16 @@ h2 {
 h3 {
   font-size: 1.125rem;
   font-weight: 600;
-  color: var(--dark-teal-darker);
+  color: var(--dark-teal);
 }
 
+<<<<<<< HEAD
 p {
   color: var(--light-gray-blue);
+=======
+p { 
+  color: var(--dark-teal);
+>>>>>>> b6557bad996a96b58e00ebc671d1af25267235d6
 }
 
 a {
@@ -191,6 +207,7 @@ a:hover {
   padding: 1.5rem 1.5rem;
 }
 
+<<<<<<< HEAD
 .hero-gradient {
   background-image: url('home.jpg'),
     linear-gradient(var(--light-gray-blue-lighter), rgba(130, 148, 148, 0.6) 10%, var(--logo-white) 10%);
@@ -208,8 +225,10 @@ a:hover {
   color: var(--dark-teal);
 }
 
+=======
+>>>>>>> b6557bad996a96b58e00ebc671d1af25267235d6
 /* ----------------------------------------------------
-   NAVIGATION (Improved)
+   NAVIGATION
 ---------------------------------------------------- */
 .nav-blur {
   background-color: rgba(49, 82, 98, 0.7);
@@ -221,12 +240,6 @@ a:hover {
 .nav-blur:hover {
   background-color: rgba(49, 82, 98, 0.9);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
-}
-
-/* Brand header area */
-.header-brand {
-  background-color: var(--dark-teal);
-  color: var(--logo-white);
 }
 
 .nav-link {
@@ -247,7 +260,7 @@ a:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Brand and footer logo sizing (Tailwind component classes) */
+/* Brand and footer logo sizing */
 .logo-brand {
   width: 2.5rem;
   height: 2.5rem;
@@ -277,7 +290,7 @@ a:hover {
 }
 
 /* ----------------------------------------------------
-   CARD COMPONENTS (Motion Improved)
+   CARD COMPONENTS
 ---------------------------------------------------- */
 .card-soft {
   background-color: var(--logo-white);
@@ -294,6 +307,7 @@ a:hover {
 }
 
 /* ----------------------------------------------------
+<<<<<<< HEAD
    SMOOTH SECTION REVEAL ANIMATION
 ---------------------------------------------------- */
 section {
@@ -322,6 +336,8 @@ section:nth-of-type(4) {
 }
 
 /* ----------------------------------------------------
+=======
+>>>>>>> b6557bad996a96b58e00ebc671d1af25267235d6
    DIVIDERS
 ---------------------------------------------------- */
 .divider {
@@ -336,25 +352,6 @@ section:nth-of-type(4) {
   border-radius: 0.5rem;
   overflow: hidden;
   border: 1px solid var(--light-gray-blue);
-}
-
-.admission-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(49, 82, 98, 0.6), rgba(49, 82, 98, 0.75));
-}
-
-.admission-overlay {
-  position: absolute;
-  left: .7rem;
-  top: .7rem;
-  right: .7rem;
-  bottom: .7rem;
-  background: rgba(49, 82, 98, 0.7);
-  color: var(--logo-white);
-  padding: 1rem;
-  border-radius: 0.5rem;
 }
 
 /* White sidebar cards with blue accents */
@@ -374,12 +371,12 @@ section:nth-of-type(4) {
 }
 
 .aside-link {
-  color: var(--dark-teal-darker);
+  color: var(--dark-teal);
   transition: 0.25s ease;
 }
 
 .aside-link:hover {
-  color: var(--dark-teal);
+  color: var(--dark-teal-darker);
 }
 
 .aside-select {
