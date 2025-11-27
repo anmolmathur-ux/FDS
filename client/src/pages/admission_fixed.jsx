@@ -186,7 +186,7 @@ export default function Admission() {
                   </select>
                 </label>
 
-                <button disabled={applyLoading} className="btn-yellow mt-2 text-sm sm:text-base">
+                <button disabled={applyLoading} className="btn-amber mt-2 text-sm sm:text-base">
                   {applyLoading ? "Submitting..." : "Submit Application"}
                 </button>
               </form>
