@@ -50,6 +50,7 @@
 
 .btn-blue:hover {
   background-color: var(--dark-teal-darker);
+  color: var(--logo-white); /* Explicitly set text color to white on hover */
   transform: scale(1.06);
   box-shadow: 0 6px 16px rgba(0,0,0,0.25);
 }

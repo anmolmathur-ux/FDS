@@ -138,14 +138,14 @@ export default function Courses() {
         <div className="mt-10 text-center flex justify-center gap-4">
           <a
             href="/admission"
-            className="btn-amber inline-block px-6 py-3 rounded bg-[#EFAB47] text-[#FBFCFC] hover:bg-[#d6922e] transition shadow"
+            className="btn-amber inline-block px-6 py-3 rounded transition shadow"
           >
             Apply Now
           </a>
 
           <a
             href="/about"
-            className="btn-blue inline-block px-6 py-3 rounded bg-[#315262] text-[#FBFCFC] hover:bg-[#253d4a] transition shadow"
+            className="btn-blue inline-block px-6 py-3 rounded transition shadow"
           >
             Request Info
           </a>
