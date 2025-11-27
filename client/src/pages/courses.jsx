@@ -43,7 +43,7 @@ export default function Courses() {
         " Establishing and operating private trust structures with expertise. ",
       category: "business",
       features: ["Private Trusts", "Operating Structures","Creditor Rights"],
-      imageUrl: course3  ,
+      imageUrl: course3,
       buttonLink: "/admission"
     },
     {
@@ -99,8 +99,8 @@ export default function Courses() {
       <div className="max-w-6xl mx-auto px-6 py-12">
       
         {/* Header + Filter Section */}
-        <div className="flex items-end justify-between border-b border-[#829494] pb-6 mb-8">
-          <h1 className="text-4xl font-bold text-[#315262]">All Courses</h1>
+        <div className="flex items-end justify-between border-b border-[#829494] pb-4 mb-8">
+          <h1 className="text-3xl font-bold text-[#315262]">All Courses</h1>
 
           <div className="text-right">
             <label className="block text-[#315262] text-sm">Filter by category</label>
