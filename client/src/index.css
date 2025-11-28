@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  @keyframes fadeUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .animate-fade-up {
+      animation-duration: 0.4s;
+    }
+  }
+}
+
 /* ----------------------------------------------------
   COLOR PALETTE FROM LOGO
 ---------------------------------------------------- */
@@ -28,14 +49,14 @@
   font-weight: 700;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .btn-amber:hover {
   background-color: var(--golden-yellow-darker);
   transform: scale(1.06);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
 }
 
 .btn-blue {
@@ -44,7 +65,7 @@
   font-weight: 700;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 
@@ -52,7 +73,7 @@
   background-color: var(--dark-teal-darker);
   color: var(--logo-white); /* Explicitly set text color to white on hover */
   transform: scale(1.06);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
 }
 
 .btn-yellow {
@@ -61,14 +82,14 @@
   font-weight: 700;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .btn-yellow:hover {
   background-color: var(--golden-yellow-darker);
   transform: scale(1.06);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
 }
 
 .btn-blue:active,
@@ -142,14 +163,15 @@ a:hover {
    NAVIGATION
 ---------------------------------------------------- */
 .nav-blur {
-  background-color: rgba(49, 82, 98, 0.7); /* Dark Teal with transparency */
+  background-color: rgba(49, 82, 98, 0.7);
+  /* Dark Teal with transparency */
   backdrop-filter: blur(8px);
   transition: 0.3s ease;
 }
 
 .nav-blur:hover {
   background-color: rgba(49, 82, 98, 0.9);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.45);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
 }
 
 .nav-link {
@@ -167,7 +189,7 @@ a:hover {
 .nav-link-active {
   background-color: var(--golden-yellow);
   color: var(--dark-teal);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Brand and footer logo sizing */
@@ -207,13 +229,13 @@ a:hover {
   border: 1px solid var(--light-gray-blue);
   border-radius: 0.75rem;
   padding: 1.25rem;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .card-soft:hover {
   transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* ----------------------------------------------------
@@ -240,7 +262,7 @@ a:hover {
   border: 1px solid var(--light-gray-blue);
   border-radius: 0.5rem;
   padding: 1rem;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .aside-title {
@@ -281,13 +303,13 @@ a:hover {
   border-radius: 1rem;
   overflow: hidden;
   border: 1px solid var(--light-gray-blue);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
   transition: transform .3s ease, box-shadow .3s ease;
 }
 
 .course-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
 /* Top image placeholder — replace with actual BG if needed */
@@ -322,7 +344,7 @@ a:hover {
   margin-top: 1rem;
   display: flex;
   flex-direction: column;
-  gap: .5rem;
+  gap: 0.75rem;
 }
 
 .course-list li {
@@ -336,8 +358,8 @@ a:hover {
 /* Book button gradient */
 .course-book-btn {
   width: 100%;
-  margin-top: 1.3rem;
-  padding: .8rem;
+  margin-top: 1.5rem;
+  padding: .875rem;
   border: none;
   border-radius: .75rem;
   font-weight: 700;
@@ -367,12 +389,110 @@ a:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(49, 82, 98, 0.7); /* Dark teal overlay for better text contrast */
+  background: rgba(49, 82, 98, 0.7);
+  /* Dark teal overlay for better text contrast */
   border-radius: 1rem;
 }
 
 .steps-card-content {
   position: relative;
   z-index: 1;
-  color: #528383; /* White text for better contrast */
+  color: #FBFCFC;
+  /* White text for better contrast */
+}
+
+/* ----------------------------------------------------
+   STEPS TIMELINE (Four-step dark strip)
+---------------------------------------------------- */
+.steps-dark {
+  background: #0b0b0b;
+  border: 1px solid #1f1f1f;
+}
+
+.progress-line {
+  position: absolute;
+  top: 32px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  border-radius: 9999px;
+  background: #F6B93B;
+  box-shadow: 0 0 8px #F6B93B, 0 0 15px rgba(246, 185, 59, 0.5);
+}
+
+@media (max-width: 639px) {
+  .progress-line {
+    display: none;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 767px) {
+  .progress-line {
+    top: 30px;
+    height: 2px;
+  }
+}
+
+.step-circle {
+  width: 64px;
+  height: 64px;
+  border-radius: 9999px;
+  border: 2px solid #F6B93B;
+  color: #F6B93B;
+  background: rgba(0, 0, 0, 0.5);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 8px #F6B93B, 0 0 15px rgba(246, 185, 59, 0.3);
+}
+
+@media (max-width: 639px) {
+  .step-circle {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 767px) {
+  .step-circle {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.step-circle-mobile {
+  width: 56px;
+  height: 56px;
+  border-radius: 9999px;
+  border: 2px solid #F6B93B;
+  color: #F6B93B;
+  background: rgba(0, 0, 0, 0.5);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 6px #F6B93B, 0 0 12px rgba(246, 185, 59, 0.3);
+  margin: 0 auto 1rem;
+}
+
+.step-number {
+  position: absolute;
+  right: -8px;
+  top: -10px;
+  background: #F6B93B;
+  color: #000;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1;
+  padding: 4px 8px;
+  border-radius: 9999px;
+  box-shadow: 0 0 6px #F6B93B, 0 0 12px rgba(246, 185, 59, 0.4);
+}
+
+@media (max-width: 639px) {
+  .step-number {
+    right: -6px;
+    top: -8px;
+    font-size: 0.65rem;
+    padding: 3px 6px;
+  }
 }
