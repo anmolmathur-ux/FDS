@@ -25,7 +25,7 @@ export default function SiteHeader() {
           <NavLink to="/" className={({isActive})=>`nav-link ${isActive?"nav-link-active":""}`}>Home</NavLink>
           <NavLink to="/courses" className={({isActive})=>`nav-link ${isActive?"nav-link-active":""}`}>Courses</NavLink>
           <NavLink to="/admission" className={({isActive})=>`nav-link ${isActive?"nav-link-active":""}`}>Admission</NavLink>
-          <NavLink to="/about" className={({isActive})=>`nav-link ${isActive?"nav-link-active":""}`}>Vision & Mission</NavLink>
+          <NavLink to="/about" className={({isActive})=>`nav-link ${isActive?"nav-link-active":""}`}>Connect With Us</NavLink>
           <NavLink to="/about-new" className={({isActive})=>`nav-link ${isActive?"bg-[#315262] text-white":""}`}>About</NavLink>
         </nav>
       </div>

@@ -7,15 +7,15 @@ const AboutNew = () => {
   const image2 = "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8QWJvdXQlMjB1c3xlbnwwfHwwfHx8MA%3D%3D";
   const image3 = "https://images.unsplash.com/photo-1560277090-46659724a489?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fEFib3V0JTIwdXN8ZW58MHx8MHx8fDA%3D";
   const image4 = "https://plus.unsplash.com/premium_photo-1738637796692-d29db83fb7c4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjl8fEFib3V0JTIwdXN8ZW58MHx8MHx8fDA%3D";
-  const portraitImage = "https://images.unsplash.com/photo-1718087036737-62d69f635ba3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fEFib3V0JTIwdXN8ZW58MHx8MHx8fDA%3D";
+  const portraitImage = "https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#2E4A56] to-[#355A66]">
+    <div className="min-h-screen bg-gradient-to-b from-[#2E4A56] to-[#355A66] font-serif">
       {/* SECTION 1 — HERO SECTION (TOP YELLOW HEADER) */}
       <section className="bg-[#315262]/60 rounded-b-[40px] py-20 md:py-10 relative overflow-visible">
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight hover:text-gray-200 transition-colors duration-300">
+            <h1 className="text-4xl md:text-4xl font-bold text-white mb-6 tracking-tight hover:text-gray-200 transition-colors duration-300">
               About Us
             </h1>
             <p className="text-base md:text-lg text-blue-100 max-w-2xl mx-auto leading-relaxed mb-8 hover:text-white transition-colors duration-300">
@@ -70,7 +70,7 @@ const AboutNew = () => {
       <section className="py-16 md:py-24 bg-gradient-to-br from-[#F8F9FA] to-[#E9ECEF]">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-[#1A1A1A]">
+            <h2 className="text-4xl font-bold tracking-tight text-[#1A1A1A] font-serif">
               We Make Sure Your Idea & Creation Delivered Properly
             </h2>
             <div className="w-16 h-[3px] bg-blue-600 rounded-full mt-3 mx-auto"></div>
@@ -152,7 +152,7 @@ const AboutNew = () => {
       {/* SECTION 3 — BUSINESS OWNER EMPOWERMENT BLOCK */}
       <section className=" py-5 bg-gradient-to-br from-[#F8F9FA] to-[#E9ECEF]">
         <div className="bg-[#315262]/80 max-w-7xl mx-auto px-2">
-          <div className="py-16 grid md:grid-cols-2 gap-12 items-center">
+          <div className=" px-7 py-16 grid md:grid-cols-2 gap-12 items-center">
             <div className="rounded-[20px] overflow-hidden shadow-lg">
               <img 
                 src={portraitImage} 
@@ -162,17 +162,17 @@ const AboutNew = () => {
             </div>
             
             <div>
-              <h2 className=" text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-6 hover:text-[#333] transition-colors duration-300">
+              <h2 className="text-4xl font-bold text-[#EFAB49] mb-6  transition-colors duration-300 font-serif">
                 We empower small business owners
               </h2>
-              
-              <p className="text-[#fff] text-lg mb-6 leading-relaxed hover:text-[#333] transition-colors duration-300">
-                Our structured approach helps entrepreneurs establish strong business foundations, optimize their operations, and gain the confidence to navigate complex market challenges with proven strategies.
-              </p>
-              
-              <p className="text-[#fff] text-lg mb-8 leading-relaxed hover:text-[#333] transition-colors duration-300">
-                We provide comprehensive training and resources that enable business owners to build sustainable growth models, enhance their market position, and achieve long-term success in their respective industries.
-              </p>
+              <div className="p-5 rounded-[20px] bg-white/10 text-lg mb-6 leading-relaxed  transition-colors duration-300 font-serif">
+                <p className="text-[#fff]">
+                    Our structured approach helps entrepreneurs establish strong business foundations, optimize their operations, and gain the confidence to navigate complex market challenges with proven strategies.
+                </p>
+                <p className="text-[#fff]">
+                    We provide comprehensive training and resources that enable business owners to build sustainable growth models, enhance their market position, and achieve long-term success in their respective industries.
+                </p>
+               </div>
               
               {/* QUOTE CARD */}
               <div className="bg-white rounded-xl p-6 shadow-md border border-gray-200">
@@ -191,7 +191,7 @@ const AboutNew = () => {
       {/* SECTION 4 — BUSINESS GROWTH SECTION */}
       <section className="py-16 bg-gradient-to-br from-[#F8F9FA] to-[#E9ECEF]">
         <div className="max-w-7xl mx-auto px-6 text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4 hover:text-[#333] transition-colors duration-300">
+          <h2 className="text-4xl font-bold text-[#1A1A1A] mb-4 hover:text-[#333] transition-colors duration-300 font-serif">
             We help business to grow faster and bigger
           </h2>
           <p className="text-[#555] text-lg max-w-2xl mx-auto hover:text-[#333] transition-colors duration-300">
