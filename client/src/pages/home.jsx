@@ -4,7 +4,7 @@ import homeImg from "../assets/home.jpg";
 import About from "./about";
 import Courses from "./courses";
 import Admission from "./admission";
-import Timeline from "../components/timeline";
+import GoalsIdeals from "../components/GoalsIdeals";
 
 export default function Home() {
   return (
@@ -24,18 +24,18 @@ export default function Home() {
               Become Private. Build Generational Wealth.
             </h1>
 
-            <p className="mt-6 text-lg md:text-xl text-[#FBFCFC] p-6">
+            <p className="mt-4 text-lg md:text-xl text-[#FBFCFC] p-6">
               Structured courses on status corrections, secure party creditor
               concepts, unincorporated business trusts, credit optimization,
               reclaiming securities, and debt discharge strategies.
             </p>
 
-            <div className="mt-8 flex justify-center gap-4 flex-wrap p-6">
+            <div className="mt-6 flex justify-center gap-4 flex-wrap p-6">
               <a href="/admission" className="btn-amber">Apply Now</a>
               <a href="/about" className="btn-blue">Request Info</a>
             </div>
 
-            <ul className="mt-8 flex justify-center gap-8 text-white p-6">
+            <ul className="mt-6 flex justify-center gap-8 text-white p-6">
               <li><strong>6</strong> core subject areas</li>
               <li><strong>Self-paced</strong> modules</li>
               <li><strong>Community</strong> support</li>
@@ -45,34 +45,7 @@ export default function Home() {
       </section>
 
       {/* GOALS & IDEALS SECTION */}
-      <section className="py-12 bg-white">
-        <div className="max-w-6xl mx-auto px-6">
-          {/* Main Heading */}
-          <h2 className="text-4xl font-bold text-[#2F4A55] text-center mb-8 font-serif tracking-wide">
-            Goals & Ideals
-          </h2>
-          
-          {/* Centered Paragraph */}
-          <p className="text-[#2F4A55] text-center text-base sm:text-lg md:text-xl leading-relaxed mb-12 max-w-3xl mx-auto font-sans">
-            Our mission is to empower individuals with the knowledge and tools needed to operate privately, build generational wealth, and thrive outside the limitations of public-statutory systems.
-          </p>
-          
-          {/* Subheading */}
-          <h3 className="text-4xl font-semibold text-[#2F4A55] text-center mb-6 font-serif tracking-wide">
-            Sovereignty Path
-          </h3>
-          
-          {/* Subtitle */}
-          <p className="text-[#2F4A55]/80 text-center text-base sm:text-lg mb-12">
-            Six steps toward full legal, financial, and spiritual independence.
-          </p>
-          
-          {/* Timeline */}
-          <div className="mt-0">
-            <Timeline />
-          </div>
-        </div>
-      </section>
+      <GoalsIdeals />
 
       {/* ALL SECTIONS ADDED HERE */}
       <About />

@@ -9,9 +9,9 @@ const AboutNew = () => {
   const portraitImage = "https://images.unsplash.com/photo-1718087036737-62d69f635ba3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fEFib3V0JTIwdXN8ZW58MHx8MHx8fDA%3D";
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-b from-[#2E4A56] to-[#355A66]">
       {/* SECTION 1 — HERO SECTION (TOP YELLOW HEADER) */}
-      <section className="bg-blue-600 rounded-b-[40px] py-24 md:py-32 relative overflow-hidden">
+      <section className="bg-[#315262]/80 rounded-b-[40px] py-24 md:py-32 relative overflow-visible">
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight hover:text-gray-200 transition-colors duration-300">
@@ -29,46 +29,44 @@ const AboutNew = () => {
         <div className="absolute bottom-20 left-1/4 w-3 h-3 rounded-full border border-white opacity-30"></div>
         <div className="absolute top-1/3 right-1/4 w-2 h-2 rounded-full border border-white opacity-30"></div>
         <div className="absolute bottom-1/3 left-1/3 w-3 h-3 border-t-2 border-r-2 border-white opacity-30"></div>
-      </section>
-
-      {/* SECTION 2 — 4 IMAGE GRID */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
+        
+        {/* 4 IMAGE GRID MOVED FURTHER DOWN */}
+        <div className="max-w-7xl mx-auto px-6 mt-12 pb-0 -mb-24 relative z-20">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div className="rounded-[20px] overflow-hidden shadow-md hover:shadow-lg hover:scale-[1.03] transition-all duration-300">
+            <div className="rounded-[20px] overflow-hidden shadow-lg hover:shadow-xl hover:scale-[1.03] transition-all duration-300">
               <img 
                 src={image1} 
                 alt="Team Collaboration" 
-                className="w-full h-64 object-cover"
+                className="w-full h-80 object-cover"
               />
             </div>
-            <div className="rounded-[20px] overflow-hidden shadow-md hover:shadow-lg hover:scale-[1.03] transition-all duration-300">
+            <div className="rounded-[20px] overflow-hidden shadow-lg hover:shadow-xl hover:scale-[1.03] transition-all duration-300 -mt-8">
               <img 
                 src={image2} 
                 alt="Working Together" 
-                className="w-full h-64 object-cover"
+                className="w-full h-96 object-cover"
               />
             </div>
-            <div className="rounded-[20px] overflow-hidden shadow-md hover:shadow-lg hover:scale-[1.03] transition-all duration-300">
+            <div className="rounded-[20px] overflow-hidden shadow-lg hover:shadow-xl hover:scale-[1.03] transition-all duration-300">
               <img 
                 src={image3} 
                 alt="Professional Setting" 
-                className="w-full h-64 object-cover"
+                className="w-full h-80 object-cover"
               />
             </div>
-            <div className="rounded-[20px] overflow-hidden shadow-md hover:shadow-lg hover:scale-[1.03] transition-all duration-300">
+            <div className="rounded-[20px] overflow-hidden shadow-lg hover:shadow-xl hover:scale-[1.03] transition-all duration-300 -mt-8">
               <img 
                 src={image4} 
                 alt="Team Meeting" 
-                className="w-full h-64 object-cover"
+                className="w-full h-96 object-cover"
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* SECTION 3 — TEXT SECTION: "We Make Sure Your Idea Delivered Properly" */}
-      <section className="py-16 bg-white">
+      {/* SECTION 2 — TEXT SECTION: "We Make Sure Your Idea Delivered Properly" */}
+      <section className="py-16 bg-gradient-to-br from-[#F8F9FA] to-[#E9ECEF] pt-8">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-12 text-left hover:text-[#333] transition-colors duration-300">
             We Make Sure Your Idea & Creation Delivered Properly
@@ -95,8 +93,8 @@ const AboutNew = () => {
         </div>
       </section>
 
-      {/* SECTION 4 — BUSINESS OWNER EMPOWERMENT BLOCK */}
-      <section className="py-16 bg-white">
+      {/* SECTION 3 — BUSINESS OWNER EMPOWERMENT BLOCK */}
+      <section className="py-16 bg-gradient-to-br from-[#F8F9FA] to-[#E9ECEF]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="rounded-[20px] overflow-hidden shadow-lg">
@@ -121,7 +119,7 @@ const AboutNew = () => {
               </p>
               
               {/* QUOTE CARD */}
-              <div className="bg-white rounded-xl p-6 shadow-md border border-gray-100">
+              <div className="bg-white rounded-xl p-6 shadow-md border border-gray-200">
                 <p className="text-[#1A1A1A] text-lg italic mb-2 hover:text-[#333] transition-colors duration-300">
                   "Making an impact, together"
                 </p>
@@ -134,8 +132,8 @@ const AboutNew = () => {
         </div>
       </section>
 
-      {/* SECTION 5 — BUSINESS GROWTH SECTION */}
-      <section className="py-16 bg-white">
+      {/* SECTION 4 — BUSINESS GROWTH SECTION */}
+      <section className="py-16 bg-gradient-to-br from-[#F8F9FA] to-[#E9ECEF]">
         <div className="max-w-7xl mx-auto px-6 text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4 hover:text-[#333] transition-colors duration-300">
             We help business to grow faster and bigger
