@@ -16,12 +16,12 @@ export default function GoalsIdeals() {
         </p>
         
         {/* Subheading */}
-        <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#1A1A1A] text-center mb-3 sm:mb-6 font-serif tracking-wide">
+        <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#1A1A1A] text-center mb-1 sm:mb-1 font-serif tracking-wide">
           Sovereignty Path
         </h3>
         
         {/* Subtitle */}
-        <p className="text-[#555] text-center text-base sm:text-lg mb-8 sm:mb-12">
+        <p className="text-[#555] text-center text-base sm:text-lg mb-5 sm:mb-2">
           Six steps toward full legal, financial, and spiritual independence.
         </p>
         
