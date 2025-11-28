@@ -4,7 +4,7 @@ import homeImg from "../assets/home.jpg";
 import About from "./about";
 import Courses from "./courses";
 import Admission from "./admission";
-import GoalsIdeals from "../components/GoalsIdeals";
+import Timeline from "../components/timeline";
 
 export default function Home() {
   return (
@@ -45,7 +45,34 @@ export default function Home() {
       </section>
 
       {/* GOALS & IDEALS SECTION */}
-      <GoalsIdeals />
+      <section className="py-16 sm:py-20 md:py-10 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          {/* Main Heading */}
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#2F4A55] text-center mb-6 sm:mb-8 font-serif tracking-wide">
+            Goals & Ideals
+          </h2>
+          
+          {/* Centered Paragraph */}
+          <p className="text-[#2F4A55] text-center text-base sm:text-lg md:text-xl leading-relaxed mb-10 sm:mb-12 max-w-3xl mx-auto font-sans">
+            Our mission is to empower individuals with the knowledge and tools needed to operate privately, build generational wealth, and thrive outside the limitations of public-statutory systems.
+          </p>
+          
+          {/* Subheading */}
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#2F4A55] text-center mb-3 sm:mb-6 font-serif tracking-wide">
+            Sovereignty Path
+          </h3>
+          
+          {/* Subtitle */}
+          <p className="text-[#2F4A55]/80 text-center text-base sm:text-lg mb-8 sm:mb-12">
+            Six steps toward full legal, financial, and spiritual independence.
+          </p>
+          
+          {/* Timeline */}
+          <div className="mt-0">
+            <Timeline />
+          </div>
+        </div>
+      </section>
 
       {/* ALL SECTIONS ADDED HERE */}
       <About />

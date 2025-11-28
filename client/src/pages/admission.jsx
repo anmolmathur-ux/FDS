@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import admissionImg from "../assets/online-admission.jpg";
 import logoImg from "../assets/logo.png";
 
@@ -25,7 +26,7 @@ export default function Admission() {
 
   return (
     <div className="bg-[#315262] min-h-screen">
-      <section className="max-w-6xl mx-auto px-6 py-12">
+      <section className="max-w-4xl mx-auto px-6 py-12">
 
         {/* MAIN WRAPPER */}
         <div className="grid gap-6">
@@ -40,24 +41,24 @@ export default function Admission() {
             <div className="absolute inset-0 bg-gradient-to-b from-[#315262]/70 to-[#315262]/90"></div>
 
             <div className="p-6 relative z-10 h-full flex flex-col justify-center">
-              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center px-4">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 py-2 ">
                 Online Admission
               </h1>
 
-              <p className="text-slate-300 mb-6 max-w-3xl text-sm sm:text-base text-center mx-auto">
+              <p className="text-slate-300 mb-6 max-w-3xl text-sm sm:text-base">
                 Enroll in self-paced programs designed to help you operate privately and build generational wealth.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 mt-6 justify-center">
-                <a href="#info" className="btn-blue text-center">Request Info</a>
-                <a href="#apply" className="btn-yellow text-center">Apply Now</a>
+              <div className="flex flex-col sm:flex-row gap-4 mt-6">
+                <a href="#info" className="btn-blue">Request Info</a>
+                <a href="#apply" className="btn-yellow">Apply Now</a>
               </div>
 
-              <h2 className="mt-8 text-xl sm:text-2xl font-bold text-white text-center">
+              <h2 className="mt-8 text-xl sm:text-2xl font-bold text-white">
                 How Do I Apply?
               </h2>
 
-              <ol className="mt-4 list-decimal pl-5 space-y-2 text-slate-300 text-sm sm:text-base max-w-2xl mx-auto">
+              <ol className="mt-4 list-decimal pl-5 space-y-2 text-slate-300 text-sm sm:text-base max-w-2xl">
                 <li>Create your student account.</li>
                 <li>Select one or more courses that match your goals.</li>
                 <li>Complete enrollment and payment.</li>
@@ -69,7 +70,7 @@ export default function Admission() {
                 <img 
                   src={logoImg} 
                   alt="FDS Logo" 
-                  className="w-40 h-40 object-contain"
+                  className="w-32 h-32 object-contain"
                 />
               </div>
             </div>
@@ -77,7 +78,6 @@ export default function Admission() {
 
           {/* FORMS WRAPPER */}
           <div id="info" className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-
             {/* REQUEST INFO */}
             <div className="bg-white border border-[#829494] rounded-xl p-6">
               <h3 className="font-semibold text-[#315262] text-lg sm:text-xl mb-4">
@@ -93,6 +93,7 @@ export default function Admission() {
                     name: form.name.value,
                     email: form.email.value,
                     interest: form.interest.value,
+                    description: form.description.value,
                   };
                   await submit("info", data, setInfoLoading, "Request Info");
                   form.reset();
@@ -131,14 +132,21 @@ export default function Admission() {
                   </select>
                 </label>
 
-                <button disabled={infoLoading} className="btn-blue mt-2 text-sm sm:text-base">
-                  {infoLoading ? "Submitting..." : "Request Info"}
+                <label className="grid gap-1 text-[#315262] text-sm">
+                  Description
+                  <textarea
+                    name="description"
+                    placeholder="Please provide any additional information or questions you have..."
+                    className="bg-[#FBFCFC] text-[#315262] border border-[#829494] rounded px-3 py-2 min-h-[100px]"
+                  />
+                </label>
+
+                <button disabled={infoLoading} className="btn-yellow mt-2 text-sm sm:text-base">
+                  {infoLoading ? "Submitting..." : "Submit Application"}
                 </button>
               </form>
 
-              <p className="mt-4 text-[#EFAB47] text-xs sm:text-sm">
-                Submitting this form sends data to the local server.
-              </p>
+             
             </div>
 
             {/* APPLY NOW */}
@@ -155,7 +163,8 @@ export default function Admission() {
                   const data = {
                     name: form.name.value,
                     email: form.email.value,
-                    course: form.course.value,
+                    interest: form.interest.value,
+                    description: form.description.value,
                   };
                   await submit("apply", data, setApplyLoading, "Application");
                   form.reset();
@@ -181,22 +190,29 @@ export default function Admission() {
                 </label>
 
                 <label className="grid gap-1 text-[#315262] text-sm">
-                  Selected Course
+                  Area of Interest
                   <select
-                    name="course"
-                    required
+                    name="interest"
                     className="bg-[#FBFCFC] text-[#315262] border border-[#829494] rounded px-3 py-2"
                   >
                     <option>Status Corrections</option>
                     <option>Secure Party Creditor</option>
                     <option>Unincorporated Business Trust</option>
-                    <option>Credit Repair & Optimization (Personal)</option>
-                    <option>Credit Optimization (Business)</option>
+                    <option>Credit Optimization</option>
                     <option>Reclaiming Securities & Debt Discharge</option>
                   </select>
                 </label>
 
-                <button disabled={applyLoading} className="btn-yellow mt-2 text-sm sm:text-base">
+                <label className="grid gap-1 text-[#315262] text-sm">
+                  Description
+                  <textarea
+                    name="description"
+                    placeholder="Please provide any additional information or questions you have..."
+                    className="bg-[#FBFCFC] text-[#315262] border border-[#829494] rounded px-3 py-2 min-h-[100px]"
+                  />
+                </label>
+
+                <button disabled={applyLoading} className="btn-blue mt-2 text-sm sm:text-base">
                   {applyLoading ? "Submitting..." : "Submit Application"}
                 </button>
               </form>

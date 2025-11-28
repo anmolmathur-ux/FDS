@@ -88,26 +88,21 @@ const ChatBot = () => {
       {isOpen && (
         <div className="fixed bottom-6 right-6 w-full max-w-md h-[500px] bg-white rounded-2xl shadow-xl flex flex-col z-50 animate-fade-in-up">
           {/* Chat Header */}
-          <div className="bg-[#2F4A55] text-white p-4 rounded-t-2xl flex justify-between items-center">
-            <h3 className="font-semibold text-lg">AI Assistant</h3>
-            <button
-              onClick={handleClose}
-              className="text-white hover:text-gray-300 transition-colors"
-              aria-label="Close chat"
+          <div className="flex items-center justify-between p-4 border-b border-gray-200 bg-gradient-to-r from-[#315262] to-[#1F3A48] rounded-t-2xl">
+            <div className="flex items-center space-x-3">
+              <div className="w-10 h-10 rounded-full bg-[#EFAB47] flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                </svg>
+              </div>
+              <h3 className="font-semibold text-lg">AI Assistant</h3>
+            </div>
+            <button 
+              onClick={toggleChat} 
+              className="text-gray-400 hover:text-white transition-colors duration-200"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
           </div>

@@ -138,7 +138,7 @@ const Timeline = () => {
 
   return (
     <div className="w-full py-8 lg:py-10 bg-gradient-to-b from-white to-gray-50">
-      <div 
+      <div
         ref={sectionRef}
         className="max-w-7xl mx-auto px-4 sm:px-6 fade-in-element"
       >
@@ -147,7 +147,7 @@ const Timeline = () => {
           {/* Left column */}
           <div className="space-y-8 lg:space-y-10">
             {leftFeatures.map((feature, index) => (
-              <div 
+              <div
                 key={feature.id}
                 className="group flex items-start space-x-4 p-6 rounded-2xl transition-all duration-500 hover:bg-white hover:shadow-xl hover:-translate-y-2 border border-transparent hover:border-gray-100"
               >
@@ -174,9 +174,9 @@ const Timeline = () => {
               {/* Larger center image with smooth gradient border */}
               <div className="relative w-80 h-80 lg:w-96 lg:h-96 rounded-3xl bg-gradient-to-br from-[#EFAB47] via-[#D4AF37] to-[#315262] p-1.5 shadow-2xl">
                 <div className="w-full h-full rounded-2xl overflow-hidden bg-white">
-                  <img 
-                    src={SovImage} 
-                    alt="Sovereignty Path" 
+                  <img
+                    src={SovImage}
+                    alt="Sovereignty Path"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>
@@ -187,7 +187,7 @@ const Timeline = () => {
           {/* Right column */}
           <div className="space-y-8 lg:space-y-10">
             {rightFeatures.map((feature, index) => (
-              <div 
+              <div
                 key={feature.id}
                 className="group flex items-start space-x-4 p-6 rounded-2xl transition-all duration-500 hover:bg-white hover:shadow-xl hover:-translate-y-2 border border-transparent hover:border-gray-100"
               >
@@ -212,7 +212,7 @@ const Timeline = () => {
         {/* Stacked layout for mobile */}
         <div className="md:hidden space-y-6">
           {features.map((feature, index) => (
-            <div 
+            <div
               key={feature.id}
               className="group flex items-start space-x-4 p-6 rounded-2xl bg-white backdrop-blur-sm transition-all duration-500 hover:shadow-xl hover:-translate-y-1 border border-gray-100"
             >

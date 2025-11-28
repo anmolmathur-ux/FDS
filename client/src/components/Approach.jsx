@@ -29,41 +29,31 @@ export default function Approach() {
   return (
     <div className="mt-8">
       <div className="max-w-6xl mx-auto">
-        <motion.h2
+        <motion.div
           initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-4xl font-bold text-white text-center mb-8"
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          className="text-center"
         >
-          Our Approach
-        </motion.h2>
+          <h2 className="text-4xl font-bold text-white tracking-wide">
+            Our Approach
+          </h2>
+        </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
           {steps.map((step, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="bg-[#315262] border border-[#829494] rounded-2xl overflow-hidden shadow-lg"
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="bg-[#315262] border border-[#829494] rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300"
             >
-              <div className="h-48 overflow-hidden">
-                <img
-                  src={step.image}
-                  alt={step.title}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-2xl font-bold text-white">
-                  {step.title}
-                </h3>
-                <p className="mt-3 text-white text-lg leading-relaxed">
-                  {step.description}
-                </p>
-              </div>
+              <h3 className="text-2xl font-bold text-white">{step.title}</h3>
+              <p className="text-white opacity-80 leading-relaxed">
+                {step.description}
+              </p>
             </motion.div>
           ))}
         </div>

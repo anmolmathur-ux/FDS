@@ -2,9 +2,16 @@ import React from "react";
 import { motion } from "framer-motion";
 
 export default function CoreValues() {
+  // Animation variants for cards
+  const cardVariants = {
+    hidden: { opacity: 0, y: 40 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
     <div className="mt-8">
       <div className="flex flex-col items-center">
+        
         <motion.h2
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -23,8 +30,17 @@ export default function CoreValues() {
           className="bg-gradient-to-br from-[#efe7da] to-[#EFAB47] p-6 rounded-3xl shadow-lg max-w-2xl w-full mx-auto"
         >
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
             {/* Privacy */}
-            <div className="bg-white/80 backdrop-blur rounded-xl p-6 shadow-lg flex gap-4">
+            <motion.div
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              whileHover={{ scale: 1.04 }}
+              className="bg-white/80 backdrop-blur rounded-xl p-6 shadow-lg flex gap-4 cursor-pointer"
+            >
               <span className="text-yellow-600 text-3xl">🔒</span>
               <div>
                 <h4 className="font-semibold text-gray-900 text-lg">Privacy</h4>
@@ -32,10 +48,18 @@ export default function CoreValues() {
                   Your information and sovereignty are sacred.
                 </p>
               </div>
-            </div>
+            </motion.div>
 
             {/* Compliance */}
-            <div className="bg-white/80 backdrop-blur rounded-xl p-6 shadow-lg flex gap-4">
+            <motion.div
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              whileHover={{ scale: 1.04 }}
+              className="bg-white/80 backdrop-blur rounded-xl p-6 shadow-lg flex gap-4 cursor-pointer"
+            >
               <span className="text-yellow-600 text-3xl">📜</span>
               <div>
                 <h4 className="font-semibold text-gray-900 text-lg">Compliance</h4>
@@ -43,10 +67,18 @@ export default function CoreValues() {
                   Operate responsibly while mastering lawful processes.
                 </p>
               </div>
-            </div>
+            </motion.div>
 
             {/* Empowerment */}
-            <div className="bg-white/80 backdrop-blur rounded-xl p-6 shadow-lg flex gap-4">
+            <motion.div
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              whileHover={{ scale: 1.04 }}
+              className="bg-white/80 backdrop-blur rounded-xl p-6 shadow-lg flex gap-4 cursor-pointer"
+            >
               <span className="text-yellow-600 text-3xl">⚡</span>
               <div>
                 <h4 className="font-semibold text-gray-900 text-lg">Empowerment</h4>
@@ -54,10 +86,18 @@ export default function CoreValues() {
                   We equip you with actionable guidance and real strategies.
                 </p>
               </div>
-            </div>
+            </motion.div>
 
             {/* Integrity */}
-            <div className="bg-white/80 backdrop-blur rounded-xl p-6 shadow-lg flex gap-4">
+            <motion.div
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.1 }}
+              whileHover={{ scale: 1.04 }}
+              className="bg-white/80 backdrop-blur rounded-xl p-6 shadow-lg flex gap-4 cursor-pointer"
+            >
               <span className="text-yellow-600 text-3xl">⚖️</span>
               <div>
                 <h4 className="font-semibold text-gray-900 text-lg">Integrity</h4>
@@ -65,7 +105,8 @@ export default function CoreValues() {
                   Transparent, ethical, and principle-based education.
                 </p>
               </div>
-            </div>
+            </motion.div>
+
           </div>
         </motion.div>
       </div>

@@ -100,7 +100,7 @@ export default function Courses() {
       
         {/* Header + Filter Section */}
         <div className="flex items-end justify-between border-b border-[#829494] pb-4 mb-8">
-          <h1 className="text-3xl font-bold text-[#315262]">All Courses</h1>
+          <h1 className="text-4xl font-bold text-[#315262]">All Courses</h1>
 
           <div className="text-right">
             <label className="block text-[#315262] text-sm">Filter by category</label>

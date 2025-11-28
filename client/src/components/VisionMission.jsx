@@ -20,6 +20,13 @@ export default function VisionMission() {
         transition={{ duration: 0.7 }}
         className="text-center"
       >
+        <div className="flex justify-center mb-6">
+          <img 
+            src={logoImg} 
+            alt="Freedom Solutions Logo" 
+            className="h-24 w-auto"
+          />
+        </div>
         <h2 className="text-4xl font-bold text-white tracking-wide">
           Our Vision & Mission
         </h2>
