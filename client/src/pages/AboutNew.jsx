@@ -10,7 +10,7 @@ const AboutNew = () => {
   const portraitImage = "https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#2E4A56] to-[#355A66] font-serif">
+    <div className="min-h-screen bg-gradient-to-b from-[#2E4A56] to-[#355A66] font-serif -georgian">
       {/* SECTION 1 — HERO SECTION (TOP YELLOW HEADER) */}
       <section className="bg-[#315262]/60 rounded-b-[40px] py-20 md:py-10 relative overflow-visible">
         <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -18,7 +18,7 @@ const AboutNew = () => {
             <h1 className="text-4xl md:text-4xl font-bold text-white mb-6 tracking-tight hover:text-gray-200 transition-colors duration-300">
               About Us
             </h1>
-            <p className="text-base md:text-lg text-blue-100 max-w-2xl mx-auto leading-relaxed mb-8 hover:text-white transition-colors duration-300">
+            <p className="text-base md:text-lg text-[#315262] max-w-2xl mx-auto leading-relaxed mb-8 hover:text-[#315262] duration-300">
               We empower individuals and businesses with the knowledge and tools needed to thrive in today's competitive landscape.
             </p>
           </div>
@@ -96,8 +96,8 @@ const AboutNew = () => {
                   <path d="M10 22h4"/>
                 </svg>
               </div>
-              <div className="text-2xl font-semibold text-gray-900 mb-1 tracking-wider">01</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Understanding Your Vision</h3>
+              <div className="text-2xl font-semibold text-#315262 mb-1 tracking-wider">01</div>
+              <h3 className="text-xl font-bold text-[#315262] mb-3">Understanding Your Vision</h3>
               <p className="text-gray-600 leading-relaxed">
                 We empower individuals and businesses with the knowledge needed to operate effectively and build sustainable growth outside traditional systems.
               </p>

@@ -10,7 +10,7 @@ import step6Img from "../assets/step6.jpg";
 import img1 from "../assets/learn.jpg";
 import img2 from "../assets/apply.jpg";
 import img3 from "../assets/thrive.jpg";
-
+import CoreValues from "../components/CoreValues";
 
 export default function About() {
   return (
@@ -129,38 +129,8 @@ export default function About() {
         </div>
 
         {/* Core Values */}
-        <motion.h2
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mt-16 text-3xl font-bold text-white text-center"
-        >
-          Core Values
-        </motion.h2>
 
-        <motion.ul
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="mt-6 space-y-4 max-w-4xl mx-auto text-lg text-white"
-        >
-          <li>
-            <strong>
-               Privacy
-               </strong> — Your information and sovereignty are sacred.
-          </li>
-          <li>
-            <strong>Compliance</strong> — Operate responsibly while mastering lawful processes.
-          </li>
-          <li>
-            <strong>Empowerment</strong> — We equip you with actionable guidance and real strategies.
-          </li>
-          <li>
-            <strong>Integrity</strong> — Transparent, ethical, and principle-based education.
-          </li>
-        </motion.ul>
+        <CoreValues />
 
         {/* Disclaimer */}
         <motion.div

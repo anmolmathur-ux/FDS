@@ -41,7 +41,7 @@ export default function Admission() {
             <div className="absolute inset-0 bg-gradient-to-b from-[#315262]/70 to-[#315262]/90"></div>
 
             <div className="p-6 relative z-10 h-full flex flex-col justify-center">
-              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 py-2 ">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 py-2 px- ">
                 Online Admission
               </h1>
 
@@ -93,7 +93,6 @@ export default function Admission() {
                     name: form.name.value,
                     email: form.email.value,
                     interest: form.interest.value,
-                    description: form.description.value,
                   };
                   await submit("info", data, setInfoLoading, "Request Info");
                   form.reset();
@@ -132,21 +131,14 @@ export default function Admission() {
                   </select>
                 </label>
 
-                <label className="grid gap-1 text-[#315262] text-sm">
-                  Description
-                  <textarea
-                    name="description"
-                    placeholder="Please provide any additional information or questions you have..."
-                    className="bg-[#FBFCFC] text-[#315262] border border-[#829494] rounded px-3 py-2 min-h-[100px]"
-                  />
-                </label>
-
-                <button disabled={infoLoading} className="btn-yellow mt-2 text-sm sm:text-base">
-                  {infoLoading ? "Submitting..." : "Submit Application"}
+                <button disabled={infoLoading} className="btn-blue mt-2 text-sm sm:text-base">
+                  {infoLoading ? "Submitting..." : "Request Info"}
                 </button>
               </form>
 
-             
+              <p className="mt-4 text-[#EFAB47] text-xs sm:text-sm">
+                Submitting this form sends data to the local server.
+              </p>
             </div>
 
             {/* APPLY NOW */}
@@ -163,8 +155,9 @@ export default function Admission() {
                   const data = {
                     name: form.name.value,
                     email: form.email.value,
-                    interest: form.interest.value,
-                    description: form.description.value,
+                    phone: form.phone.value,
+                    course: form.course.value,
+                    experience: form.experience.value,
                   };
                   await submit("apply", data, setApplyLoading, "Application");
                   form.reset();
@@ -190,29 +183,40 @@ export default function Admission() {
                 </label>
 
                 <label className="grid gap-1 text-[#315262] text-sm">
-                  Area of Interest
+                  Phone Number
+                  <input
+                    name="phone"
+                    type="tel"
+                    required
+                    className="bg-[#FBFCFC] text-[#315262] border border-[#829494] rounded px-3 py-2"
+                  />
+                </label>
+
+                <label className="grid gap-1 text-[#315262] text-sm">
+                  Selected Course
                   <select
-                    name="interest"
+                    name="course"
+                    required
                     className="bg-[#FBFCFC] text-[#315262] border border-[#829494] rounded px-3 py-2"
                   >
                     <option>Status Corrections</option>
                     <option>Secure Party Creditor</option>
                     <option>Unincorporated Business Trust</option>
-                    <option>Credit Optimization</option>
+                    <option>Credit Repair & Optimization (Personal)</option>
+                    <option>Credit Optimization (Business)</option>
                     <option>Reclaiming Securities & Debt Discharge</option>
                   </select>
                 </label>
 
                 <label className="grid gap-1 text-[#315262] text-sm">
-                  Description
+                  Relevant Experience
                   <textarea
-                    name="description"
-                    placeholder="Please provide any additional information or questions you have..."
-                    className="bg-[#FBFCFC] text-[#315262] border border-[#829494] rounded px-3 py-2 min-h-[100px]"
+                    name="experience"
+                    className="bg-[#FBFCFC] text-[#315262] border border-[#829494] rounded px-3 py-2"
                   />
                 </label>
 
-                <button disabled={applyLoading} className="btn-blue mt-2 text-sm sm:text-base">
+                <button disabled={applyLoading} className="btn-yellow mt-2 text-sm sm:text-base">
                   {applyLoading ? "Submitting..." : "Submit Application"}
                 </button>
               </form>
