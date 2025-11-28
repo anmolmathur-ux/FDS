@@ -10,54 +10,9 @@ import step6Img from "../assets/step6.jpg";
 import img1 from "../assets/learn.jpg";
 import img2 from "../assets/apply.jpg";
 import img3 from "../assets/thrive.jpg";
-import CoreValues from "../components/CoreValues.jsx";
+
 
 export default function About() {
-  const steps = [
-    {
-      number: 1,
-      title: "Becoming Private",
-      description:
-        "The first step toward financial, legal, and spiritual independence begins with transitioning to a private status.",
-      image: step1Img
-    },
-    {
-      number: 2,
-      title: "Building Your Private Business Trust",
-      description:
-        "Establish a private trust structure to protect your assets and build generational stability.",
-      image: step2Img
-    },
-    {
-      number: 3,
-      title: "Optimizing Personal & Business Credit",
-      description:
-        "Strengthen both personal and business credit to unlock greater financial opportunities.",
-      image: step3Img
-    },
-    {
-      number: 4,
-      title: "Becoming a Secure Party Creditor",
-      description:
-        "Take legal control of your identity and assets through Secure Party Creditor status.",
-      image: step4Img
-    },
-    {
-      number: 5,
-      title: "Reclaiming Your Securities",
-      description:
-        "Recover what belongs to you by taking ownership of your securities and financial instruments.",
-      image: step5Img
-    },
-    {
-      number: 6,
-      title: "Becoming Your Own Banker",
-      description:
-        "Achieve full financial autonomy by taking control of your banking and financial systems.",
-      image: step6Img
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#2E4A56] to-[#355A66]">
       {/* ================= HERO SECTION ================= */}
@@ -174,7 +129,15 @@ export default function About() {
         </div>
 
         {/* Core Values */}
-        
+        <motion.h2
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mt-16 text-3xl font-bold text-white text-center"
+        >
+          Core Values
+        </motion.h2>
 
         <motion.ul
           initial={{ opacity: 0 }}
@@ -183,7 +146,20 @@ export default function About() {
           transition={{ duration: 0.8 }}
           className="mt-6 space-y-4 max-w-4xl mx-auto text-lg text-white"
         >
-          <CoreValues />
+          <li>
+            <strong>
+               Privacy
+               </strong> — Your information and sovereignty are sacred.
+          </li>
+          <li>
+            <strong>Compliance</strong> — Operate responsibly while mastering lawful processes.
+          </li>
+          <li>
+            <strong>Empowerment</strong> — We equip you with actionable guidance and real strategies.
+          </li>
+          <li>
+            <strong>Integrity</strong> — Transparent, ethical, and principle-based education.
+          </li>
         </motion.ul>
 
         {/* Disclaimer */}

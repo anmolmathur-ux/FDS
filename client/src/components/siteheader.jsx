@@ -16,58 +16,23 @@ export default function SiteHeader() {
       <div className="max-w-6xl mx-auto px-4 sm:px-8 py-4 sm:py-6 flex items-center justify-between">
 
         {/* BRAND */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.15, duration: 0.5 }}
+        <NavLink
+          to="/"
+          className="flex items-center gap-3 font-bold text-xl md:text-2xl text-white"
         >
-          <NavLink
-            to="/"
-            className="flex items-center gap-3 font-bold text-xl md:text-2xl text-white"
-          >
-            <motion.img
-              src={logoImg}
-              alt="Freedom Solutions logo"
-              className="w-10 h-10 drop-shadow-[0_2px_4px_rgba(255,255,255,0.7)]"
-              whileHover={{ rotate: 5, scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 200 }}
-            />
-            <motion.span
-              className="text-white tracking-wide"
-              whileHover={{ x: 2 }}
-            >
-              FREEDOM SOLUTIONS
-            </motion.span>
-          </NavLink>
-        </motion.div>
-
-        {/* NAV LINKS */}
-        <nav className="hidden md:flex gap-8 ml-auto">
-          {[
-            ["Home", "/"],
-            ["About", "/about-new"],
-            ["Courses", "/courses"],
-            ["Admission", "/admission"],
-            ["Contact", "/contact"],
-          ].map(([label, path]) => (
-            <NavLink
-              key={path}
-              to={path}
-              className={({ isActive }) =>
-                `relative text-white text-[15px] tracking-wide px-1 transition 
-                 ${isActive ? "font-semibold text-[#EFAB47]" : "hover:text-[#EFAB47]"}`
-              }
-            >
-              {/* Animated Underline */}
-              <span
-                className={`
-                  absolute left-0 -bottom-1 h-[2px] w-full rounded-full transform transition-all duration-300
-                  ${path === window.location.pathname ? "bg-[#EFAB47] scale-x-100" : "bg-[#EFAB47] scale-x-0 group-hover:scale-x-100"}
-                `}
-              />
-              {label}
-            </NavLink>
-          ))}
+          <img
+            src={logoImg}
+            alt="Freedom Solutions logo"
+            className="logo-brand w-10 h-10 drop-shadow-[0_2px_2px_rgba(255,255,255,0.8)]"
+          />
+          <span className="text-white">FREEDOM SOLUTIONS</span>
+        </NavLink>
+        <nav className="ml-auto flex gap-6">
+          <NavLink to="/" className={({isActive})=>`nav-link ${isActive?"nav-link-active":""}`}>Home</NavLink>
+          <NavLink to="/courses" className={({isActive})=>`nav-link ${isActive?"nav-link-active":""}`}>Courses</NavLink>
+          <NavLink to="/admission" className={({isActive})=>`nav-link ${isActive?"nav-link-active":""}`}>Admission</NavLink>
+          <NavLink to="/about" className={({isActive})=>`nav-link ${isActive?"nav-link-active":""}`}>Vision & Mission</NavLink>
+          <NavLink to="/about-new" className={({isActive})=>`nav-link ${isActive?"bg-[#315262] text-white":""}`}>About</NavLink>
         </nav>
       </div>
     </motion.header>
