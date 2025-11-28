@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const AboutNew = () => {
   // Placeholder image sources - replace with actual image imports
@@ -11,7 +12,7 @@ const AboutNew = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#2E4A56] to-[#355A66]">
       {/* SECTION 1 — HERO SECTION (TOP YELLOW HEADER) */}
-      <section className="bg-[#315262]/80 rounded-b-[40px] py-24 md:py-32 relative overflow-visible">
+      <section className="bg-[#315262]/60 rounded-b-[40px] py-20 md:py-10 relative overflow-visible">
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight hover:text-gray-200 transition-colors duration-300">
@@ -31,72 +32,127 @@ const AboutNew = () => {
         <div className="absolute bottom-1/3 left-1/3 w-3 h-3 border-t-2 border-r-2 border-white opacity-30"></div>
         
         {/* 4 IMAGE GRID MOVED FURTHER DOWN */}
-        <div className="max-w-7xl mx-auto px-6 mt-12 pb-0 -mb-24 relative z-20">
+        <div className=" py-20 max-w-7xl mx-auto px-3 mt-12 pb-0 -mb-20 relative z-20">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             <div className="rounded-[20px] overflow-hidden shadow-lg hover:shadow-xl hover:scale-[1.03] transition-all duration-300">
               <img 
                 src={image1} 
                 alt="Team Collaboration" 
-                className="w-full h-80 object-cover"
+                className="w-full h-50 object-cover"
               />
             </div>
             <div className="rounded-[20px] overflow-hidden shadow-lg hover:shadow-xl hover:scale-[1.03] transition-all duration-300 -mt-8">
               <img 
                 src={image2} 
                 alt="Working Together" 
-                className="w-full h-96 object-cover"
+                className="w-full h-66 object-cover"
               />
             </div>
             <div className="rounded-[20px] overflow-hidden shadow-lg hover:shadow-xl hover:scale-[1.03] transition-all duration-300">
               <img 
                 src={image3} 
                 alt="Professional Setting" 
-                className="w-full h-80 object-cover"
+                className="w-full h-50 object-cover"
               />
             </div>
             <div className="rounded-[20px] overflow-hidden shadow-lg hover:shadow-xl hover:scale-[1.03] transition-all duration-300 -mt-8">
               <img 
                 src={image4} 
                 alt="Team Meeting" 
-                className="w-full h-96 object-cover"
+                className="w-full h-66 object-cover"
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* SECTION 2 — TEXT SECTION: "We Make Sure Your Idea Delivered Properly" */}
-      <section className="py-16 bg-gradient-to-br from-[#F8F9FA] to-[#E9ECEF] pt-8">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-12 text-left hover:text-[#333] transition-colors duration-300">
-            We Make Sure Your Idea & Creation Delivered Properly
-          </h2>
-          
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
-              <p className="text-[#555] text-lg leading-relaxed mb-6 hover:text-[#333] transition-colors duration-300">
-                Our mission is to empower individuals and businesses with the knowledge and structure needed to operate effectively, build sustainable growth, and thrive outside the limitations of traditional systems.
+      {/* SECTION 2 — PREMIUM 3-STEP PROCESS FLOW */}
+      <section className="py-16 md:py-24 bg-gradient-to-br from-[#F8F9FA] to-[#E9ECEF]">
+        <div className="max-w-7xl mx-auto px-6 md:px-12">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-[#1A1A1A]">
+              We Make Sure Your Idea & Creation Delivered Properly
+            </h2>
+            <div className="w-16 h-[3px] bg-blue-600 rounded-full mt-3 mx-auto"></div>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 md:gap-4 relative">
+            {/* Horizontal connector line between steps (hidden on mobile) */}
+            <div className="hidden md:block absolute top-16 left-1/3 w-1/3 h-[2px] bg-gray-300 transform -translate-y-1/2"></div>
+            <div className="hidden md:block absolute top-16 right-1/3 w-1/3 h-[2px] bg-gray-300 transform -translate-y-1/2"></div>
+
+            {/* Step 1 */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="bg-white/80 shadow-sm rounded-2xl p-6 md:p-8 relative"
+            >
+              <div className="bg-blue-50 p-3 rounded-xl text-blue-600 w-12 h-12 flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/>
+                  <path d="M9 18h6"/>
+                  <path d="M10 22h4"/>
+                </svg>
+              </div>
+              <div className="text-2xl font-semibold text-gray-900 mb-1 tracking-wider">01</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Understanding Your Vision</h3>
+              <p className="text-gray-600 leading-relaxed">
+                We empower individuals and businesses with the knowledge needed to operate effectively and build sustainable growth outside traditional systems.
               </p>
-              <p className="text-[#555] text-lg leading-relaxed hover:text-[#333] transition-colors duration-300">
-                We provide transformative education and resources designed to help entrepreneurs establish strong foundations, optimize their operations, and achieve long-term success through our specialized curriculum and proven methodologies.
+            </motion.div>
+
+            {/* Step 2 */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="bg-white/80 shadow-sm rounded-2xl p-6 md:p-8 relative"
+            >
+              <div className="bg-blue-50 p-3 rounded-xl text-blue-600 w-12 h-12 flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="3"/>
+                  <path d="M12 3v18"/>
+                  <path d="M3 12h18"/>
+                </svg>
+              </div>
+              <div className="text-2xl font-semibold text-gray-900 mb-1 tracking-wider">02</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Strategic Execution</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Our approach combines practical training with strategic insights to ensure every concept is implemented effectively for your business objectives.
               </p>
-            </div>
-            <div>
-              <p className="text-[#555] text-lg leading-relaxed mb-6 hover:text-[#333] transition-colors duration-300">
-                Our approach combines practical training with strategic insights to ensure that every concept is implemented effectively. We focus on delivering results that matter to your business objectives.
+            </motion.div>
+
+            {/* Step 3 */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="bg-white/80 shadow-sm rounded-2xl p-6 md:p-8 relative"
+            >
+              <div className="bg-blue-50 p-3 rounded-xl text-blue-600 w-12 h-12 flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                  <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+              </div>
+              <div className="text-2xl font-semibold text-gray-900 mb-1 tracking-wider">03</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Delivering Results Confidently</h3>
+              <p className="text-gray-600 leading-relaxed">
+                With years of experience, we help entrepreneurs navigate complex challenges and achieve their goals with confidence through proven methodologies.
               </p>
-              <p className="text-[#555] text-lg leading-relaxed hover:text-[#333] transition-colors duration-300">
-                With years of experience in business development and growth strategies, we've helped countless entrepreneurs navigate complex challenges and achieve their goals with confidence.
-              </p>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
       {/* SECTION 3 — BUSINESS OWNER EMPOWERMENT BLOCK */}
-      <section className="py-16 bg-gradient-to-br from-[#F8F9FA] to-[#E9ECEF]">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+      <section className=" py-5 bg-gradient-to-br from-[#F8F9FA] to-[#E9ECEF]">
+        <div className="bg-[#315262]/80 max-w-7xl mx-auto px-2">
+          <div className="py-16 grid md:grid-cols-2 gap-12 items-center">
             <div className="rounded-[20px] overflow-hidden shadow-lg">
               <img 
                 src={portraitImage} 
@@ -106,15 +162,15 @@ const AboutNew = () => {
             </div>
             
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-6 hover:text-[#333] transition-colors duration-300">
+              <h2 className=" text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-6 hover:text-[#333] transition-colors duration-300">
                 We empower small business owners
               </h2>
               
-              <p className="text-[#555] text-lg mb-6 leading-relaxed hover:text-[#333] transition-colors duration-300">
+              <p className="text-[#fff] text-lg mb-6 leading-relaxed hover:text-[#333] transition-colors duration-300">
                 Our structured approach helps entrepreneurs establish strong business foundations, optimize their operations, and gain the confidence to navigate complex market challenges with proven strategies.
               </p>
               
-              <p className="text-[#555] text-lg mb-8 leading-relaxed hover:text-[#333] transition-colors duration-300">
+              <p className="text-[#fff] text-lg mb-8 leading-relaxed hover:text-[#333] transition-colors duration-300">
                 We provide comprehensive training and resources that enable business owners to build sustainable growth models, enhance their market position, and achieve long-term success in their respective industries.
               </p>
               
