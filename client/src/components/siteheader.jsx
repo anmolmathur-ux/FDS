@@ -8,10 +8,11 @@ export default function SiteHeader() {
 
   const navLinks = [
     { to: "/", label: "Home" },
+    { to: "/about-new", label: "About" },
     { to: "/courses", label: "Courses" },
     { to: "/admission", label: "Admission" },
-    { to: "/contact", label: "Contact" },
-    { to: "/about-new", label: "About" },
+    { to: "/contact", label: "Contact" }
+    
   ];
 
   return (
