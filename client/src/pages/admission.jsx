@@ -38,43 +38,54 @@ export default function Admission() {
               style={{ backgroundImage: `url(${admissionImg})` }}
             />
 
-            <div className="absolute inset-0 bg-gradient-to-b from-[#315262]/70 to-[#315262]/90"></div>
+            {/* BACKGROUND OVERLAY */}
+<div className="absolute inset-0 bg-gradient-to-b from-[#315262]/70 to-[#315262]/90"></div>
 
-            <div className="p-4 sm:p-6 relative z-10 h-full flex flex-col justify-center">
-              <h1 className="text-xl sm:text-3xl md:text-4xl font-bold text-white mb-2 leading-tight">
-                Online Admission
-              </h1>
+{/* CONTENT WRAPPER */}
+<div className="relative z-10 w-full px-4 sm:px-6 py-6 sm:py-10 
+                min-h-[60vh] sm:min-h-[70vh] flex flex-col justify-center gap-4 sm:gap-6">
 
-              <p className="text-slate-200 mb-4 sm:mb-6 max-w-2xl text-xs sm:text-base leading-relaxed">
-                Enroll in self-paced programs designed to help you operate privately and build generational wealth.
-              </p>
+  {/* TITLE */}
+  <h1 className="text-xl sm:text-3xl md:text-4xl font-bold text-white leading-tight">
+    Online Admission
+  </h1>
 
-              {/* Buttons */}
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-4 sm:mt-6">
-                <a href="#info" className="btn-blue text-center w-full sm:w-auto">Request Info</a>
-                <a href="#apply" className="btn-yellow text-center w-full sm:w-auto">Apply Now</a>
-              </div>
+  {/* SUBTEXT */}
+  <p className="text-slate-200 max-w-2xl text-xs sm:text-base leading-relaxed">
+    Enroll in self-paced programs designed to help you operate privately and build generational wealth.
+  </p>
 
-              <h2 className="mt-6 sm:mt-8 text-lg sm:text-2xl font-bold text-white">
-                How Do I Apply?
-              </h2>
+  {/* BUTTONS */}
+  <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
+    <a href="#info" className="btn-blue text-center w-full sm:w-auto">Request Info</a>
+    <a href="#apply" className="btn-yellow text-center w-full sm:w-auto">Apply Now</a>
+  </div>
 
-              <ol className="mt-3 sm:mt-4 list-decimal pl-4 space-y-1 sm:space-y-2 text-slate-300 text-xs sm:text-base">
-                <li>Create your student account.</li>
-                <li>Select one or more courses that match your goals.</li>
-                <li>Complete enrollment and payment.</li>
-                <li>Start learning immediately with guided modules.</li>
-              </ol>
+  {/* SECTION TITLE */}
+  <h2 className="text-lg sm:text-2xl font-bold text-white mt-2 sm:mt-4">
+    How Do I Apply?
+  </h2>
 
-              {/* Logo — reduced size for mobile */}
-              <div className="absolute bottom-3 right-3 sm:bottom-6 sm:right-6">
-                <img 
-                  src={logoImg}
-                  alt="FDS Logo"
-                  className="w-20 h-20 sm:w-28 sm:h-28 object-contain opacity-90"
-                />
-              </div>
-            </div>
+  {/* STEPS */}
+  <ol className="list-decimal pl-5 space-y-1 sm:space-y-2 text-slate-300 
+                 text-xs sm:text-base max-w-xl">
+    <li>Create your student account.</li>
+    <li>Select one or more courses that match your goals.</li>
+    <li>Complete enrollment and payment.</li>
+    <li>Start learning immediately with guided modules.</li>
+  </ol>
+
+  {/* LOGO — Responsive & Non-Blocking */}
+  <div className="absolute bottom-3 right-3 sm:bottom-6 sm:right-6 pointer-events-none">
+    <img 
+      src={logoImg}
+      alt="FDS Logo"
+      className="w-16 h-16 sm:w-28 sm:h-28 object-contain opacity-90"
+    />
+  </div>
+
+</div>
+
           </div>
 
           {/* FORMS WRAPPER */}
