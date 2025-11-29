@@ -1,4 +1,5 @@
 import React from "react";
+import logoImg from "../assets/logo.png";
 
 export default function ConnectWithUs() {
   return (
@@ -14,7 +15,14 @@ export default function ConnectWithUs() {
         <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {/* LEFT CARD - CONTACT INFORMATION */}
           <div className="bg-[#315262] border border-[#829494] rounded-2xl p-8 shadow-sm">
-            <h3 className="text-xl font-bold text-white mb-6">Contact Information</h3>
+            <div className="flex justify-center mb-6">
+              <img 
+                src={logoImg} 
+                alt="RLC Freedom Solutions Logo" 
+                className="h-15 w-15"
+              />
+            </div>
+            <h3 className="text-xl font-bold text-white mb-6 text-center">Contact Information</h3>
             
             <div className="space-y-6">
               <div className="flex items-start">
@@ -123,6 +131,13 @@ export default function ConnectWithUs() {
               >
                 Send Message
               </button>
+              
+              <a 
+                href="/about" 
+                className="w-full btn-amber mt-4 inline-block text-center"
+              >
+                Vision & Mission
+              </a>
             </form>
           </div>
         </div>

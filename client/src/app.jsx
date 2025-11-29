@@ -8,6 +8,7 @@ import Courses from "./pages/courses.jsx"
 import About from "./pages/about.jsx"
 import Admission from "./pages/admission.jsx"
 import AboutNew from "./pages/AboutNew.jsx"
+import Contact from "./pages/contact.jsx"
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/about-new" element={<AboutNew />} />
           <Route path="/admission" element={<Admission />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
       <SiteFooter />

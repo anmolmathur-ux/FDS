@@ -19,7 +19,7 @@ const AboutNew = () => {
             <h1 className="text-4xl md:text-4xl font-bold text-white mb-6 tracking-tight hover:text-gray-200 transition-colors duration-300">
               About Us
             </h1>
-            <p className="text-base md:text-lg text-[#315262] max-w-2xl mx-auto leading-relaxed mb-8 hover:text-[#315262] duration-300">
+            <p className="text-lg md:text-lg text-white max-w-2xl mx-auto leading-relaxed mb-8 hover:text-white duration-300">
               We empower individuals and businesses with the knowledge and tools needed to thrive in today's competitive landscape.
             </p>
           </div>
@@ -71,7 +71,7 @@ const AboutNew = () => {
       <section className="py-16 md:py-24 bg-gradient-to-br from-[#F8F9FA] to-[#E9ECEF]">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold tracking-tight text-[#1A1A1A] font-serif">
+            <h2 className="text-4xl font-bold tracking-tight text-[#315262] font-serif">
               We Make Sure Your Idea & Creation Delivered Properly
             </h2>
             <div className="w-16 h-[3px] bg-blue-600 rounded-full mt-3 mx-auto"></div>
@@ -151,8 +151,8 @@ const AboutNew = () => {
       </section>
 
       {/* SECTION 3 — BUSINESS OWNER EMPOWERMENT BLOCK */}
-      <section className=" py-5 bg-gradient-to-br from-[#F8F9FA] to-[#E9ECEF]">
-        <div className="bg-[#315262]/80 max-w-7xl mx-auto px-2">
+      <section className=" py-5 bg-gradient-to-br from-[#F8F9FA] to-[#315262]">
+        <div className="bg-[#315262] max-w-7xl mx-auto px-2">
           <div className=" px-7 py-16 grid md:grid-cols-2 gap-12 items-center">
             <div className="rounded-[20px] overflow-hidden shadow-lg">
               <img 
@@ -163,7 +163,7 @@ const AboutNew = () => {
             </div>
             
             <div>
-              <h2 className="text-4xl font-bold text-[#EFAB49] mb-6  transition-colors duration-300 font-serif">
+              <h2 className="text-4xl font-bold text-white mb-6  duration-300 font-serif">
                 We empower small business owners
               </h2>
               <div className="p-5 rounded-[20px] bg-white/10 text-lg mb-6 leading-relaxed  transition-colors duration-300 font-serif">
@@ -192,7 +192,7 @@ const AboutNew = () => {
       {/* SECTION 4 — BUSINESS GROWTH SECTION */}
       <section className="py-16 bg-gradient-to-br from-[#F8F9FA] to-[#E9ECEF]">
         <div className="max-w-7xl mx-auto px-6 text-center mb-16">
-          <h2 className="text-4xl font-bold text-[#1A1A1A] mb-4 hover:text-[#333] transition-colors duration-300 font-serif">
+          <h2 className="text-4xl font-bold text-[#315262] mb-4 hover:text-[#333] transition-colors duration-300 font-serif">
             We help business to grow faster and bigger
           </h2>
           <p className="text-[#555] text-lg max-w-2xl mx-auto hover:text-[#333] transition-colors duration-300">
@@ -212,7 +212,7 @@ const AboutNew = () => {
                   <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-[#1A1A1A] mb-3 hover:text-[#333] transition-colors duration-300">Professional Team</h3>
+              <h3 className="text-xl font-bold text-[#315262] mb-3 hover:text-[#333] transition-colors duration-300">Professional Team</h3>
               <p className="text-[#666] hover:text-[#333] transition-colors duration-300">Expert educators with deep knowledge in business development and growth strategies</p>
             </div>
             
@@ -224,18 +224,18 @@ const AboutNew = () => {
                   <line x1="12" y1="16" x2="12.01" y2="16"></line>
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-[#1A1A1A] mb-3 hover:text-[#333] transition-colors duration-300">Target Oriented</h3>
+              <h3 className="text-xl font-bold text-[#315262] mb-3 hover:text-[#333] transition-colors duration-300">Target Oriented</h3>
               <p className="text-[#666] hover:text-[#333] transition-colors duration-300">Focused curriculum designed to achieve specific business growth objectives</p>
             </div>
             
             <div className="text-center p-8 rounded-xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
-              <div className="w-16 h-16 rounded-full bg-[#F9E27C33] flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 rounded-full bg-golden-yellow flex items-center justify-center mx-auto mb-6">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" strokeWidth="1.5">
                   <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
                   <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-[#1A1A1A] mb-3 hover:text-[#333] transition-colors duration-300">Success Guarantee</h3>
+              <h3 className="text-xl font-bold text-[#315262] mb-3 hover:text-[#333] transition-colors duration-300">Success Guarantee</h3>
               <p className="text-[#666] hover:text-[#333] transition-colors duration-300">Proven methodology for achieving sustainable business growth and expansion</p>
             </div>
           </div>

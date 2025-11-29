@@ -10,7 +10,7 @@ export default function SiteHeader() {
     { to: "/", label: "Home" },
     { to: "/courses", label: "Courses" },
     { to: "/admission", label: "Admission" },
-    { to: "/about", label: "Vision & Mission" },
+    { to: "/contact", label: "Contact" },
     { to: "/about-new", label: "About" },
   ];
 

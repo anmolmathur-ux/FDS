@@ -6,6 +6,7 @@ import About from "./about";
 import Courses from "./courses";
 import Admission from "./admission";
 import Timeline from "../components/timeline";
+import VisionMission from "../components/VisionMission";
 
 export default function Home() {
   return (
@@ -81,6 +82,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      
 
       {/* IMPORTED SECTIONS */}
       <About />

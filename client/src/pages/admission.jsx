@@ -142,7 +142,7 @@ export default function Admission() {
                   Add Your Message (optional)
                   <textarea
                     name="message"
-                    rows="4"
+                    rows="8"
                     className="bg-[#FBFCFC] border text-[#315262] border-[#829494] rounded px-3 py-2"
                     placeholder="Add your message (optional)"
                   />
