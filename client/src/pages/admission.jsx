@@ -38,48 +38,44 @@ export default function Admission() {
               style={{ backgroundImage: `url(${admissionImg})` }}
             />
 
-            {/* Background Overlay */}
-<div className="absolute inset-0 bg-gradient-to-b from-[#315262]/70 to-[#315262]/90"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-[#315262]/70 to-[#315262]/90"></div>
 
-{/* CONTENT WRAPPER */}
-<div className="absolute inset-0 bg-gradient-to-b from-[#315262]/70 to-[#315262]/90"></div>
+            <div className="p-4 sm:p-6 relative z-10 h-full flex flex-col justify-center">
+              <h1 className="text-xl sm:text-3xl md:text-4xl font-bold text-white mb-2 leading-tight">
+                Online Admission
+              </h1>
 
-<div className="p-4 sm:p-6 relative z-10 min-h-[60vh] sm:h-full overflow-visible flex flex-col justify-center">
+              <p className="text-slate-200 mb-4 sm:mb-6 max-w-2xl text-xs sm:text-base leading-relaxed">
+                Enroll in self-paced programs designed to help you operate privately and build generational wealth.
+              </p>
 
-  <h1 className="text-xl sm:text-3xl md:text-4xl font-bold text-white mb-2 leading-tight">
-    Online Admission
-  </h1>
+              {/* Buttons */}
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-4 sm:mt-6">
+                <a href="#info" className="btn-blue text-center w-full sm:w-auto">Request Info</a>
+                <a href="#apply" className="btn-yellow text-center w-full sm:w-auto">Apply Now</a>
+              </div>
 
-  <p className="text-slate-200 mb-4 sm:mb-6 max-w-2xl text-xs sm:text-base leading-relaxed">
-    Enroll in self-paced programs designed to help you operate privately and build generational wealth.
-  </p>
+              <h2 className="mt-6 sm:mt-8 text-lg sm:text-2xl font-bold text-white">
+                How Do I Apply?
+              </h2>
 
-  <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-4 sm:mt-6 w-full">
-    <a href="#info" className="btn-blue text-center w-full sm:w-auto">Request Info</a>
-    <a href="#apply" className="btn-yellow text-center w-full sm:w-auto">Apply Now</a>
-  </div>
+              <ol className="mt-3 sm:mt-4 list-decimal pl-4 space-y-1 sm:space-y-2 text-slate-300 text-xs sm:text-base">
+                <li>Create your student account.</li>
+                <li>Select one or more courses that match your goals.</li>
+                <li>Complete enrollment and payment.</li>
+                <li>Start learning immediately with guided modules.</li>
+              </ol>
 
-  <h2 className="mt-6 sm:mt-8 text-lg sm:text-2xl font-bold text-white">
-    How Do I Apply?
-  </h2>
-
-  <ol className="mt-3 sm:mt-4 list-decimal pl-5 space-y-1 sm:space-y-2 text-slate-300 text-xs sm:text-base max-w-xl">
-    <li>Create your student account.</li>
-    <li>Select one or more courses that match your goals.</li>
-    <li>Complete enrollment and payment.</li>
-    <li>Start learning immediately with guided modules.</li>
-  </ol>
-
-  <div className="absolute bottom-3 right-3 sm:bottom-6 sm:right-6">
-    <img 
-      src={logoImg}
-      alt="FDS Logo"
-      className="w-16 h-16 sm:w-28 sm:h-28 object-contain opacity-90"
-    />
-  </div>
-
-</div>
-</div>
+              {/* Logo — reduced size for mobile */}
+              <div className="absolute bottom-3 right-3 sm:bottom-6 sm:right-6">
+                <img 
+                  src={logoImg}
+                  alt="FDS Logo"
+                  className="w-20 h-20 sm:w-28 sm:h-28 object-contain opacity-90"
+                />
+              </div>
+            </div>
+          </div>
 
           {/* FORMS WRAPPER */}
           <div id="info" className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -146,7 +142,7 @@ export default function Admission() {
                   Add Your Message (optional)
                   <textarea
                     name="message"
-                    rows="8"
+                    rows="4"
                     className="bg-[#FBFCFC] border text-[#315262] border-[#829494] rounded px-3 py-2"
                     placeholder="Add your message (optional)"
                   />
