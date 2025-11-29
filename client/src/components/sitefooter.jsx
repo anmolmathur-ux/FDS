@@ -16,7 +16,7 @@ export default function SiteFooter() {
                 className="h-20 w-auto drop-shadow-lg"
               />
             </div>
-            <h3 className="text-xl font-bold text-[#315262] mb-2">Freedom Solutions</h3>
+            <h3 className="text-xl font-bold text-[#315262] mb-2">RLC FREEDOM SOLUTIONS LLC</h3>
             <p className="text-[#315262] mb-6 text-sm leading-relaxed">
               Empowering individuals with the knowledge and tools to operate privately, build generational wealth, and thrive.
             </p>
@@ -81,7 +81,7 @@ export default function SiteFooter() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-[#829494]/30 text-center text-[#315262]">
-          <p className="text-sm">&copy; {year} Freedom Solutions. All rights reserved.</p>
+          <p className="text-sm">&copy; {year} RLC FREEDOM SOLUTIONS LLC. All rights reserved.</p>
         </div>
       </div>
     </footer>

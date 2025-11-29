@@ -25,7 +25,7 @@ export default function SiteHeader() {
             alt="Freedom Solutions logo"
             className="logo-brand w-10 h-10 drop-shadow-[0_2px_2px_rgba(255,255,255,0.8)]"
           />
-          <span className="text-white">FREEDOM SOLUTIONS</span>
+          <span className="text-white">RLC FREEDOM SOLUTIONS LLC</span>
         </NavLink>
         <nav className="ml-auto flex gap-6">
           <NavLink to="/" className={({isActive})=>`nav-link ${isActive?"nav-link-active":""}`}>Home</NavLink>

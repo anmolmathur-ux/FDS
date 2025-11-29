@@ -93,52 +93,64 @@ export default function Admission() {
                     name: form.name.value,
                     email: form.email.value,
                     interest: form.interest.value,
+                    query: "Request Info Form Submission",
                   };
                   await submit("info", data, setInfoLoading, "Request Info");
                   form.reset();
                 }}
               >
                 <label className="grid gap-1 text-[#315262] text-sm">
-                  Full Name
+                  Full Name *
                   <input
                     name="name"
                     required
                     className="bg-[#FBFCFC] text-[#315262] border border-[#829494] rounded px-3 py-2"
+                    placeholder="Enter your full name"
                   />
                 </label>
 
                 <label className="grid gap-1 text-[#315262] text-sm">
-                  Email
+                  Email *
                   <input
                     name="email"
                     type="email"
                     required
                     className="bg-[#FBFCFC] text-[#315262] border border-[#829494] rounded px-3 py-2"
+                    placeholder="Enter your email address"
                   />
                 </label>
 
                 <label className="grid gap-1 text-[#315262] text-sm">
-                  Area of Interest
+                  Area of Interest *
                   <select
                     name="interest"
+                    required
                     className="bg-[#FBFCFC] text-[#315262] border border-[#829494] rounded px-3 py-2"
                   >
-                    <option>Status Corrections</option>
-                    <option>Secure Party Creditor</option>
-                    <option>Unincorporated Business Trust</option>
-                    <option>Credit Optimization</option>
-                    <option>Reclaiming Securities & Debt Discharge</option>
+                    <option value="">Select an area of interest</option>
+                    <option value="Status Corrections">Status Corrections</option>
+                    <option value="Secure Party Creditor">Secure Party Creditor</option>
+                    <option value="Unincorporated Business Trust">Unincorporated Business Trust</option>
+                    <option value="Credit Optimization">Credit Optimization</option>
+                    <option value="Reclaiming Securities & Debt Discharge">Reclaiming Securities & Debt Discharge</option>
                   </select>
+                </label>
+                <label className="grid gap-1 text-[#315262] text-sm">Add Your Message (optional)
+                  <textarea
+                    name="message"
+                    rows="6"
+                    className="bg-[#FBFCFC] text-[#315262] border border-[#829494] rounded px-3 py-2"
+                    placeholder="Add your message (optional)"
+                  />
                 </label>
 
                 <button disabled={infoLoading} className="btn-blue mt-2 text-sm sm:text-base">
                   {infoLoading ? "Submitting..." : "Request Info"}
                 </button>
+                
               </form>
 
-              <p className="mt-4 text-[#EFAB47] text-xs sm:text-sm">
-                Submitting this form sends data to the local server.
-              </p>
+             
             </div>
 
             {/* APPLY NOW */}
@@ -158,53 +170,58 @@ export default function Admission() {
                     phone: form.phone.value,
                     course: form.course.value,
                     experience: form.experience.value,
+                    query: "Apply Now Form Submission",
                   };
                   await submit("apply", data, setApplyLoading, "Application");
                   form.reset();
                 }}
               >
                 <label className="grid gap-1 text-[#315262] text-sm">
-                  Full Name
+                  Full Name *
                   <input
                     name="name"
                     required
                     className="bg-[#FBFCFC] text-[#315262] border border-[#829494] rounded px-3 py-2"
+                    placeholder="Enter your full name"
                   />
                 </label>
 
                 <label className="grid gap-1 text-[#315262] text-sm">
-                  Email
+                  Email *
                   <input
                     name="email"
                     type="email"
                     required
                     className="bg-[#FBFCFC] text-[#315262] border border-[#829494] rounded px-3 py-2"
+                    placeholder="Enter your email address"
                   />
                 </label>
 
                 <label className="grid gap-1 text-[#315262] text-sm">
-                  Phone Number
+                  Phone Number *
                   <input
                     name="phone"
                     type="tel"
                     required
                     className="bg-[#FBFCFC] text-[#315262] border border-[#829494] rounded px-3 py-2"
+                    placeholder="Enter your phone number"
                   />
                 </label>
 
                 <label className="grid gap-1 text-[#315262] text-sm">
-                  Selected Course
+                  Selected Course *
                   <select
                     name="course"
                     required
                     className="bg-[#FBFCFC] text-[#315262] border border-[#829494] rounded px-3 py-2"
                   >
-                    <option>Status Corrections</option>
-                    <option>Secure Party Creditor</option>
-                    <option>Unincorporated Business Trust</option>
-                    <option>Credit Repair & Optimization (Personal)</option>
-                    <option>Credit Optimization (Business)</option>
-                    <option>Reclaiming Securities & Debt Discharge</option>
+                    <option value="">Select a course</option>
+                    <option value="Status Corrections">Status Corrections</option>
+                    <option value="Secure Party Creditor">Secure Party Creditor</option>
+                    <option value="Unincorporated Business Trust">Unincorporated Business Trust</option>
+                    <option value="Credit Repair & Optimization (Personal)">Credit Repair & Optimization (Personal)</option>
+                    <option value="Credit Optimization (Business)">Credit Optimization (Business)</option>
+                    <option value="Reclaiming Securities & Debt Discharge">Reclaiming Securities & Debt Discharge</option>
                   </select>
                 </label>
 
@@ -213,6 +230,7 @@ export default function Admission() {
                   <textarea
                     name="experience"
                     className="bg-[#FBFCFC] text-[#315262] border border-[#829494] rounded px-3 py-2"
+                    placeholder="Describe your relevant experience (optional)"
                   />
                 </label>
 

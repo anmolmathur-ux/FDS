@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+
 const AboutNew = () => {
   // Placeholder image sources - replace with actual image imports
   const image1 = "https://plus.unsplash.com/premium_photo-1668383778557-d71c562fdb4b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8QWJvdXQlMjB1c3xlbnwwfHwwfHx8MA%3D%3D";
