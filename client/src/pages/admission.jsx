@@ -26,66 +26,72 @@ export default function Admission() {
 
   return (
     <div className="bg-[#315262] min-h-screen">
-      <section className="max-w-4xl mx-auto px-6 py-12">
+      <section className="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-12">
 
         {/* MAIN WRAPPER */}
         <div className="grid gap-6">
 
           {/* HERO SECTION */}
-          <div className="admission-hero rounded-xl overflow-hidden h-72 sm:h-96 md:h-[500px] relative">
+          <div className="rounded-xl overflow-hidden h-64 sm:h-80 md:h-[480px] relative">
             <div
               className="absolute inset-0 bg-cover bg-center bg-no-repeat"
               style={{ backgroundImage: `url(${admissionImg})` }}
-            ></div>
+            />
 
-            <div className="absolute inset-0 bg-gradient-to-b from-[#315262]/70 to-[#315262]/90"></div>
+            {/* Background Overlay */}
+<div className="absolute inset-0 bg-gradient-to-b from-[#315262]/70 to-[#315262]/90"></div>
 
-            <div className="p-6 relative z-10 h-full flex flex-col justify-center">
-              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 py-2 px- ">
-                Online Admission
-              </h1>
+{/* CONTENT WRAPPER */}
+<div className="absolute inset-0 bg-gradient-to-b from-[#315262]/70 to-[#315262]/90"></div>
 
-              <p className="text-slate-300 mb-6 max-w-3xl text-sm sm:text-base">
-                Enroll in self-paced programs designed to help you operate privately and build generational wealth.
-              </p>
+<div className="p-4 sm:p-6 relative z-10 min-h-[60vh] sm:h-full overflow-visible flex flex-col justify-center">
 
-              <div className="flex flex-col sm:flex-row gap-4 mt-6">
-                <a href="#info" className="btn-blue">Request Info</a>
-                <a href="#apply" className="btn-yellow">Apply Now</a>
-              </div>
+  <h1 className="text-xl sm:text-3xl md:text-4xl font-bold text-white mb-2 leading-tight">
+    Online Admission
+  </h1>
 
-              <h2 className="mt-8 text-xl sm:text-2xl font-bold text-white">
-                How Do I Apply?
-              </h2>
+  <p className="text-slate-200 mb-4 sm:mb-6 max-w-2xl text-xs sm:text-base leading-relaxed">
+    Enroll in self-paced programs designed to help you operate privately and build generational wealth.
+  </p>
 
-              <ol className="mt-4 list-decimal pl-5 space-y-2 text-slate-300 text-sm sm:text-base max-w-2xl">
-                <li>Create your student account.</li>
-                <li>Select one or more courses that match your goals.</li>
-                <li>Complete enrollment and payment.</li>
-                <li>Start learning immediately with guided modules.</li>
-              </ol>
-              
-              {/* Logo in bottom right corner */}
-              <div className="absolute bottom-6 right-6">
-                <img 
-                  src={logoImg} 
-                  alt="FDS Logo" 
-                  className="w-32 h-32 object-contain"
-                />
-              </div>
-            </div>
-          </div>
+  <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-4 sm:mt-6 w-full">
+    <a href="#info" className="btn-blue text-center w-full sm:w-auto">Request Info</a>
+    <a href="#apply" className="btn-yellow text-center w-full sm:w-auto">Apply Now</a>
+  </div>
+
+  <h2 className="mt-6 sm:mt-8 text-lg sm:text-2xl font-bold text-white">
+    How Do I Apply?
+  </h2>
+
+  <ol className="mt-3 sm:mt-4 list-decimal pl-5 space-y-1 sm:space-y-2 text-slate-300 text-xs sm:text-base max-w-xl">
+    <li>Create your student account.</li>
+    <li>Select one or more courses that match your goals.</li>
+    <li>Complete enrollment and payment.</li>
+    <li>Start learning immediately with guided modules.</li>
+  </ol>
+
+  <div className="absolute bottom-3 right-3 sm:bottom-6 sm:right-6">
+    <img 
+      src={logoImg}
+      alt="FDS Logo"
+      className="w-16 h-16 sm:w-28 sm:h-28 object-contain opacity-90"
+    />
+  </div>
+
+</div>
+</div>
 
           {/* FORMS WRAPPER */}
           <div id="info" className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+
             {/* REQUEST INFO */}
-            <div className="bg-white border border-[#829494] rounded-xl p-6">
-              <h3 className="font-semibold text-[#315262] text-lg sm:text-xl mb-4">
+            <div className="bg-white border border-[#829494] rounded-xl p-4 sm:p-6">
+              <h3 className="font-semibold text-[#315262] text-lg sm:text-xl mb-3 sm:mb-4">
                 Request Info
               </h3>
 
               <form
-                className="grid gap-4"
+                className="grid gap-3 sm:gap-4"
                 onSubmit={async (e) => {
                   e.preventDefault();
                   const form = e.currentTarget;
@@ -104,7 +110,7 @@ export default function Admission() {
                   <input
                     name="name"
                     required
-                    className="bg-[#FBFCFC] text-[#315262] border border-[#829494] rounded px-3 py-2"
+                    className="bg-[#FBFCFC] border text-[#315262] border-[#829494] rounded px-3 py-2"
                     placeholder="Enter your full name"
                   />
                 </label>
@@ -115,7 +121,7 @@ export default function Admission() {
                     name="email"
                     type="email"
                     required
-                    className="bg-[#FBFCFC] text-[#315262] border border-[#829494] rounded px-3 py-2"
+                    className="bg-[#FBFCFC] border text-[#315262] border-[#829494] rounded px-3 py-2"
                     placeholder="Enter your email address"
                   />
                 </label>
@@ -125,7 +131,7 @@ export default function Admission() {
                   <select
                     name="interest"
                     required
-                    className="bg-[#FBFCFC] text-[#315262] border border-[#829494] rounded px-3 py-2"
+                    className="bg-[#FBFCFC] border text-[#315262] border-[#829494] rounded px-3 py-2"
                   >
                     <option value="">Select an area of interest</option>
                     <option value="Status Corrections">Status Corrections</option>
@@ -135,11 +141,13 @@ export default function Admission() {
                     <option value="Reclaiming Securities & Debt Discharge">Reclaiming Securities & Debt Discharge</option>
                   </select>
                 </label>
-                <label className="grid gap-1 text-[#315262] text-sm">Add Your Message (optional)
+
+                <label className="grid gap-1 text-[#315262] text-sm">
+                  Add Your Message (optional)
                   <textarea
                     name="message"
-                    rows="6"
-                    className="bg-[#FBFCFC] text-[#315262] border border-[#829494] rounded px-3 py-2"
+                    rows="8"
+                    className="bg-[#FBFCFC] border text-[#315262] border-[#829494] rounded px-3 py-2"
                     placeholder="Add your message (optional)"
                   />
                 </label>
@@ -147,20 +155,17 @@ export default function Admission() {
                 <button disabled={infoLoading} className="btn-blue mt-2 text-sm sm:text-base">
                   {infoLoading ? "Submitting..." : "Request Info"}
                 </button>
-                
               </form>
-
-             
             </div>
 
             {/* APPLY NOW */}
-            <div className="bg-white border border-[#829494] rounded-xl p-6" id="apply">
-              <h3 className="font-semibold text-[#315262] text-lg sm:text-xl mb-4">
+            <div className="bg-white border border-[#829494] rounded-xl p-4 sm:p-6" id="apply">
+              <h3 className="font-semibold text-[#315262] text-lg sm:text-xl mb-3 sm:mb-4">
                 Apply Now
               </h3>
 
               <form
-                className="grid gap-4"
+                className="grid gap-3 sm:gap-4"
                 onSubmit={async (e) => {
                   e.preventDefault();
                   const form = e.currentTarget;
@@ -182,7 +187,6 @@ export default function Admission() {
                     name="name"
                     required
                     className="bg-[#FBFCFC] text-[#315262] border border-[#829494] rounded px-3 py-2"
-                    placeholder="Enter your full name"
                   />
                 </label>
 
@@ -193,7 +197,6 @@ export default function Admission() {
                     type="email"
                     required
                     className="bg-[#FBFCFC] text-[#315262] border border-[#829494] rounded px-3 py-2"
-                    placeholder="Enter your email address"
                   />
                 </label>
 
@@ -204,7 +207,6 @@ export default function Admission() {
                     type="tel"
                     required
                     className="bg-[#FBFCFC] text-[#315262] border border-[#829494] rounded px-3 py-2"
-                    placeholder="Enter your phone number"
                   />
                 </label>
 
@@ -229,8 +231,8 @@ export default function Admission() {
                   Relevant Experience
                   <textarea
                     name="experience"
+                    rows="4"
                     className="bg-[#FBFCFC] text-[#315262] border border-[#829494] rounded px-3 py-2"
-                    placeholder="Describe your relevant experience (optional)"
                   />
                 </label>
 
@@ -241,8 +243,9 @@ export default function Admission() {
             </div>
           </div>
 
-          <div className="mt-8 bg-[#EFAB47]/20 border border-[#EFAB47] rounded-xl p-6">
-            <p className="text-white font-semibold">
+          {/* DISCLAIMER */}
+          <div className="mt-8 bg-[#EFAB47]/20 border border-[#EFAB47] rounded-xl p-4 sm:p-6">
+            <p className="text-white font-semibold text-xs sm:text-base leading-relaxed">
               Educational disclaimer: Enrollment provides access to educational materials only.
               It does not constitute legal, financial, or tax advice.
             </p>

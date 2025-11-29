@@ -99,23 +99,32 @@ export default function Courses() {
       <div className="max-w-6xl mx-auto px-6 py-12">
       
         {/* Header + Filter Section */}
-        <div className="flex items-end justify-between border-b border-[#829494] pb-4 mb-8">
-          <h1 className="text-4xl font-bold text-[#315262]">All Courses</h1>
+        <div className="flex flex-col md:flex-row items-start md:items-end justify-between border-b border-[#829494] pb-4 mb-8 gap-4 md:gap-0">
 
-          <div className="text-right">
-            <label className="block text-[#315262] text-sm">Filter by category</label>
-            <select
-              value={filter}
-              onChange={(e) => setFilter(e.target.value)}
-              className="mt-1 bg-white text-[#315262] border border-[#829494] rounded px-3 py-2 focus:ring focus:ring-[#315262]/40 transition"
-            >
-              <option value="all">All</option>
-              <option value="legal">Legal Foundation</option>
-              <option value="financial">Financial Strategy</option>
-              <option value="identity">Identity Management</option>
-            </select>
-          </div>
-        </div>
+  <h1 className="text-4xl font-bold text-[#315262]">
+    All Courses
+  </h1>
+
+  <div className="text-left md:text-right w-full md:w-auto">
+    <label className="block text-[#315262] text-sm">
+      Filter by category
+    </label>
+
+    <select
+      value={filter}
+      onChange={(e) => setFilter(e.target.value)}
+      className="mt-1 bg-white text-[#315262] border border-[#829494] rounded px-3 py-2 
+                 focus:ring focus:ring-[#315262]/40 transition w-full md:w-auto"
+    >
+      <option value="all">All</option>
+      <option value="legal">Legal Foundation</option>
+      <option value="financial">Financial Strategy</option>
+      <option value="identity">Identity Management</option>
+    </select>
+  </div>
+
+</div>
+
 
         {/* Course Grid */}
         <div className="grid md:grid-cols-3 gap-6">
