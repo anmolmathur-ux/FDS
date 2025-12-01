@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom"
 import SiteHeader from "./components/siteheader.jsx"
 import SiteFooter from "./components/sitefooter.jsx"
 import ChatBot from "./components/ChatBot.jsx"
+import ScrollToTop from "./components/ScrollToTop.jsx"
 import Home from "./pages/home.jsx"
 import Courses from "./pages/courses.jsx"
 import About from "./pages/about.jsx"
@@ -13,6 +14,7 @@ import Contact from "./pages/contact.jsx"
 export default function App() {
   return (
     <div>
+      <ScrollToTop />
       <SiteHeader />
       <main id="main">
         <Routes>
