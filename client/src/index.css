@@ -72,8 +72,13 @@ a:hover {
   transition: width 0.3s ease;
 }
 
+.nav-link:hover {
+  color: white;
+}
+
 .nav-link:hover::after {
   width: 100%;
+  color:var(--golden-yellow)
 }
 
 .nav-link.active {

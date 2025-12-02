@@ -10,6 +10,7 @@ import step6Img from "../assets/step6.jpg";
 import img1 from "../assets/learn.jpg";
 import img2 from "../assets/apply.jpg";
 import img3 from "../assets/thrive.jpg";
+import logoImg from "../assets/logo.png";
 import CoreValues from "../components/CoreValues";
 
 export default function About() {
@@ -43,6 +44,13 @@ export default function About() {
           transition={{ duration: 0.7 }}
           className="text-center"
         >
+          <div className="flex justify-center mb-6">
+            <img 
+              src={logoImg} 
+              alt="Freedom Solutions Logo" 
+              className="h-24 w-auto drop-shadow-[0_4px_4px_rgba(255,255,255,0.8)]"
+            />
+          </div>
           <h2 className="text-4xl font-bold text-white tracking-wide">
             Our Vision & Mission
           </h2>

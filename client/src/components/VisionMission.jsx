@@ -24,7 +24,7 @@ export default function VisionMission() {
           <img 
             src={logoImg} 
             alt="Freedom Solutions Logo" 
-            className="h-24 w-auto"
+            className="h-24 w-auto drop-shadow-[0_2px_2px_rgba(255,255,255,0.8)]"
           />
         </div>
         <h2 className="text-4xl font-bold text-white tracking-wide">
