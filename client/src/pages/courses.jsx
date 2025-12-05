@@ -22,10 +22,10 @@ export default function Courses() {
       category: "legal",
       features: ["Principles", "Workflows", "Compliance"],
       imageUrl: course1,
-      buttonLink: "/admission"
+      slug: "status-corrections"
     },
     {
-      title: "Secure Party Creditor",
+      title: "SPC Secured Party Creditor",
       level: "Intermediate",
       duration: "5 weeks",
       summary:
@@ -33,10 +33,10 @@ export default function Courses() {
       category: "legal",
       features: ["Frameworks", "Risk Management", "Compliance"],
       imageUrl: course2,
-      buttonLink: "/admission"
+      slug: "secure-party-creditor"
     },
     {
-      title: "Unincorporated Business Trust",
+      title: "Business Trust",
       level: "Intermediate",
       duration: "4 weeks",
       summary:
@@ -44,14 +44,14 @@ export default function Courses() {
       category: "business",
       features: ["Private Trusts", "Operating Structures","Creditor Rights"],
       imageUrl: course3,
-      buttonLink: "/admission"
+      slug: "unincorporated-business-trust"
     },
     {
-      title: "Credit Repair & Optimization (Personal)",
+      title: "Optimizing Personal Credit",
       level: "Foundational",
       duration: "3 weeks",
       summary:
-        "Dispute mechanics, profile hygiene, and scoring optimization.",
+        "Remedy Now - Dispute mechanics, profile hygiene, and scoring optimization.",
       category: "credit",
       features: [
         "Dispute Mechanics",
@@ -59,10 +59,10 @@ export default function Courses() {
         "Scoring Optimization"
       ],
       imageUrl: course4,
-      buttonLink: "/admission"
+      slug: "credit-repair-personal"
     },
     {
-      title: "Credit Optimization (Business)",
+      title: "Optimizing Business Credit Profile",
       level: "Intermediate",
       duration: "3 weeks",
       summary:
@@ -70,10 +70,10 @@ export default function Courses() {
       category: "credit",
       features: ["Vendor Tiers", "Trade Lines", "Underwriting Signals"],
       imageUrl: course5,
-      buttonLink: "/admission"
+      slug: "credit-optimization-business"
     },
     {
-      title: "Reclaiming Securities & Debt Discharge",
+      title: "Reclaiming Securities & Debt Discharging",
       level: "Advanced",
       duration: "6 weeks",
       summary:
@@ -85,7 +85,7 @@ export default function Courses() {
         "Documentation Review"
       ],
       imageUrl: course6,
-      buttonLink: "/admission"
+      slug: "reclaiming-securities-debt-discharge"
     }
   ];
 
@@ -118,8 +118,9 @@ export default function Courses() {
     >
       <option value="all">All</option>
       <option value="legal">Legal Foundation</option>
-      <option value="financial">Financial Strategy</option>
-      <option value="identity">Identity Management</option>
+      <option value="business">Business Strategy</option>
+      <option value="credit">Credit Optimization</option>
+      <option value="finance">Financial Strategy</option>
     </select>
   </div>
 
@@ -138,7 +139,7 @@ export default function Courses() {
               category={c.category}
               features={c.features}
               imageUrl={c.imageUrl}
-              buttonLink={c.buttonLink}
+              buttonLink={`/course/${c.slug}`}
             />
           ))}
         </div>

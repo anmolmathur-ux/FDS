@@ -6,6 +6,9 @@ import ChatBot from "./components/ChatBot.jsx"
 import ScrollToTop from "./components/ScrollToTop.jsx"
 import Home from "./pages/home.jsx"
 import Courses from "./pages/courses.jsx"
+import CourseIndex from "./pages/CourseIndex.jsx"
+import CourseDetail from "./pages/CourseDetail.jsx"
+import Plans from "./pages/Plans.jsx"
 import About from "./pages/about.jsx"
 import Admission from "./pages/admission.jsx"
 import AboutNew from "./pages/AboutNew.jsx"
@@ -20,6 +23,9 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/courses" element={<Courses />} />
+          <Route path="/course-index" element={<CourseIndex />} />
+          <Route path="/course/:slug" element={<CourseDetail />} />
+          <Route path="/plans" element={<Plans />} />
           <Route path="/about" element={<About />} />
           <Route path="/about-new" element={<AboutNew />} />
           <Route path="/admission" element={<Admission />} />
