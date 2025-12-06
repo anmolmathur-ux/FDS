@@ -3,11 +3,10 @@ import { motion } from "framer-motion";
 import image1 from "../assets/about1.jpg";
 import image2 from "../assets/about2.jpg";
 import image3 from "../assets/about3.jpg";
-import portraitImage from "../assets/Sov.jpg";
+import image4 from "../assets/apply.jpg";
+import portraitImage from "../assets/vision.jpg";
 
 const AboutNew = () => {
-  const image4 = "../assets/vision.jpg";
-
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#2E4753] to-[#355A66] font-serif">
       

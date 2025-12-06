@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+import untitledProject from "../assets/Untitled Project.jpg";
 
 export default function Plans() {
   const [showModal, setShowModal] = useState(false);
@@ -109,29 +110,47 @@ export default function Plans() {
         
         {/* Combo Courses */}
         <div className="bg-white rounded-2xl shadow-xl overflow-hidden mb-12">
-          <div className="p-8">
+          <div className="p-5">
             <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
               <h2 className="text-2xl font-bold text-[#315262]">Combo Courses</h2>
-              <span className="bg-[#EFAB47] text-[#315262] px-6 py-2 rounded-full font-bold text-lg">
+              <span className="bg-[#E9B24E] text-[#315262] px-6 py-2 rounded-full font-bold text-lg shadow-md">
                 20% OFF
               </span>
             </div>
-            <div className="flex flex-wrap items-baseline gap-4 mb-6">
-              <span className="text-3xl font-bold text-[#315262]">The Freedom Solution Package</span>
-              <div className="flex items-baseline gap-2">
-                <span className="text-2xl text-gray-500 line-through">$3125</span>
-                <span className="text-4xl font-bold text-[#315262]">$2500</span>
+            
+            {/* Further Reduced Course Bundle Image */}
+            <div className="flex flex-col md:flex-row gap-6 items-center mb-8">
+              <div className="md:w-1/3">
+                <div className="rounded-2xl overflow-hidden border-4 border-[#315262]/10 shadow-xl bg-gradient-to-br from-white to-gray-50 p-3 transition-all duration-300 hover:shadow-2xl mx-auto">
+                  <div className="relative">
+                    <img 
+                      src={untitledProject} 
+                      alt="Digital Course Bundle" 
+                      className="w-full h-auto object-contain rounded-xl transition-transform duration-300 hover:scale-[1.02]"
+                    />
+                  </div>
+                </div>
+              </div>
+              
+              <div className="md:w-2/3">
+                <div className="flex flex-wrap items-baseline gap-4 mb-4">
+                  <span className="text-3xl font-bold text-[#315262]">The Freedom Solution Package</span>
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-2xl text-gray-500 line-through">$3125</span>
+                    <span className="text-4xl font-bold text-[#315262]">$2500</span>
+                  </div>
+                </div>
+                <p className="text-[#444444] mb-6 text-lg">
+                  Get all courses with exclusive content and personalized mentoring sessions.
+                </p>
+                <button 
+                  onClick={() => setShowModal(true)}
+                  className="inline-block py-4 px-8 bg-[#315262] text-white font-bold rounded-lg hover:bg-[#253d4a] transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl text-lg"
+                >
+                  Get the Bundle
+                </button>
               </div>
             </div>
-            <p className="text-[#444444] mb-8 text-lg">
-              Get all courses with exclusive content and personalized mentoring sessions.
-            </p>
-            <button 
-              onClick={() => setShowModal(true)}
-              className="inline-block py-4 px-10 bg-[#315262] text-white font-bold rounded-lg hover:bg-[#253d4a] transition-colors text-lg"
-            >
-              Get the Bundle
-            </button>
           </div>
         </div>
         
@@ -147,14 +166,14 @@ export default function Plans() {
                 <svg className="w-8 h-8 text-[#EFAB47] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                <span className="text-xl font-semibold">Daily at 7:00 PM EST</span>
+                <span className="text-xl font-semibold  text-[#315262] px-2 rounded">Daily at 7:00 PM EST</span>
               </div>
               <div className="flex items-center">
                 <svg className="w-8 h-8 text-[#EFAB47] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
-                <span className="text-xl font-semibold">Virtual Classroom</span>
+                <span className="text-xl font-semibold bg-white text-[#315262] px-2 rounded">Virtual Classroom</span>
               </div>
             </div>
             <button 

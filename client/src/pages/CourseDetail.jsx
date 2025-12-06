@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { useParams, Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import course1 from "../assets/course1.jpg";
 import course2 from "../assets/course2.jpg";
 import course3 from "../assets/course3.jpg";
 import course4 from "../assets/course4.jpg";
 import course5 from "../assets/course5.jpg";
 import course6 from "../assets/course6.jpg";
+import CurriculumSection from "../components/CurriculumSection";
 
 // Course data with detailed information
 const courseData = [
@@ -451,38 +453,13 @@ export default function CourseDetail() {
                 </svg>
                 Curriculum
               </h2>
-              <div className="space-y-4">
-                {course.curriculum.map((week, index) => (
-                  <div key={index} className="border border-gray-200 rounded-lg overflow-hidden">
-                    <button
-                      onClick={() => toggleWeek(index)}
-                      className="w-full flex justify-between items-center p-5 bg-gray-50 hover:bg-gray-100 transition-colors duration-300 text-left"
-                    >
-                      <h3 className="font-bold text-lg text-[#315262]">{week.week}</h3>
-                      <svg 
-                        className={`w-5 h-5 text-[#315262] transition-transform duration-300 ${openWeek === index ? 'rotate-180' : ''}`}
-                        fill="none" 
-                        stroke="currentColor" 
-                        viewBox="0 0 24 24"
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                      </svg>
-                    </button>
-                    {openWeek === index && (
-                      <div className="p-5 bg-white border-t border-gray-200">
-                        <ul className="space-y-2">
-                          {week.topics.map((topic, topicIndex) => (
-                            <li key={topicIndex} className="flex items-start">
-                              <div className="flex-shrink-0 mt-1.5 mr-3 w-2 h-2 rounded-full bg-[#EFAB47]"></div>
-                              <span className="text-[#444444]">{topic}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <CurriculumSection curriculumData={course.curriculum} />
+              </motion.div>
             </div>
             
             {/* Enroll Button */}
