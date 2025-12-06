@@ -4,6 +4,8 @@ import image1 from "../assets/about1.jpg";
 import image2 from "../assets/about2.jpg";
 import image3 from "../assets/about3.jpg";
 import image4 from "../assets/apply.jpg";
+import step2 from "../assets/step2.jpg";
+import step3 from "../assets/step3.jpg";
 import portraitImage from "../assets/vision.jpg";
 
 const AboutNew = () => {
@@ -92,14 +94,14 @@ const AboutNew = () => {
                 number: "02",
                 title: "Strategic Execution",
                 text: "Practical training + strategic insights = flawless execution for your goals.",
-                image: image2
+                image: step2
               },
               {
                 
                 number: "03",
                 title: "Delivering Results",
                 text: "We help navigate business challenges with confidence and proven methods.",
-                image: image3
+                image: step3
               },
             ].map((step, i) => (
               <motion.div
@@ -107,11 +109,11 @@ const AboutNew = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.15 }}
-                className={`bg-white/90 backdrop-blur-sm shadow-md hover:shadow-xl rounded-2xl p-8 border border-gray-100 ${i === 0 ? 'relative overflow-hidden' : ''}`}
+                className={`bg-white/90 backdrop-blur-sm shadow-md hover:shadow-xl rounded-2xl p-8 border border-gray-100 relative overflow-hidden`}
               >
-                {i === 0 && step.image && (
+                {step.image && (
                   <div className="absolute inset-0 z-0 opacity-20">
-                    <img src={step.image} alt="Understanding Your Vision" className="w-full h-full object-cover" />
+                    <img src={step.image} alt={step.title} className="w-full h-full object-cover" />
                   </div>
                 )}
                 <div className="relative z-10">

@@ -21,7 +21,7 @@ export default function SiteHeader() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="sticky top-0 z-20 bg-[#315262]/90 backdrop-blur-lg shadow-lg border-b border-white/10"
+        className="sticky top-0 z-50 bg-[#315262]/90 backdrop-blur-lg shadow-lg border-b border-white/10"
       >
         <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-4 sm:py-5 flex items-center justify-between">
           
