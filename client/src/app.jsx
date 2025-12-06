@@ -46,6 +46,10 @@ export default function App() {
     // Debugging: Log when component mounts
     console.log("App component mounted, current path:", location.pathname)
     
+    // Check if we should force show the popup (for testing)
+    const urlParams = new URLSearchParams(window.location.search);
+    const forcePopup = urlParams.get('showPopup') === 'true';
+    
     // Only show popup on home page
     if (location.pathname === '/') {
       // More reliable way to check if user has visited before
@@ -53,10 +57,12 @@ export default function App() {
         const hasVisited = localStorage.getItem('hasVisitedFDS')
         console.log("Has visited value:", hasVisited)
         
-        if (!hasVisited) {
+        if (!hasVisited || forcePopup) {
           console.log("User is new and on home page, setting up popup timer")
           // Set flag and show popup after a short delay
-          localStorage.setItem('hasVisitedFDS', 'true')
+          if (!forcePopup) {
+            localStorage.setItem('hasVisitedFDS', 'true')
+          }
           console.log("Setting popup to show")
           const timer = setTimeout(() => {
             console.log("Timer fired, showing popup")
