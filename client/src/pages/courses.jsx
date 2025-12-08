@@ -24,7 +24,7 @@ export default function Courses() {
       category: "legal",
       features: ["Principles", "Workflows", "Compliance"],
       imageUrl: course1,
-      slug: "status-corrections"
+      slug: "statuscorrections"
     },
     {
       title: "SPC Secured Party Creditor",
@@ -35,7 +35,7 @@ export default function Courses() {
       category: "legal",
       features: ["Frameworks", "Risk Management", "Compliance"],
       imageUrl: course2,
-      slug: "secure-party-creditor"
+      slug: "securepartycreditor"
     },
     {
       title: "Business Trust",
@@ -46,7 +46,7 @@ export default function Courses() {
       category: "business",
       features: ["Private Trusts", "Operating Structures","Creditor Rights"],
       imageUrl: course3,
-      slug: "unincorporated-business-trust"
+      slug: "unincorporatedbusinesstrust"
     },
     {
       title: "Optimizing Personal Credit",
@@ -61,7 +61,7 @@ export default function Courses() {
         "Scoring Optimization"
       ],
       imageUrl: course4,
-      slug: "credit-repair-personal"
+      slug: "creditrepairpersonal"
     },
     {
       title: "Optimizing Business Credit Profile",
@@ -72,7 +72,7 @@ export default function Courses() {
       category: "credit",
       features: ["Vendor Tiers", "Trade Lines", "Underwriting Signals"],
       imageUrl: course5,
-      slug: "credit-optimization-business"
+      slug: "creditoptimizationbusiness"
     },
     {
       title: "Reclaiming Securities & Debt Discharging",
@@ -87,7 +87,7 @@ export default function Courses() {
         "Documentation Review"
       ],
       imageUrl: course6,
-      slug: "reclaiming-securities-debt-discharge"
+      slug: "reclaimingsecuritiesdebtdischarging"
     }
   ];
 
