@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import admissionImg from "../assets/online-admission.jpg";
+import admissionImg from "../assets/onlineadmission.jpg";
 import logoImg from "../assets/logo.png";
 
 export default function Admission() {
