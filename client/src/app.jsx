@@ -142,20 +142,33 @@ export default function App() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
             className="fixed inset-0 bg-black/70 z-[9999] flex items-center justify-center p-4"
             onClick={() => setShowWelcomePopup(false)}
           >
             <motion.div 
-              initial={{ scale: 0.5, y: 50, opacity: 0 }}
-              animate={{ scale: 1, y: 0, opacity: 1 }}
-              exit={{ scale: 0.5, y: 50, opacity: 0 }}
-              transition={{ type: "spring", damping: 25 }}
+              initial={{ scale: 0.5, y: 50, opacity: 0, rotateY: -15 }}
+              animate={{ scale: 1, y: 0, opacity: 1, rotateY: 0 }}
+              exit={{ scale: 0.5, y: 50, opacity: 0, rotateY: 15 }}
+              transition={{ 
+                type: "spring", 
+                damping: 25,
+                stiffness: 300,
+                mass: 0.8
+              }}
               className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-hidden relative z-[10000]"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="p-8 overflow-y-auto max-h-[90vh] scrollbar-hide">
                 <div className="flex justify-center items-center mb-6 relative">
-                  <h2 className="text-3xl font-bold text-[#315262] text-center">Welcome to Freedom Solutions!</h2>
+                  <motion.h2 
+                    className="text-3xl font-bold text-[#315262] text-center"
+                    initial={{ y: -20, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ delay: 0.2, duration: 0.5 }}
+                  >
+                    Welcome to Freedom Solutions!
+                  </motion.h2>
                   <button 
                     onClick={() => setShowWelcomePopup(false)}
                     className="absolute right-0 top-0 text-gray-500 hover:text-gray-700 text-2xl w-8 h-8 flex items-center justify-center"
@@ -164,19 +177,37 @@ export default function App() {
                   </button>
                 </div>
                 
-                <div className="text-center mb-8">
+                <motion.div 
+                  className="text-center mb-8"
+                  initial={{ y: 20, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ delay: 0.3, duration: 0.5 }}
+                >
                   <div className="inline-block bg-gradient-to-r from-[#315262] to-[#253d4a] text-white px-6 py-3 rounded-full mb-6">
                     <span className="font-bold text-xl">BEGINNER'S PATH</span>
                   </div>
-                  <h3 className="text-2xl font-bold text-[#315262] mb-4">Start Your Journey to Financial Sovereignty</h3>
+                  <motion.h3 
+                    className="text-2xl font-bold text-[#315262] mb-4"
+                    initial={{ scale: 0.9, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    transition={{ delay: 0.4, type: "spring", stiffness: 200 }}
+                  >
+                    Start Your Journey to Financial Sovereignty
+                  </motion.h3>
                   <p className="text-gray-600 mb-6 text-lg">
                     As a new member, you'll begin with our foundational courses:
                   </p>
-                </div>
+                </motion.div>
                 
-                <div className="grid md:grid-cols-3 gap-6 mb-8">
+                <motion.div 
+                  className="grid md:grid-cols-3 gap-6 mb-8"
+                  initial={{ y: 30, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ delay: 0.5, duration: 0.6 }}
+                >
                   <motion.div 
-                    whileHover={{ y: -10 }}
+                    whileHover={{ y: -10, scale: 1.03 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
                     className="bg-gradient-to-br from-white to-gray-50 border-2 border-[#315262] rounded-xl p-6 text-center shadow-lg"
                   >
                     <div className="text-4xl mb-4">📘</div>
@@ -187,7 +218,8 @@ export default function App() {
                   </motion.div>
                   
                   <motion.div 
-                    whileHover={{ y: -10 }}
+                    whileHover={{ y: -10, scale: 1.03 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
                     className="bg-gradient-to-br from-white to-gray-50 border-2 border-[#EFAB47] rounded-xl p-6 text-center shadow-lg"
                   >
                     <div className="text-4xl mb-4">🔒</div>
@@ -198,7 +230,8 @@ export default function App() {
                   </motion.div>
                   
                   <motion.div 
-                    whileHover={{ y: -10 }}
+                    whileHover={{ y: -10, scale: 1.03 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
                     className="bg-gradient-to-br from-white to-gray-50 border-2 border-[#315262] rounded-xl p-6 text-center shadow-lg"
                   >
                     <div className="text-4xl mb-4">🗺️</div>
@@ -207,20 +240,27 @@ export default function App() {
                       Your Step-by-Step Guide to Success
                     </p>
                   </motion.div>
-                </div>
+                </motion.div>
                 
-                <div className="bg-gradient-to-r from-[#315262] to-[#253d4a] rounded-xl p-6 text-white text-center">
+                <motion.div 
+                  className="bg-gradient-to-r from-[#315262] to-[#253d4a] rounded-xl p-6 text-white text-center"
+                  initial={{ y: 30, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ delay: 0.6, duration: 0.5 }}
+                >
                   <h3 className="text-2xl font-bold mb-2">Ready to Begin?</h3>
                   <p className="mb-6 opacity-90 text-white">
                     Join thousands who have started their journey to financial freedom
                   </p>
-                  <button 
+                  <motion.button 
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
                     onClick={() => setShowWelcomePopup(false)}
                     className="inline-block py-4 px-10 bg-[#EFAB47] text-[#315262] font-bold rounded-lg hover:bg-[#e6992e] transition-colors text-lg"
                   >
                     Get Started
-                  </button>
-                </div>
+                  </motion.button>
+                </motion.div>
               </div>
             </motion.div>
           </motion.div>
