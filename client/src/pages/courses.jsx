@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import CourseCard from "../components/coursecard.jsx";
+import CourseCard from "../components/coursecard";
+import ApplyNowButton from "../components/ApplyNowButton";
+import RequestInfoButton from "../components/RequestInfoButton";
 import course1 from '../assets/course1.jpg';
 import course2 from '../assets/course2.jpg';
 import course3 from '../assets/course3.jpg';
@@ -146,19 +148,8 @@ export default function Courses() {
 
         {/* Bottom Buttons */}
         <div className="mt-8 text-center flex justify-center gap-4">
-          <a
-            href="/admission"
-            className="btn-amber inline-block px-6 py-3 rounded transition shadow"
-          >
-            Apply Now
-          </a>
-
-          <a
-            href="/about"
-            className="btn-blue inline-block px-6 py-3 rounded transition shadow"
-          >
-            Request Info
-          </a>
+          <ApplyNowButton />
+          <RequestInfoButton />
         </div>
 
       {/* Disclaimer */}

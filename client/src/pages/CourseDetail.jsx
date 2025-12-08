@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import CurriculumSection from "../components/CurriculumSection";
+import EnrollButton from "../components/EnrollButton";
 import course1 from "../assets/course1.jpg";
 import course2 from "../assets/course2.jpg";
 import course3 from "../assets/course3.jpg";
 import course4 from "../assets/course4.jpg";
 import course5 from "../assets/course5.jpg";
 import course6 from "../assets/course6.jpg";
-import CurriculumSection from "../components/CurriculumSection";
 
 // Course data with detailed information
 const courseData = [
@@ -464,20 +465,7 @@ export default function CourseDetail() {
             
             {/* Enroll Button */}
             <div className="text-center pt-6">
-              <Link
-                to="/admission"
-                className="
-                  inline-block w-full sm:w-auto px-8 py-4
-                  text-center text-white font-bold rounded-xl
-                  bg-gradient-to-r from-[#EFAB47] to-[#D4AF37]
-                  hover:from-[#e6992e] hover:to-[#c29a2e]
-                  transition-all duration-300 shadow-lg hover:shadow-xl 
-                  transform hover:-translate-y-1
-                  text-lg sm:text-xl
-                "
-              >
-                Enroll Now for ${course.price}
-              </Link>
+              <EnrollButton price={course.price} />
               <p className="mt-3 text-sm text-[#444444]">
                 Secure your spot in this comprehensive course
               </p>
