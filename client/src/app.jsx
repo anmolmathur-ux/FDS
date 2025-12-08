@@ -1,20 +1,27 @@
-import React, { useEffect, useState } from "react"
-import { Routes, Route, useLocation } from "react-router-dom"
-import SiteHeader from "./components/siteheader.jsx"
-import SiteFooter from "./components/sitefooter.jsx"
-import ChatBot from "./components/ChatBot.jsx"
-import ScrollToTop from "./components/ScrollToTop.jsx"
-import Home from "./pages/home.jsx"
-import Courses from "./pages/courses.jsx"
-import CourseIndex from "./pages/CourseIndex.jsx"
-import CourseDetail from "./pages/CourseDetail.jsx"
-import Plans from "./pages/Plans.jsx"
-import CurriculumDemo from "./pages/CurriculumDemo.jsx"
-import About from "./pages/about.jsx"
-import Admission from "./pages/admission.jsx"
-import AboutNew from "./pages/AboutNew.jsx"
-import Contact from "./pages/contact.jsx"
-import { motion, AnimatePresence } from "framer-motion"
+import React, { useState, useEffect } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
+import Home from "./pages/home";
+import Courses from "./pages/courses";
+import CourseIndex from "./pages/CourseIndex";
+import Plans from "./pages/Plans";
+import CurriculumDemo from "./pages/CurriculumDemo";
+import About from "./pages/about";
+import AboutNew from "./pages/AboutNew";
+import Admission from "./pages/admission";
+import Contact from "./pages/contact";
+import SiteHeader from "./components/siteheader";
+import SiteFooter from "./components/sitefooter";
+import ChatBot from "./components/chatbot";
+import ScrollToTop from "./components/ScrollToTop";
+
+// Import individual course components
+import StatusCorrections from "./components/courses/StatusCorrections";
+import SecurePartyCreditor from "./components/courses/SecurePartyCreditor";
+import UnincorporatedBusinessTrust from "./components/courses/UnincorporatedBusinessTrust";
+import OptimizingPersonalCredit from "./components/courses/OptimizingPersonalCredit";
+import OptimizingBusinessCreditProfile from "./components/courses/OptimizingBusinessCreditProfile";
+import ReclaimingSecuritiesDebtDischarging from "./components/courses/ReclaimingSecuritiesDebtDischarging";
 
 // Add CSS for hiding scrollbar
 const scrollbarHideStyles = `
@@ -111,7 +118,12 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/courses" element={<Courses />} />
           <Route path="/course-index" element={<CourseIndex />} />
-          <Route path="/course/:slug" element={<CourseDetail />} />
+          <Route path="/course/statuscorrections" element={<StatusCorrections />} />
+          <Route path="/course/securepartycreditor" element={<SecurePartyCreditor />} />
+          <Route path="/course/unincorporatedbusinesstrust" element={<UnincorporatedBusinessTrust />} />
+          <Route path="/course/creditrepairpersonal" element={<OptimizingPersonalCredit />} />
+          <Route path="/course/creditoptimizationbusiness" element={<OptimizingBusinessCreditProfile />} />
+          <Route path="/course/reclaimingsecuritiesdebtdischarging" element={<ReclaimingSecuritiesDebtDischarging />} />
           <Route path="/plans" element={<Plans />} />
           <Route path="/curriculum-demo" element={<CurriculumDemo />} />
           <Route path="/about" element={<About />} />
